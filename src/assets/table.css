@@ -41,7 +41,8 @@
     height: 1px
 }
 
-.el-table.has-footer.el-table--fluid-height tr:last-child td.el-table__cell,.el-table.has-footer.el-table--scrollable-y tr:last-child td.el-table__cell {
+.el-table.has-footer.el-table--fluid-height tr:last-child td.el-table__cell,
+.el-table.has-footer.el-table--scrollable-y tr:last-child td.el-table__cell {
     border-bottom-color: transparent
 }
 
@@ -95,7 +96,7 @@
 }
 
 .el-table__expanded-cell:hover {
-    background-color: transparent!important
+    background-color: transparent !important
 }
 
 .el-table__placeholder {
@@ -160,7 +161,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-    word-break: break-all;
     line-height: 23px;
     padding: 0 12px
 }
@@ -214,7 +214,8 @@
     margin: 0
 }
 
-.el-table td.el-table__cell,.el-table th.el-table__cell.is-leaf {
+.el-table td.el-table__cell,
+.el-table th.el-table__cell.is-leaf {
     border-bottom: var(--el-table-border)
 }
 
@@ -255,7 +256,10 @@
     border-top: var(--el-table-border)
 }
 
-.el-table--border .el-table__inner-wrapper:after,.el-table--border:after,.el-table--border:before,.el-table__inner-wrapper:before {
+.el-table--border .el-table__inner-wrapper:after,
+.el-table--border:after,
+.el-table--border:before,
+.el-table__inner-wrapper:before {
     content: "";
     position: absolute;
     background-color: var(--el-table-border-color);
@@ -310,17 +314,53 @@
     visibility: hidden
 }
 
-.el-table__body-wrapper,.el-table__footer-wrapper,.el-table__header-wrapper {
+.el-table__body-wrapper,
+.el-table__footer-wrapper,
+.el-table__header-wrapper {
     width: 100%
 }
 
-.el-table__body-wrapper tr td.el-table-fixed-column--left,.el-table__body-wrapper tr td.el-table-fixed-column--right,.el-table__body-wrapper tr th.el-table-fixed-column--left,.el-table__body-wrapper tr th.el-table-fixed-column--right,.el-table__footer-wrapper tr td.el-table-fixed-column--left,.el-table__footer-wrapper tr td.el-table-fixed-column--right,.el-table__footer-wrapper tr th.el-table-fixed-column--left,.el-table__footer-wrapper tr th.el-table-fixed-column--right,.el-table__header-wrapper tr td.el-table-fixed-column--left,.el-table__header-wrapper tr td.el-table-fixed-column--right,.el-table__header-wrapper tr th.el-table-fixed-column--left,.el-table__header-wrapper tr th.el-table-fixed-column--right {
-    position: sticky!important;
+.el-table__body-wrapper tr td.el-table-fixed-column--left,
+.el-table__body-wrapper tr td.el-table-fixed-column--right,
+.el-table__body-wrapper tr th.el-table-fixed-column--left,
+.el-table__body-wrapper tr th.el-table-fixed-column--right,
+.el-table__footer-wrapper tr td.el-table-fixed-column--left,
+.el-table__footer-wrapper tr td.el-table-fixed-column--right,
+.el-table__footer-wrapper tr th.el-table-fixed-column--left,
+.el-table__footer-wrapper tr th.el-table-fixed-column--right,
+.el-table__header-wrapper tr td.el-table-fixed-column--left,
+.el-table__header-wrapper tr td.el-table-fixed-column--right,
+.el-table__header-wrapper tr th.el-table-fixed-column--left,
+.el-table__header-wrapper tr th.el-table-fixed-column--right {
+    position: sticky !important;
     z-index: 2;
     background: var(--el-bg-color)
 }
 
-.el-table__body-wrapper tr td.el-table-fixed-column--left.is-first-column:before,.el-table__body-wrapper tr td.el-table-fixed-column--left.is-last-column:before,.el-table__body-wrapper tr td.el-table-fixed-column--right.is-first-column:before,.el-table__body-wrapper tr td.el-table-fixed-column--right.is-last-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--left.is-first-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--left.is-last-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--right.is-first-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--right.is-last-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-first-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-last-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-first-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-last-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-first-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-last-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-first-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-last-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--left.is-first-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--left.is-last-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--right.is-first-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--right.is-last-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--left.is-first-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--left.is-last-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--right.is-first-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--right.is-last-column:before {
+.el-table__body-wrapper tr td.el-table-fixed-column--left.is-first-column:before,
+.el-table__body-wrapper tr td.el-table-fixed-column--left.is-last-column:before,
+.el-table__body-wrapper tr td.el-table-fixed-column--right.is-first-column:before,
+.el-table__body-wrapper tr td.el-table-fixed-column--right.is-last-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--left.is-first-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--left.is-last-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--right.is-first-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--right.is-last-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-first-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-last-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-first-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-last-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-first-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-last-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-first-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-last-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--left.is-first-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--left.is-last-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--right.is-first-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--right.is-last-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--left.is-first-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--left.is-last-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--right.is-first-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--right.is-last-column:before {
     content: "";
     position: absolute;
     top: 0;
@@ -333,17 +373,44 @@
     pointer-events: none
 }
 
-.el-table__body-wrapper tr td.el-table-fixed-column--left.is-first-column:before,.el-table__body-wrapper tr td.el-table-fixed-column--right.is-first-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--left.is-first-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--right.is-first-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-first-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-first-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-first-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-first-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--left.is-first-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--right.is-first-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--left.is-first-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--right.is-first-column:before {
+.el-table__body-wrapper tr td.el-table-fixed-column--left.is-first-column:before,
+.el-table__body-wrapper tr td.el-table-fixed-column--right.is-first-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--left.is-first-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--right.is-first-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-first-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-first-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-first-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-first-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--left.is-first-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--right.is-first-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--left.is-first-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--right.is-first-column:before {
     left: -10px
 }
 
-.el-table__body-wrapper tr td.el-table-fixed-column--left.is-last-column:before,.el-table__body-wrapper tr td.el-table-fixed-column--right.is-last-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--left.is-last-column:before,.el-table__body-wrapper tr th.el-table-fixed-column--right.is-last-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-last-column:before,.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-last-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-last-column:before,.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-last-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--left.is-last-column:before,.el-table__header-wrapper tr td.el-table-fixed-column--right.is-last-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--left.is-last-column:before,.el-table__header-wrapper tr th.el-table-fixed-column--right.is-last-column:before {
+.el-table__body-wrapper tr td.el-table-fixed-column--left.is-last-column:before,
+.el-table__body-wrapper tr td.el-table-fixed-column--right.is-last-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--left.is-last-column:before,
+.el-table__body-wrapper tr th.el-table-fixed-column--right.is-last-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--left.is-last-column:before,
+.el-table__footer-wrapper tr td.el-table-fixed-column--right.is-last-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--left.is-last-column:before,
+.el-table__footer-wrapper tr th.el-table-fixed-column--right.is-last-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--left.is-last-column:before,
+.el-table__header-wrapper tr td.el-table-fixed-column--right.is-last-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--left.is-last-column:before,
+.el-table__header-wrapper tr th.el-table-fixed-column--right.is-last-column:before {
     right: -10px;
     box-shadow: none
 }
 
-.el-table__body-wrapper tr td.el-table__fixed-right-patch,.el-table__body-wrapper tr th.el-table__fixed-right-patch,.el-table__footer-wrapper tr td.el-table__fixed-right-patch,.el-table__footer-wrapper tr th.el-table__fixed-right-patch,.el-table__header-wrapper tr td.el-table__fixed-right-patch,.el-table__header-wrapper tr th.el-table__fixed-right-patch {
-    position: sticky!important;
+.el-table__body-wrapper tr td.el-table__fixed-right-patch,
+.el-table__body-wrapper tr th.el-table__fixed-right-patch,
+.el-table__footer-wrapper tr td.el-table__fixed-right-patch,
+.el-table__footer-wrapper tr th.el-table__fixed-right-patch,
+.el-table__header-wrapper tr td.el-table__fixed-right-patch,
+.el-table__header-wrapper tr th.el-table__fixed-right-patch {
+    position: sticky !important;
     z-index: 2;
     background: #fff;
     right: 0
@@ -353,31 +420,38 @@
     flex-shrink: 0
 }
 
-.el-table__header-wrapper tr th.el-table-fixed-column--left,.el-table__header-wrapper tr th.el-table-fixed-column--right {
+.el-table__header-wrapper tr th.el-table-fixed-column--left,
+.el-table__header-wrapper tr th.el-table-fixed-column--right {
     background-color: var(--el-table-header-bg-color)
 }
 
-.el-table__body,.el-table__footer,.el-table__header {
+.el-table__body,
+.el-table__footer,
+.el-table__header {
     table-layout: fixed;
     border-collapse: separate
 }
 
-.el-table__footer-wrapper,.el-table__header-wrapper {
+.el-table__footer-wrapper,
+.el-table__header-wrapper {
     overflow: hidden
 }
 
-.el-table__footer-wrapper tbody td.el-table__cell,.el-table__header-wrapper tbody td.el-table__cell {
+.el-table__footer-wrapper tbody td.el-table__cell,
+.el-table__header-wrapper tbody td.el-table__cell {
     background-color: var(--el-table-row-hover-bg-color);
     color: var(--el-table-text-color)
 }
 
-.el-table__body-wrapper .el-table-column--selection>.cell,.el-table__header-wrapper .el-table-column--selection>.cell {
+.el-table__body-wrapper .el-table-column--selection>.cell,
+.el-table__header-wrapper .el-table-column--selection>.cell {
     display: inline-flex;
     align-items: center;
     height: 23px
 }
 
-.el-table__body-wrapper .el-table-column--selection .el-checkbox,.el-table__header-wrapper .el-table-column--selection .el-checkbox {
+.el-table__body-wrapper .el-table-column--selection .el-checkbox,
+.el-table__header-wrapper .el-table-column--selection .el-checkbox {
     height: unset
 }
 
@@ -417,11 +491,15 @@
     box-shadow: var(--el-table-fixed-left-column)
 }
 
-.el-table.is-scrolling-none .el-table-fixed-column--left.is-first-column:before,.el-table.is-scrolling-none .el-table-fixed-column--left.is-last-column:before,.el-table.is-scrolling-none .el-table-fixed-column--right.is-first-column:before,.el-table.is-scrolling-none .el-table-fixed-column--right.is-last-column:before {
+.el-table.is-scrolling-none .el-table-fixed-column--left.is-first-column:before,
+.el-table.is-scrolling-none .el-table-fixed-column--left.is-last-column:before,
+.el-table.is-scrolling-none .el-table-fixed-column--right.is-first-column:before,
+.el-table.is-scrolling-none .el-table-fixed-column--right.is-last-column:before {
     box-shadow: none
 }
 
-.el-table.is-scrolling-none th.el-table-fixed-column--left,.el-table.is-scrolling-none th.el-table-fixed-column--right {
+.el-table.is-scrolling-none th.el-table-fixed-column--left,
+.el-table.is-scrolling-none th.el-table-fixed-column--right {
     background-color: var(--el-table-header-bg-color)
 }
 
@@ -487,7 +565,10 @@
     background-color: var(--el-table-current-row-bg-color)
 }
 
-.el-table__body tr.hover-row.current-row>td.el-table__cell,.el-table__body tr.hover-row.el-table__row--striped.current-row>td.el-table__cell,.el-table__body tr.hover-row.el-table__row--striped>td.el-table__cell,.el-table__body tr.hover-row>td.el-table__cell {
+.el-table__body tr.hover-row.current-row>td.el-table__cell,
+.el-table__body tr.hover-row.el-table__row--striped.current-row>td.el-table__cell,
+.el-table__body tr.hover-row.el-table__row--striped>td.el-table__cell,
+.el-table__body tr.hover-row>td.el-table__cell {
     background-color: var(--el-table-row-hover-bg-color)
 }
 

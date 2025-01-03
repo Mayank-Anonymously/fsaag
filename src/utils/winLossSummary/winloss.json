@@ -1,0 +1,227 @@
+[
+  {
+    "userID": "indwinnerag",
+    "platform": "JDB",
+    "type": "SLOT",
+    "location": "",
+    "betCount": 1284,
+    "validTurnover": 2489.6,
+    "betAmount": 2489.6,
+    "totalBet": 2489.6,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": 372.04,
+      "adjustment": 0,
+      "totalPL": 372.04,
+      "margin": "14.94%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": 372.04
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "JDB",
+    "type": "FISH",
+    "location": "",
+    "betCount": 32,
+    "validTurnover": 33.0,
+    "betAmount": 33.0,
+    "totalBet": 33.0,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -16.0,
+      "adjustment": 0,
+      "totalPL": -16.0,
+      "margin": "-48.48%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -16.0
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "JILI",
+    "type": "TABLE",
+    "location": "",
+    "betCount": 13,
+    "validTurnover": 2660.0,
+    "betAmount": 2660.0,
+    "totalBet": 2660.0,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -272.0,
+      "adjustment": 0,
+      "totalPL": -272.0,
+      "margin": "-10.23%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -272.0
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "JILI",
+    "type": "FISH",
+    "location": "",
+    "betCount": 2011,
+    "validTurnover": 5476.3,
+    "betAmount": 5476.3,
+    "totalBet": 5476.3,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -376.9,
+      "adjustment": 0,
+      "totalPL": -376.9,
+      "margin": "-6.88%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -376.9
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "PP",
+    "type": "SLOT",
+    "location": "",
+    "betCount": 8566,
+    "validTurnover": 7157.05,
+    "betAmount": 7157.05,
+    "totalBet": 7157.05,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -1310.34,
+      "adjustment": 0,
+      "totalPL": -1310.34,
+      "margin": "-18.31%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -1310.34
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "JILI",
+    "type": "SLOT",
+    "location": "",
+    "betCount": 2962,
+    "validTurnover": 6593.4,
+    "betAmount": 6593.4,
+    "totalBet": 6593.4,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -1234.56,
+      "adjustment": 0,
+      "totalPL": -1234.56,
+      "margin": "-18.72%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -1234.56
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "JILI",
+    "type": "SLOT",
+    "location": "",
+    "betCount": 2962,
+    "validTurnover": 6593.4,
+    "betAmount": 6593.4,
+    "totalBet": 6593.4,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -1234.56,
+      "adjustment": 0,
+      "totalPL": -1234.56,
+      "margin": "-18.72%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -1234.56
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "JILI",
+    "type": "SLOT",
+    "location": "",
+    "betCount": 2962,
+    "validTurnover": 6593.4,
+    "betAmount": 6593.4,
+    "totalBet": 6593.4,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -1234.56,
+      "adjustment": 0,
+      "totalPL": -1234.56,
+      "margin": "-18.72%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -1234.56
+    }
+  },
+  {
+    "userID": "indwinnerag",
+    "platform": "JILI",
+    "type": "SLOT",
+    "location": "",
+    "betCount": 2962,
+    "validTurnover": 6593.4,
+    "betAmount": 6593.4,
+    "totalBet": 6593.4,
+    "remark": "",
+    "Player": {
+      "playerWinLoss": -1234.56,
+      "adjustment": 0,
+      "totalPL": -1234.56,
+      "margin": "-18.72%"
+    },
+    "Agent": {
+      "ptWinLoss": 0,
+      "adjustment": 0,
+      "totalPL": 0
+    },
+    "Company": {
+      "totalPL": -1234.56
+    }
+  }
+]

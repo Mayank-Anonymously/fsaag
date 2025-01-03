@@ -1,19 +1,19 @@
 :root {
   --el-color-white: #ffffff;
   --el-color-black: #000000;
-  --el-color-primary-rgb: 64,158,255;
-  --el-color-success-rgb: 103,194,58;
-  --el-color-warning-rgb: 230,162,60;
-  --el-color-danger-rgb: 245,108,108;
-  --el-color-error-rgb: 245,108,108;
-  --el-color-info-rgb: 144,147,153;
+  --el-color-primary-rgb: #eed27b;
+  --el-color-success-rgb: 103, 194, 58;
+  --el-color-warning-rgb: 230, 162, 60;
+  --el-color-danger-rgb: 245, 108, 108;
+  --el-color-error-rgb: 245, 108, 108;
+  --el-color-info-rgb: 144, 147, 153;
   --el-font-size-extra-large: 20px;
   --el-font-size-large: 18px;
   --el-font-size-medium: 16px;
   --el-font-size-base: 14px;
   --el-font-size-small: 13px;
   --el-font-size-extra-small: 12px;
-  --el-font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  --el-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   --el-font-weight-primary: 500;
   --el-font-line-height-primary: 24px;
   --el-index-normal: 1;
@@ -29,22 +29,23 @@
   --el-transition-function-fast-bezier: cubic-bezier(.23, 1, .32, 1);
   --el-transition-all: all var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier);
   --el-transition-fade: opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
-  --el-transition-md-fade: transform var(--el-transition-duration) var(--el-transition-function-fast-bezier),opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
+  --el-transition-md-fade: transform var(--el-transition-duration) var(--el-transition-function-fast-bezier), opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
   --el-transition-fade-linear: opacity var(--el-transition-duration-fast) linear;
   --el-transition-border: border-color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
   --el-transition-box-shadow: box-shadow var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
   --el-transition-color: color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
   --el-component-size-large: 40px;
   --el-component-size: 32px;
-  --el-component-size-small: 24px
+  --el-component-size-small: 24px;
+
 }
 
 :root {
   color-scheme: light;
   --el-color-white: #ffffff;
   --el-color-black: #000000;
-  --el-color-primary: #409eff;
-  --el-color-primary-light-3: #79bbff;
+  --el-color-primary: #eed27b;
+  --el-color-primary-light-3: #eed27b;
   --el-color-primary-light-5: #a0cfff;
   --el-color-primary-light-7: #c6e2ff;
   --el-color-primary-light-8: #d9ecff;
@@ -106,10 +107,10 @@
   --el-fill-color-dark: #ebedf0;
   --el-fill-color-darker: #e6e8eb;
   --el-fill-color-blank: #ffffff;
-  --el-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, .04),0px 8px 20px rgba(0, 0, 0, .08);
+  --el-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, .04), 0px 8px 20px rgba(0, 0, 0, .08);
   --el-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, .12);
   --el-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, .12);
-  --el-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, .08),0px 12px 32px rgba(0, 0, 0, .12),0px 8px 16px -8px rgba(0, 0, 0, .16);
+  --el-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, .08), 0px 12px 32px rgba(0, 0, 0, .12), 0px 8px 16px -8px rgba(0, 0, 0, .16);
   --el-disabled-bg-color: var(--el-fill-color-light);
   --el-disabled-text-color: var(--el-text-color-placeholder);
   --el-disabled-border-color: var(--el-border-color-light);
@@ -126,7 +127,7 @@
 }
 
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -146,11 +147,11 @@
 
 @keyframes rotating {
   0% {
-      transform: rotate(0)
+    transform: rotate(0)
   }
 
   to {
-      transform: rotate(360deg)
+    transform: rotate(360deg)
   }
 }
 
@@ -194,7 +195,7 @@
   overflow: auto;
   box-sizing: border-box;
   flex-shrink: 0;
-  width: var(--el-aside-width,300px)
+  width: var(--el-aside-width, 300px)
 }
 
 .el-footer {
@@ -225,106 +226,124 @@
   padding: var(--el-main-padding)
 }
 
-.fade-in-linear-enter-active,.fade-in-linear-leave-active {
+.fade-in-linear-enter-active,
+.fade-in-linear-leave-active {
   transition: var(--el-transition-fade-linear)
 }
 
-.fade-in-linear-enter-from,.fade-in-linear-leave-to {
+.fade-in-linear-enter-from,
+.fade-in-linear-leave-to {
   opacity: 0
 }
 
-.el-fade-in-linear-enter-active,.el-fade-in-linear-leave-active {
+.el-fade-in-linear-enter-active,
+.el-fade-in-linear-leave-active {
   transition: var(--el-transition-fade-linear)
 }
 
-.el-fade-in-linear-enter-from,.el-fade-in-linear-leave-to {
+.el-fade-in-linear-enter-from,
+.el-fade-in-linear-leave-to {
   opacity: 0
 }
 
-.el-fade-in-enter-active,.el-fade-in-leave-active {
-  transition: all var(--el-transition-duration) cubic-bezier(.55,0,.1,1)
+.el-fade-in-enter-active,
+.el-fade-in-leave-active {
+  transition: all var(--el-transition-duration) cubic-bezier(.55, 0, .1, 1)
 }
 
-.el-fade-in-enter-from,.el-fade-in-leave-active {
+.el-fade-in-enter-from,
+.el-fade-in-leave-active {
   opacity: 0
 }
 
-.el-zoom-in-center-enter-active,.el-zoom-in-center-leave-active {
-  transition: all var(--el-transition-duration) cubic-bezier(.55,0,.1,1)
+.el-zoom-in-center-enter-active,
+.el-zoom-in-center-leave-active {
+  transition: all var(--el-transition-duration) cubic-bezier(.55, 0, .1, 1)
 }
 
-.el-zoom-in-center-enter-from,.el-zoom-in-center-leave-active {
+.el-zoom-in-center-enter-from,
+.el-zoom-in-center-leave-active {
   opacity: 0;
   transform: scaleX(0)
 }
 
-.el-zoom-in-top-enter-active,.el-zoom-in-top-leave-active {
+.el-zoom-in-top-enter-active,
+.el-zoom-in-top-leave-active {
   opacity: 1;
   transform: scaleY(1);
   transition: var(--el-transition-md-fade);
   transform-origin: center top
 }
 
-.el-zoom-in-top-enter-active[data-popper-placement^=top],.el-zoom-in-top-leave-active[data-popper-placement^=top] {
+.el-zoom-in-top-enter-active[data-popper-placement^=top],
+.el-zoom-in-top-leave-active[data-popper-placement^=top] {
   transform-origin: center bottom
 }
 
-.el-zoom-in-top-enter-from,.el-zoom-in-top-leave-active {
+.el-zoom-in-top-enter-from,
+.el-zoom-in-top-leave-active {
   opacity: 0;
   transform: scaleY(0)
 }
 
-.el-zoom-in-bottom-enter-active,.el-zoom-in-bottom-leave-active {
+.el-zoom-in-bottom-enter-active,
+.el-zoom-in-bottom-leave-active {
   opacity: 1;
   transform: scaleY(1);
   transition: var(--el-transition-md-fade);
   transform-origin: center bottom
 }
 
-.el-zoom-in-bottom-enter-from,.el-zoom-in-bottom-leave-active {
+.el-zoom-in-bottom-enter-from,
+.el-zoom-in-bottom-leave-active {
   opacity: 0;
   transform: scaleY(0)
 }
 
-.el-zoom-in-left-enter-active,.el-zoom-in-left-leave-active {
+.el-zoom-in-left-enter-active,
+.el-zoom-in-left-leave-active {
   opacity: 1;
   transform: scale(1);
   transition: var(--el-transition-md-fade);
   transform-origin: top left
 }
 
-.el-zoom-in-left-enter-from,.el-zoom-in-left-leave-active {
+.el-zoom-in-left-enter-from,
+.el-zoom-in-left-leave-active {
   opacity: 0;
   transform: scale(.45)
 }
 
 .collapse-transition {
-  transition: var(--el-transition-duration) height ease-in-out,var(--el-transition-duration) padding-top ease-in-out,var(--el-transition-duration) padding-bottom ease-in-out
+  transition: var(--el-transition-duration) height ease-in-out, var(--el-transition-duration) padding-top ease-in-out, var(--el-transition-duration) padding-bottom ease-in-out
 }
 
-.el-collapse-transition-enter-active,.el-collapse-transition-leave-active {
-  transition: var(--el-transition-duration) max-height ease-in-out,var(--el-transition-duration) padding-top ease-in-out,var(--el-transition-duration) padding-bottom ease-in-out
+.el-collapse-transition-enter-active,
+.el-collapse-transition-leave-active {
+  transition: var(--el-transition-duration) max-height ease-in-out, var(--el-transition-duration) padding-top ease-in-out, var(--el-transition-duration) padding-bottom ease-in-out
 }
 
 .horizontal-collapse-transition {
-  transition: var(--el-transition-duration) width ease-in-out,var(--el-transition-duration) padding-left ease-in-out,var(--el-transition-duration) padding-right ease-in-out
+  transition: var(--el-transition-duration) width ease-in-out, var(--el-transition-duration) padding-left ease-in-out, var(--el-transition-duration) padding-right ease-in-out
 }
 
-.el-list-enter-active,.el-list-leave-active {
+.el-list-enter-active,
+.el-list-leave-active {
   transition: all 1s
 }
 
-.el-list-enter-from,.el-list-leave-to {
+.el-list-enter-from,
+.el-list-leave-to {
   opacity: 0;
   transform: translateY(-30px)
 }
 
 .el-list-leave-active {
-  position: absolute!important
+  position: absolute !important
 }
 
 .el-opacity-transition {
-  transition: opacity var(--el-transition-duration) cubic-bezier(.55,0,.1,1)
+  transition: opacity var(--el-transition-duration) cubic-bezier(.55, 0, .1, 1)
 }
 
 :root {
@@ -354,7 +373,9 @@
   box-sizing: border-box
 }
 
-.el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container) .el-menu-item,.el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container) .el-menu-item-group__title,.el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container) .el-sub-menu__title {
+.el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container) .el-menu-item,
+.el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container) .el-menu-item-group__title,
+.el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container) .el-sub-menu__title {
   white-space: nowrap;
   padding-left: calc(var(--el-menu-base-level-padding) + var(--el-menu-level) * var(--el-menu-level-padding))
 }
@@ -376,15 +397,18 @@
   color: var(--el-menu-text-color)
 }
 
-.el-menu--horizontal>.el-menu-item a,.el-menu--horizontal>.el-menu-item a:hover {
+.el-menu--horizontal>.el-menu-item a,
+.el-menu--horizontal>.el-menu-item a:hover {
   color: inherit
 }
 
-.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,.el-menu--horizontal>.el-menu-item:not(.is-disabled):hover {
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):hover {
   background-color: #fff
 }
 
-.el-menu--horizontal>.el-sub-menu:focus,.el-menu--horizontal>.el-sub-menu:hover {
+.el-menu--horizontal>.el-sub-menu:focus,
+.el-menu--horizontal>.el-sub-menu:hover {
   outline: 0
 }
 
@@ -407,7 +431,8 @@
   background-color: var(--el-bg-color-overlay)
 }
 
-.el-menu--horizontal .el-menu .el-menu-item,.el-menu--horizontal .el-menu .el-sub-menu__title {
+.el-menu--horizontal .el-menu .el-menu-item,
+.el-menu--horizontal .el-menu .el-sub-menu__title {
   background-color: var(--el-menu-bg-color);
   display: flex;
   align-items: center;
@@ -421,11 +446,13 @@
   padding-right: 40px
 }
 
-.el-menu--horizontal .el-menu .el-menu-item.is-active,.el-menu--horizontal .el-menu .el-sub-menu.is-active>.el-sub-menu__title {
+.el-menu--horizontal .el-menu .el-menu-item.is-active,
+.el-menu--horizontal .el-menu .el-sub-menu.is-active>.el-sub-menu__title {
   color: var(--el-menu-active-color)
 }
 
-.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,.el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
   outline: 0;
   color: var(--el-menu-hover-text-color);
   background-color: var(--el-menu-hover-bg-color)
@@ -433,25 +460,31 @@
 
 .el-menu--horizontal>.el-menu-item.is-active {
   border-bottom: 2px solid var(--el-menu-active-color);
-  color: var(--el-menu-active-color)!important
+  color: var(--el-menu-active-color) !important
 }
 
 .el-menu--collapse {
   width: calc(var(--el-menu-icon-width) + var(--el-menu-base-level-padding) * 2)
 }
 
-.el-menu--collapse>.el-menu-item [class^=el-icon],.el-menu--collapse>.el-menu-item-group>ul>.el-sub-menu>.el-sub-menu__title [class^=el-icon],.el-menu--collapse>.el-sub-menu>.el-sub-menu__title [class^=el-icon] {
+.el-menu--collapse>.el-menu-item [class^=el-icon],
+.el-menu--collapse>.el-menu-item-group>ul>.el-sub-menu>.el-sub-menu__title [class^=el-icon],
+.el-menu--collapse>.el-sub-menu>.el-sub-menu__title [class^=el-icon] {
   margin: 0;
   vertical-align: middle;
   width: var(--el-menu-icon-width);
   text-align: center
 }
 
-.el-menu--collapse>.el-menu-item .el-sub-menu__icon-arrow,.el-menu--collapse>.el-menu-item-group>ul>.el-sub-menu>.el-sub-menu__title .el-sub-menu__icon-arrow,.el-menu--collapse>.el-sub-menu>.el-sub-menu__title .el-sub-menu__icon-arrow {
+.el-menu--collapse>.el-menu-item .el-sub-menu__icon-arrow,
+.el-menu--collapse>.el-menu-item-group>ul>.el-sub-menu>.el-sub-menu__title .el-sub-menu__icon-arrow,
+.el-menu--collapse>.el-sub-menu>.el-sub-menu__title .el-sub-menu__icon-arrow {
   display: none
 }
 
-.el-menu--collapse>.el-menu-item-group>ul>.el-sub-menu>.el-sub-menu__title>span,.el-menu--collapse>.el-menu-item>span,.el-menu--collapse>.el-sub-menu>.el-sub-menu__title>span {
+.el-menu--collapse>.el-menu-item-group>ul>.el-sub-menu>.el-sub-menu__title>span,
+.el-menu--collapse>.el-menu-item>span,
+.el-menu--collapse>.el-sub-menu>.el-sub-menu__title>span {
   height: 0;
   width: 0;
   overflow: hidden;
@@ -491,7 +524,7 @@
   list-style: none;
   cursor: pointer;
   position: relative;
-  transition: border-color var(--el-transition-duration),background-color var(--el-transition-duration),color var(--el-transition-duration);
+  transition: border-color var(--el-transition-duration), background-color var(--el-transition-duration), color var(--el-transition-duration);
   box-sizing: border-box;
   white-space: nowrap
 }
@@ -504,7 +537,8 @@
   color: inherit
 }
 
-.el-menu-item:focus,.el-menu-item:hover {
+.el-menu-item:focus,
+.el-menu-item:hover {
   outline: 0
 }
 
@@ -515,7 +549,7 @@
 .el-menu-item.is-disabled {
   opacity: .25;
   cursor: not-allowed;
-  background: 0 0!important
+  background: 0 0 !important
 }
 
 .el-menu-item [class^=el-icon] {
@@ -563,7 +597,7 @@
   list-style: none;
   cursor: pointer;
   position: relative;
-  transition: border-color var(--el-transition-duration),background-color var(--el-transition-duration),color var(--el-transition-duration);
+  transition: border-color var(--el-transition-duration), background-color var(--el-transition-duration), color var(--el-transition-duration);
   box-sizing: border-box;
   white-space: nowrap;
   padding-right: calc(var(--el-menu-base-level-padding) + var(--el-menu-icon-width))
@@ -577,14 +611,15 @@
   color: inherit
 }
 
-.el-sub-menu__title:focus,.el-sub-menu__title:hover {
+.el-sub-menu__title:focus,
+.el-sub-menu__title:hover {
   outline: 0
 }
 
 .el-sub-menu__title.is-disabled {
   opacity: .25;
   cursor: not-allowed;
-  background: 0 0!important
+  background: 0 0 !important
 }
 
 .el-sub-menu__title:hover {
@@ -601,17 +636,18 @@
 }
 
 .el-sub-menu__hide-arrow .el-sub-menu__icon-arrow {
-  display: none!important
+  display: none !important
 }
 
 .el-sub-menu.is-active .el-sub-menu__title {
   border-bottom-color: var(--el-menu-active-color)
 }
 
-.el-sub-menu.is-disabled .el-menu-item,.el-sub-menu.is-disabled .el-sub-menu__title {
+.el-sub-menu.is-disabled .el-menu-item,
+.el-sub-menu.is-disabled .el-sub-menu__title {
   opacity: .25;
   cursor: not-allowed;
-  background: 0 0!important
+  background: 0 0 !important
 }
 
 .el-sub-menu .el-icon {
@@ -623,7 +659,7 @@
 }
 
 .el-sub-menu .el-icon.el-sub-menu__icon-more {
-  margin-right: 0!important
+  margin-right: 0 !important
 }
 
 .el-sub-menu .el-sub-menu__icon-arrow {
@@ -747,23 +783,23 @@
 }
 
 .el-popper[data-popper-placement^=top] .el-popper__arrow:before {
-  border-top-color: transparent!important;
-  border-left-color: transparent!important
+  border-top-color: transparent !important;
+  border-left-color: transparent !important
 }
 
 .el-popper[data-popper-placement^=bottom] .el-popper__arrow:before {
-  border-bottom-color: transparent!important;
-  border-right-color: transparent!important
+  border-bottom-color: transparent !important;
+  border-right-color: transparent !important
 }
 
 .el-popper[data-popper-placement^=left] .el-popper__arrow:before {
-  border-left-color: transparent!important;
-  border-bottom-color: transparent!important
+  border-left-color: transparent !important;
+  border-bottom-color: transparent !important
 }
 
 .el-popper[data-popper-placement^=right] .el-popper__arrow:before {
-  border-right-color: transparent!important;
-  border-top-color: transparent!important
+  border-right-color: transparent !important;
+  border-top-color: transparent !important
 }
 
 :root {
@@ -781,13 +817,13 @@
 
 @keyframes v-modal-in {
   0% {
-      opacity: 0
+    opacity: 0
   }
 }
 
 @keyframes v-modal-out {
   to {
-      opacity: 0
+    opacity: 0
   }
 }
 
@@ -834,7 +870,7 @@
 }
 
 .el-message-box:focus {
-  outline: 0!important
+  outline: 0 !important
 }
 
 .el-overlay.is-message-box .el-overlay-message-box {
@@ -884,7 +920,7 @@
   border: none;
   outline: 0;
   background: 0 0;
-  font-size: var(--el-message-close-size,16px);
+  font-size: var(--el-message-close-size, 16px);
   cursor: pointer
 }
 
@@ -893,7 +929,8 @@
   font-size: inherit
 }
 
-.el-message-box__headerbtn:focus .el-message-box__close,.el-message-box__headerbtn:hover .el-message-box__close {
+.el-message-box__headerbtn:focus .el-message-box__close,
+.el-message-box__headerbtn:hover .el-message-box__close {
   color: var(--el-color-primary)
 }
 
@@ -923,7 +960,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px!important
+  font-size: 24px !important
 }
 
 .el-message-box__status:before {
@@ -1031,25 +1068,25 @@
 
 @keyframes msgbox-fade-in {
   0% {
-      transform: translate3d(0,-20px,0);
-      opacity: 0
+    transform: translate3d(0, -20px, 0);
+    opacity: 0
   }
 
   to {
-      transform: translateZ(0);
-      opacity: 1
+    transform: translateZ(0);
+    opacity: 1
   }
 }
 
 @keyframes msgbox-fade-out {
   0% {
-      transform: translateZ(0);
-      opacity: 1
+    transform: translateZ(0);
+    opacity: 1
   }
 
   to {
-      transform: translate3d(0,-20px,0);
-      opacity: 0
+    transform: translate3d(0, -20px, 0);
+    opacity: 0
   }
 }
 
@@ -1099,7 +1136,8 @@
   border-radius: var(--el-border-radius-base)
 }
 
-.el-button:focus,.el-button:hover {
+.el-button:focus,
+.el-button:hover {
   color: var(--el-button-hover-text-color);
   border-color: var(--el-button-hover-border-color);
   background-color: var(--el-button-hover-bg-color);
@@ -1156,7 +1194,9 @@
   outline: 0
 }
 
-.el-button.is-disabled,.el-button.is-disabled:focus,.el-button.is-disabled:hover {
+.el-button.is-disabled,
+.el-button.is-disabled:focus,
+.el-button.is-disabled:hover {
   color: var(--el-button-disabled-text-color);
   cursor: not-allowed;
   background-image: none;
@@ -1199,10 +1239,11 @@
 
 .el-button.is-text.is-disabled {
   color: var(--el-button-disabled-text-color);
-  background-color: transparent!important
+  background-color: transparent !important
 }
 
-.el-button.is-text:not(.is-disabled):focus,.el-button.is-text:not(.is-disabled):hover {
+.el-button.is-text:not(.is-disabled):focus,
+.el-button.is-text:not(.is-disabled):hover {
   background-color: var(--el-fill-color-light)
 }
 
@@ -1219,7 +1260,8 @@
   background-color: var(--el-fill-color-light)
 }
 
-.el-button.is-text:not(.is-disabled).is-has-bg:focus,.el-button.is-text:not(.is-disabled).is-has-bg:hover {
+.el-button.is-text:not(.is-disabled).is-has-bg:focus,
+.el-button.is-text:not(.is-disabled).is-has-bg:hover {
   background-color: var(--el-fill-color)
 }
 
@@ -1240,17 +1282,19 @@
   height: auto
 }
 
-.el-button.is-link:focus,.el-button.is-link:hover {
+.el-button.is-link:focus,
+.el-button.is-link:hover {
   color: var(--el-button-hover-link-text-color)
 }
 
 .el-button.is-link.is-disabled {
   color: var(--el-button-disabled-text-color);
-  background-color: transparent!important;
-  border-color: transparent!important
+  background-color: transparent !important;
+  border-color: transparent !important
 }
 
-.el-button.is-link:not(.is-disabled):focus,.el-button.is-link:not(.is-disabled):hover {
+.el-button.is-link:not(.is-disabled):focus,
+.el-button.is-link:not(.is-disabled):hover {
   border-color: transparent;
   background-color: transparent
 }
@@ -1271,12 +1315,13 @@
 
 .el-button--text.is-disabled {
   color: var(--el-button-disabled-text-color);
-  background-color: transparent!important;
-  border-color: transparent!important
+  background-color: transparent !important;
+  border-color: transparent !important
 }
 
-.el-button--text:not(.is-disabled):focus,.el-button--text:not(.is-disabled):hover {
-  color: var(--el-color-primary-light-3);
+.el-button--text:not(.is-disabled):focus,
+.el-button--text:not(.is-disabled):hover {
+  color: var(--el-color-primary-light-3) !important;
   border-color: transparent;
   background-color: transparent
 }
@@ -1309,7 +1354,9 @@
   --el-button-disabled-border-color: var(--el-color-primary-light-5)
 }
 
-.el-button--primary.is-link,.el-button--primary.is-plain,.el-button--primary.is-text {
+.el-button--primary.is-link,
+.el-button--primary.is-plain,
+.el-button--primary.is-text {
   --el-button-text-color: var(--el-color-primary);
   --el-button-bg-color: var(--el-color-primary-light-9);
   --el-button-border-color: var(--el-color-primary-light-5);
@@ -1319,7 +1366,18 @@
   --el-button-active-text-color: var(--el-color-white)
 }
 
-.el-button--primary.is-link.is-disabled,.el-button--primary.is-link.is-disabled:active,.el-button--primary.is-link.is-disabled:focus,.el-button--primary.is-link.is-disabled:hover,.el-button--primary.is-plain.is-disabled,.el-button--primary.is-plain.is-disabled:active,.el-button--primary.is-plain.is-disabled:focus,.el-button--primary.is-plain.is-disabled:hover,.el-button--primary.is-text.is-disabled,.el-button--primary.is-text.is-disabled:active,.el-button--primary.is-text.is-disabled:focus,.el-button--primary.is-text.is-disabled:hover {
+.el-button--primary.is-link.is-disabled,
+.el-button--primary.is-link.is-disabled:active,
+.el-button--primary.is-link.is-disabled:focus,
+.el-button--primary.is-link.is-disabled:hover,
+.el-button--primary.is-plain.is-disabled,
+.el-button--primary.is-plain.is-disabled:active,
+.el-button--primary.is-plain.is-disabled:focus,
+.el-button--primary.is-plain.is-disabled:hover,
+.el-button--primary.is-text.is-disabled,
+.el-button--primary.is-text.is-disabled:active,
+.el-button--primary.is-text.is-disabled:focus,
+.el-button--primary.is-text.is-disabled:hover {
   color: var(--el-color-primary-light-5);
   background-color: var(--el-color-primary-light-9);
   border-color: var(--el-color-primary-light-8)
@@ -1342,7 +1400,9 @@
   --el-button-disabled-border-color: var(--el-color-success-light-5)
 }
 
-.el-button--success.is-link,.el-button--success.is-plain,.el-button--success.is-text {
+.el-button--success.is-link,
+.el-button--success.is-plain,
+.el-button--success.is-text {
   --el-button-text-color: var(--el-color-success);
   --el-button-bg-color: var(--el-color-success-light-9);
   --el-button-border-color: var(--el-color-success-light-5);
@@ -1352,7 +1412,18 @@
   --el-button-active-text-color: var(--el-color-white)
 }
 
-.el-button--success.is-link.is-disabled,.el-button--success.is-link.is-disabled:active,.el-button--success.is-link.is-disabled:focus,.el-button--success.is-link.is-disabled:hover,.el-button--success.is-plain.is-disabled,.el-button--success.is-plain.is-disabled:active,.el-button--success.is-plain.is-disabled:focus,.el-button--success.is-plain.is-disabled:hover,.el-button--success.is-text.is-disabled,.el-button--success.is-text.is-disabled:active,.el-button--success.is-text.is-disabled:focus,.el-button--success.is-text.is-disabled:hover {
+.el-button--success.is-link.is-disabled,
+.el-button--success.is-link.is-disabled:active,
+.el-button--success.is-link.is-disabled:focus,
+.el-button--success.is-link.is-disabled:hover,
+.el-button--success.is-plain.is-disabled,
+.el-button--success.is-plain.is-disabled:active,
+.el-button--success.is-plain.is-disabled:focus,
+.el-button--success.is-plain.is-disabled:hover,
+.el-button--success.is-text.is-disabled,
+.el-button--success.is-text.is-disabled:active,
+.el-button--success.is-text.is-disabled:focus,
+.el-button--success.is-text.is-disabled:hover {
   color: var(--el-color-success-light-5);
   background-color: var(--el-color-success-light-9);
   border-color: var(--el-color-success-light-8)
@@ -1375,7 +1446,9 @@
   --el-button-disabled-border-color: var(--el-color-warning-light-5)
 }
 
-.el-button--warning.is-link,.el-button--warning.is-plain,.el-button--warning.is-text {
+.el-button--warning.is-link,
+.el-button--warning.is-plain,
+.el-button--warning.is-text {
   --el-button-text-color: var(--el-color-warning);
   --el-button-bg-color: var(--el-color-warning-light-9);
   --el-button-border-color: var(--el-color-warning-light-5);
@@ -1385,7 +1458,18 @@
   --el-button-active-text-color: var(--el-color-white)
 }
 
-.el-button--warning.is-link.is-disabled,.el-button--warning.is-link.is-disabled:active,.el-button--warning.is-link.is-disabled:focus,.el-button--warning.is-link.is-disabled:hover,.el-button--warning.is-plain.is-disabled,.el-button--warning.is-plain.is-disabled:active,.el-button--warning.is-plain.is-disabled:focus,.el-button--warning.is-plain.is-disabled:hover,.el-button--warning.is-text.is-disabled,.el-button--warning.is-text.is-disabled:active,.el-button--warning.is-text.is-disabled:focus,.el-button--warning.is-text.is-disabled:hover {
+.el-button--warning.is-link.is-disabled,
+.el-button--warning.is-link.is-disabled:active,
+.el-button--warning.is-link.is-disabled:focus,
+.el-button--warning.is-link.is-disabled:hover,
+.el-button--warning.is-plain.is-disabled,
+.el-button--warning.is-plain.is-disabled:active,
+.el-button--warning.is-plain.is-disabled:focus,
+.el-button--warning.is-plain.is-disabled:hover,
+.el-button--warning.is-text.is-disabled,
+.el-button--warning.is-text.is-disabled:active,
+.el-button--warning.is-text.is-disabled:focus,
+.el-button--warning.is-text.is-disabled:hover {
   color: var(--el-color-warning-light-5);
   background-color: var(--el-color-warning-light-9);
   border-color: var(--el-color-warning-light-8)
@@ -1408,7 +1492,9 @@
   --el-button-disabled-border-color: var(--el-color-danger-light-5)
 }
 
-.el-button--danger.is-link,.el-button--danger.is-plain,.el-button--danger.is-text {
+.el-button--danger.is-link,
+.el-button--danger.is-plain,
+.el-button--danger.is-text {
   --el-button-text-color: var(--el-color-danger);
   --el-button-bg-color: var(--el-color-danger-light-9);
   --el-button-border-color: var(--el-color-danger-light-5);
@@ -1418,7 +1504,18 @@
   --el-button-active-text-color: var(--el-color-white)
 }
 
-.el-button--danger.is-link.is-disabled,.el-button--danger.is-link.is-disabled:active,.el-button--danger.is-link.is-disabled:focus,.el-button--danger.is-link.is-disabled:hover,.el-button--danger.is-plain.is-disabled,.el-button--danger.is-plain.is-disabled:active,.el-button--danger.is-plain.is-disabled:focus,.el-button--danger.is-plain.is-disabled:hover,.el-button--danger.is-text.is-disabled,.el-button--danger.is-text.is-disabled:active,.el-button--danger.is-text.is-disabled:focus,.el-button--danger.is-text.is-disabled:hover {
+.el-button--danger.is-link.is-disabled,
+.el-button--danger.is-link.is-disabled:active,
+.el-button--danger.is-link.is-disabled:focus,
+.el-button--danger.is-link.is-disabled:hover,
+.el-button--danger.is-plain.is-disabled,
+.el-button--danger.is-plain.is-disabled:active,
+.el-button--danger.is-plain.is-disabled:focus,
+.el-button--danger.is-plain.is-disabled:hover,
+.el-button--danger.is-text.is-disabled,
+.el-button--danger.is-text.is-disabled:active,
+.el-button--danger.is-text.is-disabled:focus,
+.el-button--danger.is-text.is-disabled:hover {
   color: var(--el-color-danger-light-5);
   background-color: var(--el-color-danger-light-9);
   border-color: var(--el-color-danger-light-8)
@@ -1441,7 +1538,9 @@
   --el-button-disabled-border-color: var(--el-color-info-light-5)
 }
 
-.el-button--info.is-link,.el-button--info.is-plain,.el-button--info.is-text {
+.el-button--info.is-link,
+.el-button--info.is-plain,
+.el-button--info.is-text {
   --el-button-text-color: var(--el-color-info);
   --el-button-bg-color: var(--el-color-info-light-9);
   --el-button-border-color: var(--el-color-info-light-5);
@@ -1451,7 +1550,18 @@
   --el-button-active-text-color: var(--el-color-white)
 }
 
-.el-button--info.is-link.is-disabled,.el-button--info.is-link.is-disabled:active,.el-button--info.is-link.is-disabled:focus,.el-button--info.is-link.is-disabled:hover,.el-button--info.is-plain.is-disabled,.el-button--info.is-plain.is-disabled:active,.el-button--info.is-plain.is-disabled:focus,.el-button--info.is-plain.is-disabled:hover,.el-button--info.is-text.is-disabled,.el-button--info.is-text.is-disabled:active,.el-button--info.is-text.is-disabled:focus,.el-button--info.is-text.is-disabled:hover {
+.el-button--info.is-link.is-disabled,
+.el-button--info.is-link.is-disabled:active,
+.el-button--info.is-link.is-disabled:focus,
+.el-button--info.is-link.is-disabled:hover,
+.el-button--info.is-plain.is-disabled,
+.el-button--info.is-plain.is-disabled:active,
+.el-button--info.is-plain.is-disabled:focus,
+.el-button--info.is-plain.is-disabled:hover,
+.el-button--info.is-text.is-disabled,
+.el-button--info.is-text.is-disabled:active,
+.el-button--info.is-text.is-disabled:focus,
+.el-button--info.is-text.is-disabled:hover {
   color: var(--el-color-info-light-5);
   background-color: var(--el-color-info-light-9);
   border-color: var(--el-color-info-light-8)
@@ -1533,18 +1643,18 @@
   width: 100%;
   font-size: inherit;
   font-family: inherit;
-  color: var(--el-input-text-color,var(--el-text-color-regular));
-  background-color: var(--el-input-bg-color,var(--el-fill-color-blank));
+  color: var(--el-input-text-color, var(--el-text-color-regular));
+  background-color: var(--el-input-bg-color, var(--el-fill-color-blank));
   background-image: none;
   -webkit-appearance: none;
-  box-shadow: 0 0 0 1px var(--el-input-border-color,var(--el-border-color)) inset;
-  border-radius: var(--el-input-border-radius,var(--el-border-radius-base));
+  box-shadow: 0 0 0 1px var(--el-input-border-color, var(--el-border-color)) inset;
+  border-radius: var(--el-input-border-radius, var(--el-border-radius-base));
   transition: var(--el-transition-box-shadow);
   border: none
 }
 
 .el-textarea__inner::placeholder {
-  color: var(--el-input-placeholder-color,var(--el-text-color-placeholder))
+  color: var(--el-input-placeholder-color, var(--el-text-color-placeholder))
 }
 
 .el-textarea__inner:hover {
@@ -1640,13 +1750,15 @@
   width: 6px
 }
 
-.el-input .el-input__clear,.el-input .el-input__password {
+.el-input .el-input__clear,
+.el-input .el-input__password {
   color: var(--el-input-icon-color);
   font-size: 14px;
   cursor: pointer
 }
 
-.el-input .el-input__clear:hover,.el-input .el-input__password:hover {
+.el-input .el-input__clear:hover,
+.el-input .el-input__password:hover {
   color: var(--el-input-clear-hover-color)
 }
 
@@ -1671,12 +1783,12 @@
   align-items: center;
   justify-content: center;
   padding: 1px 11px;
-  background-color: var(--el-input-bg-color,var(--el-fill-color-blank));
+  background-color: var(--el-input-bg-color, var(--el-fill-color-blank));
   background-image: none;
-  border-radius: var(--el-input-border-radius,var(--el-border-radius-base));
+  border-radius: var(--el-input-border-radius, var(--el-border-radius-base));
   transition: var(--el-transition-box-shadow);
   transform: translateZ(0);
-  box-shadow: 0 0 0 1px var(--el-input-border-color,var(--el-border-color)) inset
+  box-shadow: 0 0 0 1px var(--el-input-border-color, var(--el-border-color)) inset
 }
 
 .el-input__wrapper:hover {
@@ -1692,7 +1804,7 @@
   width: 100%;
   flex-grow: 1;
   -webkit-appearance: none;
-  color: var(--el-input-text-color,var(--el-text-color-regular));
+  color: var(--el-input-text-color, var(--el-text-color-regular));
   font-size: inherit;
   height: var(--el-input-inner-height);
   line-height: var(--el-input-inner-height);
@@ -1708,7 +1820,7 @@
 }
 
 .el-input__inner::placeholder {
-  color: var(--el-input-placeholder-color,var(--el-text-color-placeholder))
+  color: var(--el-input-placeholder-color, var(--el-text-color-placeholder))
 }
 
 .el-input__inner[type=password]::-ms-reveal {
@@ -1722,7 +1834,7 @@
   flex-wrap: nowrap;
   height: 100%;
   text-align: center;
-  color: var(--el-input-icon-color,var(--el-text-color-placeholder));
+  color: var(--el-input-icon-color, var(--el-text-color-placeholder));
   transition: all var(--el-transition-duration);
   pointer-events: none
 }
@@ -1738,7 +1850,8 @@
   margin-right: 8px
 }
 
-.el-input__prefix-inner>:first-child,.el-input__prefix-inner>:first-child.el-input__icon {
+.el-input__prefix-inner>:first-child,
+.el-input__prefix-inner>:first-child.el-input__icon {
   margin-left: 0
 }
 
@@ -1749,7 +1862,7 @@
   flex-wrap: nowrap;
   height: 100%;
   text-align: center;
-  color: var(--el-input-icon-color,var(--el-text-color-placeholder));
+  color: var(--el-input-icon-color, var(--el-text-color-placeholder));
   transition: all var(--el-transition-duration);
   pointer-events: none
 }
@@ -1780,7 +1893,7 @@
 }
 
 .el-input.is-active .el-input__wrapper {
-  box-shadow: 0 0 0 1px var(--el-input-focus-color,) inset
+  box-shadow: 0 0 0 1px var(--el-input-focus-color, ) inset
 }
 
 .el-input.is-disabled {
@@ -1846,7 +1959,8 @@
   align-items: stretch
 }
 
-.el-input-group__append,.el-input-group__prepend {
+.el-input-group__append,
+.el-input-group__prepend {
   background-color: var(--el-fill-color-light);
   color: var(--el-color-info);
   position: relative;
@@ -1859,22 +1973,36 @@
   white-space: nowrap
 }
 
-.el-input-group__append:focus,.el-input-group__prepend:focus {
+.el-input-group__append:focus,
+.el-input-group__prepend:focus {
   outline: 0
 }
 
-.el-input-group__append .el-button,.el-input-group__append .el-select,.el-input-group__prepend .el-button,.el-input-group__prepend .el-select {
+.el-input-group__append .el-button,
+.el-input-group__append .el-select,
+.el-input-group__prepend .el-button,
+.el-input-group__prepend .el-select {
   display: inline-block;
   margin: 0 -20px
 }
 
-.el-input-group__append button.el-button,.el-input-group__append button.el-button:hover,.el-input-group__append div.el-select .el-input__wrapper,.el-input-group__append div.el-select:hover .el-input__wrapper,.el-input-group__prepend button.el-button,.el-input-group__prepend button.el-button:hover,.el-input-group__prepend div.el-select .el-input__wrapper,.el-input-group__prepend div.el-select:hover .el-input__wrapper {
+.el-input-group__append button.el-button,
+.el-input-group__append button.el-button:hover,
+.el-input-group__append div.el-select .el-input__wrapper,
+.el-input-group__append div.el-select:hover .el-input__wrapper,
+.el-input-group__prepend button.el-button,
+.el-input-group__prepend button.el-button:hover,
+.el-input-group__prepend div.el-select .el-input__wrapper,
+.el-input-group__prepend div.el-select:hover .el-input__wrapper {
   border-color: transparent;
   background-color: transparent;
   color: inherit
 }
 
-.el-input-group__append .el-button,.el-input-group__append .el-input,.el-input-group__prepend .el-button,.el-input-group__prepend .el-input {
+.el-input-group__append .el-button,
+.el-input-group__append .el-input,
+.el-input-group__prepend .el-button,
+.el-input-group__prepend .el-input {
   font-size: inherit
 }
 
@@ -1882,14 +2010,14 @@
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow: 1px 0 0 0 var(--el-input-border-color) inset,0 1px 0 0 var(--el-input-border-color) inset,0 -1px 0 0 var(--el-input-border-color) inset
+  box-shadow: 1px 0 0 0 var(--el-input-border-color) inset, 0 1px 0 0 var(--el-input-border-color) inset, 0 -1px 0 0 var(--el-input-border-color) inset
 }
 
 .el-input-group__append {
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  box-shadow: 0 1px 0 0 var(--el-input-border-color) inset,0 -1px 0 0 var(--el-input-border-color) inset,-1px 0 0 0 var(--el-input-border-color) inset
+  box-shadow: 0 1px 0 0 var(--el-input-border-color) inset, 0 -1px 0 0 var(--el-input-border-color) inset, -1px 0 0 0 var(--el-input-border-color) inset
 }
 
 .el-input-group--prepend>.el-input__wrapper {
@@ -1898,37 +2026,37 @@
 }
 
 .el-input-group--prepend .el-input-group__prepend .el-select .el-input .el-input__inner {
-  box-shadow: none!important
+  box-shadow: none !important
 }
 
 .el-input-group--prepend .el-input-group__prepend .el-select .el-input .el-input__wrapper {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow: 1px 0 0 0 var(--el-input-border-color) inset,0 1px 0 0 var(--el-input-border-color) inset,0 -1px 0 0 var(--el-input-border-color) inset
+  box-shadow: 1px 0 0 0 var(--el-input-border-color) inset, 0 1px 0 0 var(--el-input-border-color) inset, 0 -1px 0 0 var(--el-input-border-color) inset
 }
 
 .el-input-group--prepend .el-input-group__prepend .el-select .el-input.is-focus .el-input__inner {
-  box-shadow: none!important
+  box-shadow: none !important
 }
 
 .el-input-group--prepend .el-input-group__prepend .el-select .el-input.is-focus .el-input__wrapper {
-  box-shadow: 1px 0 0 0 var(--el-input-focus-border-color) inset,1px 0 0 0 var(--el-input-focus-border-color),0 1px 0 0 var(--el-input-focus-border-color) inset,0 -1px 0 0 var(--el-input-focus-border-color) inset!important;
+  box-shadow: 1px 0 0 0 var(--el-input-focus-border-color) inset, 1px 0 0 0 var(--el-input-focus-border-color), 0 1px 0 0 var(--el-input-focus-border-color) inset, 0 -1px 0 0 var(--el-input-focus-border-color) inset !important;
   z-index: 2
 }
 
 .el-input-group--prepend .el-input-group__prepend .el-select .el-input.is-focus .el-input__wrapper:focus {
   outline: 0;
   z-index: 2;
-  box-shadow: 1px 0 0 0 var(--el-input-focus-border-color) inset,1px 0 0 0 var(--el-input-focus-border-color),0 1px 0 0 var(--el-input-focus-border-color) inset,0 -1px 0 0 var(--el-input-focus-border-color) inset!important
+  box-shadow: 1px 0 0 0 var(--el-input-focus-border-color) inset, 1px 0 0 0 var(--el-input-focus-border-color), 0 1px 0 0 var(--el-input-focus-border-color) inset, 0 -1px 0 0 var(--el-input-focus-border-color) inset !important
 }
 
 .el-input-group--prepend .el-input-group__prepend .el-select:hover .el-input__inner {
-  box-shadow: none!important
+  box-shadow: none !important
 }
 
 .el-input-group--prepend .el-input-group__prepend .el-select:hover .el-input__wrapper {
   z-index: 1;
-  box-shadow: 1px 0 0 0 var(--el-input-hover-border-color) inset,1px 0 0 0 var(--el-input-hover-border-color),0 1px 0 0 var(--el-input-hover-border-color) inset,0 -1px 0 0 var(--el-input-hover-border-color) inset!important
+  box-shadow: 1px 0 0 0 var(--el-input-hover-border-color) inset, 1px 0 0 0 var(--el-input-hover-border-color), 0 1px 0 0 var(--el-input-hover-border-color) inset, 0 -1px 0 0 var(--el-input-hover-border-color) inset !important
 }
 
 .el-input-group--append>.el-input__wrapper {
@@ -1937,31 +2065,31 @@
 }
 
 .el-input-group--append .el-input-group__append .el-select .el-input .el-input__inner {
-  box-shadow: none!important
+  box-shadow: none !important
 }
 
 .el-input-group--append .el-input-group__append .el-select .el-input .el-input__wrapper {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  box-shadow: 0 1px 0 0 var(--el-input-border-color) inset,0 -1px 0 0 var(--el-input-border-color) inset,-1px 0 0 0 var(--el-input-border-color) inset
+  box-shadow: 0 1px 0 0 var(--el-input-border-color) inset, 0 -1px 0 0 var(--el-input-border-color) inset, -1px 0 0 0 var(--el-input-border-color) inset
 }
 
 .el-input-group--append .el-input-group__append .el-select .el-input.is-focus .el-input__inner {
-  box-shadow: none!important
+  box-shadow: none !important
 }
 
 .el-input-group--append .el-input-group__append .el-select .el-input.is-focus .el-input__wrapper {
   z-index: 2;
-  box-shadow: -1px 0 0 0 var(--el-input-focus-border-color),-1px 0 0 0 var(--el-input-focus-border-color) inset,0 1px 0 0 var(--el-input-focus-border-color) inset,0 -1px 0 0 var(--el-input-focus-border-color) inset!important
+  box-shadow: -1px 0 0 0 var(--el-input-focus-border-color), -1px 0 0 0 var(--el-input-focus-border-color) inset, 0 1px 0 0 var(--el-input-focus-border-color) inset, 0 -1px 0 0 var(--el-input-focus-border-color) inset !important
 }
 
 .el-input-group--append .el-input-group__append .el-select:hover .el-input__inner {
-  box-shadow: none!important
+  box-shadow: none !important
 }
 
 .el-input-group--append .el-input-group__append .el-select:hover .el-input__wrapper {
   z-index: 1;
-  box-shadow: -1px 0 0 0 var(--el-input-hover-border-color),-1px 0 0 0 var(--el-input-hover-border-color) inset,0 1px 0 0 var(--el-input-hover-border-color) inset,0 -1px 0 0 var(--el-input-hover-border-color) inset!important
+  box-shadow: -1px 0 0 0 var(--el-input-hover-border-color), -1px 0 0 0 var(--el-input-hover-border-color) inset, 0 1px 0 0 var(--el-input-hover-border-color) inset, 0 -1px 0 0 var(--el-input-hover-border-color) inset !important
 }
 
 .el-overlay {
@@ -2070,7 +2198,7 @@
   top: 20px;
   transform: translate(-50%);
   background-color: var(--el-message-bg-color);
-  transition: opacity var(--el-transition-duration),transform .4s,top .4s;
+  transition: opacity var(--el-transition-duration), transform .4s, top .4s;
   padding: var(--el-message-padding);
   display: flex;
   align-items: center
@@ -2186,9 +2314,10 @@
   color: var(--el-message-close-hover-color)
 }
 
-.el-message-fade-enter-from,.el-message-fade-leave-to {
+.el-message-fade-enter-from,
+.el-message-fade-leave-to {
   opacity: 0;
-  transform: translate(-50%,-100%)
+  transform: translate(-50%, -100%)
 }
 
 .el-checkbox {
@@ -2377,7 +2506,7 @@
   height: var(--el-checkbox-input-height);
   background-color: var(--el-checkbox-bg-color);
   z-index: var(--el-index-normal);
-  transition: border-color .25s cubic-bezier(.71,-.46,.29,1.46),background-color .25s cubic-bezier(.71,-.46,.29,1.46),outline .25s cubic-bezier(.71,-.46,.29,1.46)
+  transition: border-color .25s cubic-bezier(.71, -.46, .29, 1.46), background-color .25s cubic-bezier(.71, -.46, .29, 1.46), outline .25s cubic-bezier(.71, -.46, .29, 1.46)
 }
 
 .el-checkbox__inner:hover {
@@ -2461,7 +2590,8 @@
   vertical-align: middle
 }
 
-.el-button-group:after,.el-button-group:before {
+.el-button-group:after,
+.el-button-group:before {
   display: table;
   content: ""
 }
@@ -2512,7 +2642,9 @@
   margin-right: -1px
 }
 
-.el-button-group>.el-button:active,.el-button-group>.el-button:focus,.el-button-group>.el-button:hover {
+.el-button-group>.el-button:active,
+.el-button-group>.el-button:focus,
+.el-button-group>.el-button:hover {
   z-index: 1
 }
 
@@ -2624,14 +2756,14 @@
   height: 0;
   cursor: pointer;
   border-radius: inherit;
-  background-color: var(--el-scrollbar-bg-color,var(--el-text-color-secondary));
+  background-color: var(--el-scrollbar-bg-color, var(--el-text-color-secondary));
   transition: var(--el-transition-duration) background-color;
-  opacity: var(--el-scrollbar-opacity,.3)
+  opacity: var(--el-scrollbar-opacity, .3)
 }
 
 .el-scrollbar__thumb:hover {
-  background-color: var(--el-scrollbar-hover-bg-color,var(--el-text-color-secondary));
-  opacity: var(--el-scrollbar-hover-opacity,.5)
+  background-color: var(--el-scrollbar-hover-bg-color, var(--el-text-color-secondary));
+  opacity: var(--el-scrollbar-hover-opacity, .5)
 }
 
 .el-scrollbar__bar {
@@ -2668,7 +2800,8 @@
   transition: opacity .12s ease-out
 }
 
-.el-scrollbar-fade-enter-from,.el-scrollbar-fade-leave-active {
+.el-scrollbar-fade-enter-from,
+.el-scrollbar-fade-leave-active {
   opacity: 0
 }
 
@@ -2872,7 +3005,8 @@
   transition: opacity .4s ease
 }
 
-.v-enter-from[data-v-b8c33039],.v-leave-to[data-v-b8c33039] {
+.v-enter-from[data-v-b8c33039],
+.v-leave-to[data-v-b8c33039] {
   opacity: 0
 }
 
@@ -2884,26 +3018,36 @@
 }
 
 body.el-popup-parent--hidden {
-  padding-right: 0!important
+  padding-right: 0 !important
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Roboto,Avenir,Helvetica,Arial,sans-serif
+  font-family: Roboto, Avenir, Helvetica, Arial, sans-serif
 }
 
 a {
   text-decoration: none
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   vertical-align: middle;
   color: var(--el-color-secondary)
 }
 
-h1>p,h2>p,h3>p,h4>p,h5>p,h6>p {
+h1>p,
+h2>p,
+h3>p,
+h4>p,
+h5>p,
+h6>p {
   color: inherit;
   font: inherit
 }
@@ -2925,8 +3069,8 @@ h1 span.latest {
 
 @media only screen and (max-width: 768px) {
   h1 span.latest {
-      display:block;
-      margin: 5px 0 0
+    display: block;
+    margin: 5px 0 0
   }
 }
 
@@ -2971,32 +3115,32 @@ h3 .icon-lightning img {
 }
 
 .w-140 {
-  width: 140px!important
+  width: 140px !important
 }
 
 .w-180 {
-  width: 180px!important
+  width: 180px !important
 }
 
 .w-240 {
-  width: 240px!important
+  width: 240px !important
 }
 
 .w-280 {
-  width: 280px!important
+  width: 280px !important
 }
 
 .w-360 {
-  width: 360px!important
+  width: 360px !important
 }
 
 .w-380 {
-  width: 370px!important
+  width: 370px !important
 }
 
 @media only screen and (max-width: 428px) {
   .w-380 {
-      width:100%!important
+    width: 100% !important
   }
 }
 
@@ -3059,7 +3203,8 @@ h3 .icon-lightning img {
   cursor: pointer
 }
 
-.currency,.houseTag {
+.currency,
+.houseTag {
   box-sizing: border-box;
   padding: 1px 5px;
   border-radius: 4px;
@@ -3070,12 +3215,13 @@ h3 .icon-lightning img {
   margin-bottom: 5px
 }
 
-.currency:not(:last-child),.houseTag:not(:last-child) {
+.currency:not(:last-child),
+.houseTag:not(:last-child) {
   margin-right: 5px
 }
 
 .currency {
-  background-color: rgba(var(--el-color-tertiary-rgb),.1);
+  background-color: rgba(var(--el-color-tertiary-rgb), .1);
   color: var(--el-text-color-secondary)
 }
 
@@ -3091,56 +3237,55 @@ h3 .icon-lightning img {
   --el-color-primary-light-7: #f8ecc7;
   --el-color-primary-light-9: #fdf9ec;
   --el-color-primary-dark-2: #b99836;
-  --el-color-primary-rgb: 231,190,67;
   --el-color-text: #30342F;
   --el-color-text-light-3: #6e716d;
   --el-color-text-light-5: #989a97;
   --el-color-text-light-7: #c1c2c1;
   --el-color-text-light-9: #eaebea;
   --el-color-text-dark-2: #262a26;
-  --el-color-text-rgb: 48,52,47;
+  --el-color-text-rgb: 48, 52, 47;
   --el-color-secondary: #432302;
   --el-color-secondary-light-3: #7b654e;
   --el-color-secondary-light-5: #a19181;
   --el-color-secondary-light-7: #c7bdb3;
   --el-color-secondary-light-9: #ece9e6;
   --el-color-secondary-dark-2: #361c02;
-  --el-color-secondary-rgb: 67,35,2;
+  --el-color-secondary-rgb: 67, 35, 2;
   --el-color-tertiary: #2d2018;
   --el-color-tertiary-light-3: #6c635d;
   --el-color-tertiary-light-5: #96908c;
   --el-color-tertiary-light-7: #c0bcba;
   --el-color-tertiary-light-9: #eae9e8;
   --el-color-tertiary-dark-2: #241a13;
-  --el-color-tertiary-rgb: 45,32,24;
+  --el-color-tertiary-rgb: 45, 32, 24;
   --el-color-gray: #191919;
   --el-color-gray-light-3: #5e5e5e;
   --el-color-gray-light-5: #8c8c8c;
   --el-color-gray-light-7: #bababa;
   --el-color-gray-light-9: #e8e8e8;
   --el-color-gray-dark-2: #141414;
-  --el-color-gray-rgb: 25,25,25;
+  --el-color-gray-rgb: 25, 25, 25;
   --el-color-red: #F56C6C;
   --el-color-red-light-3: #f89898;
   --el-color-red-light-5: #fab6b6;
   --el-color-red-light-7: #fcd3d3;
   --el-color-red-light-9: #fef0f0;
   --el-color-red-dark-2: #c45656;
-  --el-color-red-rgb: 245,108,108;
+  --el-color-red-rgb: 245, 108, 108;
   --el-color-green: #6BAF3E;
   --el-color-green-light-3: #97c778;
   --el-color-green-light-5: #b5d79f;
   --el-color-green-light-7: #d3e7c5;
   --el-color-green-light-9: #f0f7ec;
   --el-color-green-dark-2: #568c32;
-  --el-color-green-rgb: 107,175,62;
+  --el-color-green-rgb: 107, 175, 62;
   --el-color-blue: #71A1D3;
   --el-color-blue-light-3: #9cbde0;
   --el-color-blue-light-5: #b8d0e9;
   --el-color-blue-light-7: #d4e3f2;
   --el-color-blue-light-9: #f1f6fb;
   --el-color-blue-dark-2: #5a81a9;
-  --el-color-blue-rgb: 113,161,211;
+  --el-color-blue-rgb: 113, 161, 211;
   --el-text-color-regular: #30342F;
   --el-text-color-secondary: #595d59;
   --el-text-color-placeholder: #989a97;
@@ -3167,16 +3312,17 @@ h3 .icon-lightning img {
   color: var(--el-text-color-regular)
 }
 
-.color-red,.negative-number {
-  color: var(--el-color-red)!important
+.color-red,
+.negative-number {
+  color: var(--el-color-red) !important
 }
 
 .color-green {
-  color: var(--el-color-green)!important
+  color: var(--el-color-green) !important
 }
 
 .color-blue {
-  color: var(--el-color-blue)!important
+  color: var(--el-color-blue) !important
 }
 
 [class^=gametype] {
@@ -3263,11 +3409,13 @@ h3 .icon-lightning img {
   font-weight: 700
 }
 
-.gametype-live,.gametype-virtual {
+.gametype-live,
+.gametype-virtual {
   color: #af4949
 }
 
-.gametype-fishing,.gametype-fh {
+.gametype-fishing,
+.gametype-fh {
   color: #b48234
 }
 
@@ -3301,7 +3449,7 @@ h3 .icon-lightning img {
   font-family: Roboto;
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format("woff2");
   font-display: swap;
-  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
 }
 
 @font-face {
@@ -3310,7 +3458,7 @@ h3 .icon-lightning img {
   font-family: Roboto;
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format("woff2");
   font-display: swap;
-  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
 }
 
 @font-face {
@@ -3337,7 +3485,7 @@ h3 .icon-lightning img {
   font-family: Roboto;
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format("woff2");
   font-display: swap;
-  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB
 }
 
 @font-face {
@@ -3346,7 +3494,7 @@ h3 .icon-lightning img {
   font-family: Roboto;
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format("woff2");
   font-display: swap;
-  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
 }
 
 @font-face {
@@ -3355,13 +3503,13 @@ h3 .icon-lightning img {
   font-family: Roboto;
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format("woff2");
   font-display: swap;
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
 }
 
 @font-face {
   font-weight: 400;
   font-family: Montserrat;
-  src: local("Montserrat"),url(/assets/Montserrat-Regular-c3fb0280.ttf);
+  src: local("Montserrat"), url(/assets/Montserrat-Regular-c3fb0280.ttf);
   font-display: swap
 }
 
@@ -3369,7 +3517,7 @@ h3 .icon-lightning img {
   font-weight: 400;
   font-style: normal;
   font-family: Bebas Neue;
-  src: local("Bebas Neue"),url(/assets/BebasNeue-Regular-830ea186.ttf);
+  src: local("Bebas Neue"), url(/assets/BebasNeue-Regular-830ea186.ttf);
   font-display: swap
 }
 
@@ -3380,38 +3528,53 @@ h3 .icon-lightning img {
   --el-color-primary-light-7: #f2e9d1;
   --el-color-primary-light-9: #fbf8f0;
   --el-color-primary-dark-2: #aa9151;
-  --el-color-primary-rgb: 213,181,101;
   --el-color-secondary: #CB1017;
   --el-color-secondary-light-3: #db585d;
   --el-color-secondary-light-5: #e5888b;
   --el-color-secondary-light-7: #efb7b9;
   --el-color-secondary-light-9: #fae7e8;
   --el-color-secondary-dark-2: #a20d12;
-  --el-color-secondary-rgb: 203,16,23;
+  --el-color-secondary-rgb: 203, 16, 23;
   --el-color-tertiary: #094943;
   --el-color-tertiary-light-3: #53807b;
   --el-color-tertiary-light-5: #84a4a1;
   --el-color-tertiary-light-7: #b5c8c7;
   --el-color-tertiary-light-9: #e6edec;
   --el-color-tertiary-dark-2: #073a36;
-  --el-color-tertiary-rgb: 9,73,67;
+  --el-color-tertiary-rgb: 9, 73, 67;
   --el-bg-color: #FFFFFF;
   --el-bg-color-page: #F0EEE8
 }
 
-.theme-in2 :where(p,span) {
+.theme-in2 :where(p, span) {
   font-weight: 500
 }
 
-.theme-in2 h1,.theme-in2 h2,.theme-in2 h3,.theme-in2 h4,.theme-in2 h5,.theme-in2 h6 {
+.theme-in2 h1,
+.theme-in2 h2,
+.theme-in2 h3,
+.theme-in2 h4,
+.theme-in2 h5,
+.theme-in2 h6 {
   color: var(--el-color-tertiary);
   font-weight: bolder;
-  font-family: Bebas Neue,sans-serif;
+  font-family: Bebas Neue, sans-serif;
   line-height: 1;
   letter-spacing: .05em
 }
 
-.theme-in2 h1 p,.theme-in2 h1 span,.theme-in2 h2 p,.theme-in2 h2 span,.theme-in2 h3 p,.theme-in2 h3 span,.theme-in2 h4 p,.theme-in2 h4 span,.theme-in2 h5 p,.theme-in2 h5 span,.theme-in2 h6 p,.theme-in2 h6 span {
+.theme-in2 h1 p,
+.theme-in2 h1 span,
+.theme-in2 h2 p,
+.theme-in2 h2 span,
+.theme-in2 h3 p,
+.theme-in2 h3 span,
+.theme-in2 h4 p,
+.theme-in2 h4 span,
+.theme-in2 h5 p,
+.theme-in2 h5 span,
+.theme-in2 h6 p,
+.theme-in2 h6 span {
   color: inherit;
   font: inherit
 }
@@ -3433,8 +3596,8 @@ h3 .icon-lightning img {
 
 .theme-in2 .login-logo {
   margin-bottom: 35px;
-  -webkit-filter: drop-shadow(0 3px 3px rgba(0,0,0,.85));
-  filter: drop-shadow(0 3px 3px rgba(0,0,0,.85))
+  -webkit-filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .85));
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .85))
 }
 
 .theme-in2 .header-bar .header-bar-logo img {
@@ -3448,13 +3611,13 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 375px) {
   .theme-in2 .header-bar .header-bar-logo {
-      width:34px
+    width: 34px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .theme-in2 .header-bar .header-bar-logo {
-      width:41px
+    width: 41px
   }
 }
 
@@ -3477,37 +3640,52 @@ h3 .icon-lightning img {
   --el-color-primary-light-7: #ede4c7;
   --el-color-primary-light-9: #f9f6ec;
   --el-color-primary-dark-2: #9d8337;
-  --el-color-primary-rgb: 196,164,69;
   --el-color-secondary: #CB1017;
   --el-color-secondary-light-3: #db585d;
   --el-color-secondary-light-5: #e5888b;
   --el-color-secondary-light-7: #efb7b9;
   --el-color-secondary-light-9: #fae7e8;
   --el-color-secondary-dark-2: #a20d12;
-  --el-color-secondary-rgb: 203,16,23;
+  --el-color-secondary-rgb: 203, 16, 23;
   --el-color-tertiary: #323B96;
   --el-color-tertiary-light-3: #7076b6;
   --el-color-tertiary-light-5: #999dcb;
   --el-color-tertiary-light-7: #c2c4e0;
   --el-color-tertiary-light-9: #ebebf5;
   --el-color-tertiary-dark-2: #282f78;
-  --el-color-tertiary-rgb: 50,59,150;
+  --el-color-tertiary-rgb: 50, 59, 150;
   --el-bg-color: #FFFFFF;
   --el-bg-color-page: #F5F6FF;
   --el-fill-color-light: var(--el-color-tertiary-light-9)
 }
 
-.theme-sana :where(p,span) {
+.theme-sana :where(p, span) {
   font-weight: 500
 }
 
-.theme-sana h1,.theme-sana h2,.theme-sana h3,.theme-sana h4,.theme-sana h5,.theme-sana h6 {
+.theme-sana h1,
+.theme-sana h2,
+.theme-sana h3,
+.theme-sana h4,
+.theme-sana h5,
+.theme-sana h6 {
   color: var(--el-color-tertiary);
   font-weight: bolder;
   line-height: 1
 }
 
-.theme-sana h1 p,.theme-sana h1 span,.theme-sana h2 p,.theme-sana h2 span,.theme-sana h3 p,.theme-sana h3 span,.theme-sana h4 p,.theme-sana h4 span,.theme-sana h5 p,.theme-sana h5 span,.theme-sana h6 p,.theme-sana h6 span {
+.theme-sana h1 p,
+.theme-sana h1 span,
+.theme-sana h2 p,
+.theme-sana h2 span,
+.theme-sana h3 p,
+.theme-sana h3 span,
+.theme-sana h4 p,
+.theme-sana h4 span,
+.theme-sana h5 p,
+.theme-sana h5 span,
+.theme-sana h6 p,
+.theme-sana h6 span {
   color: inherit;
   font: inherit
 }
@@ -3527,12 +3705,14 @@ h3 .icon-lightning img {
   font-size: 18px
 }
 
-.theme-sana .login-wrapper,.theme-sana .otp-wrapper {
+.theme-sana .login-wrapper,
+.theme-sana .otp-wrapper {
   --login-wrapper-parttern-width: 300px;
   background: #FFFFFF
 }
 
-.theme-sana .login-wrapper .parttern,.theme-sana .otp-wrapper .parttern {
+.theme-sana .login-wrapper .parttern,
+.theme-sana .otp-wrapper .parttern {
   width: var(--login-wrapper-parttern-width);
   background: url(/assets/bg_pattern-sana-color-d1335665.png) top left repeat;
   background-color: var(--el-color-tertiary);
@@ -3540,61 +3720,80 @@ h3 .icon-lightning img {
   background-blend-mode: luminosity
 }
 
-.theme-sana .login-wrapper .parttern:after,.theme-sana .otp-wrapper .parttern:after {
+.theme-sana .login-wrapper .parttern:after,
+.theme-sana .otp-wrapper .parttern:after {
   display: none
 }
 
-.theme-sana .login-wrapper .frame,.theme-sana .otp-wrapper .frame {
+.theme-sana .login-wrapper .frame,
+.theme-sana .otp-wrapper .frame {
   padding-left: var(--login-wrapper-parttern-width);
   border: 0;
   background: transparent
 }
 
-.theme-sana .login-wrapper .login,.theme-sana .otp-wrapper .login,.theme-sana .login-wrapper .otp,.theme-sana .otp-wrapper .otp {
+.theme-sana .login-wrapper .login,
+.theme-sana .otp-wrapper .login,
+.theme-sana .login-wrapper .otp,
+.theme-sana .otp-wrapper .otp {
   border: 0;
   background: transparent
 }
 
 @media only screen and (max-width: 768px) {
-  .theme-sana .login-wrapper,.theme-sana .otp-wrapper {
-      --login-wrapper-parttern-width: 30vw
+
+  .theme-sana .login-wrapper,
+  .theme-sana .otp-wrapper {
+    --login-wrapper-parttern-width: 30vw
   }
 }
 
 @media only screen and (max-width: 428px) {
-  .theme-sana .login-wrapper .frame,.theme-sana .otp-wrapper .frame {
-      align-items:center;
-      padding-left: 0
+
+  .theme-sana .login-wrapper .frame,
+  .theme-sana .otp-wrapper .frame {
+    align-items: center;
+    padding-left: 0
   }
 
-  .theme-sana .login-wrapper .parttern,.theme-sana .otp-wrapper .parttern {
-      top: auto;
-      bottom: 0;
-      width: 100vw;
-      background-size: 25%
+  .theme-sana .login-wrapper .parttern,
+  .theme-sana .otp-wrapper .parttern {
+    top: auto;
+    bottom: 0;
+    width: 100vw;
+    background-size: 25%
   }
 }
 
-.theme-sana .otp-wrapper .otp .otp-logo,.theme-sana .otp-wrapper .otp .login-logo,.theme-sana .login-wrapper .login .otp-logo,.theme-sana .login-wrapper .login .login-logo {
+.theme-sana .otp-wrapper .otp .otp-logo,
+.theme-sana .otp-wrapper .otp .login-logo,
+.theme-sana .login-wrapper .login .otp-logo,
+.theme-sana .login-wrapper .login .login-logo {
   height: 80px;
   margin-bottom: 15px;
   background: url(/assets/logo-sana-black-txt-bd53f6dc.png) no-repeat center center;
   background-size: contain
 }
 
-.theme-sana .otp-wrapper .otp .otp-logo img,.theme-sana .otp-wrapper .otp .login-logo img,.theme-sana .login-wrapper .login .otp-logo img,.theme-sana .login-wrapper .login .login-logo img {
+.theme-sana .otp-wrapper .otp .otp-logo img,
+.theme-sana .otp-wrapper .otp .login-logo img,
+.theme-sana .login-wrapper .login .otp-logo img,
+.theme-sana .login-wrapper .login .login-logo img {
   display: none
 }
 
-.theme-sana .otp-wrapper .otp .el-card__body,.theme-sana .login-wrapper .login .el-card__body {
+.theme-sana .otp-wrapper .otp .el-card__body,
+.theme-sana .login-wrapper .login .el-card__body {
   border: 0;
   border-radius: 10px;
   background: #FFFFFF
 }
 
 @media only screen and (max-width: 428px) {
-  .theme-sana .otp-wrapper .otp .el-card__body,.theme-sana .login-wrapper .login .el-card__body {
-      box-shadow:0 2px 5px #00000073
+
+  .theme-sana .otp-wrapper .otp .el-card__body,
+  .theme-sana .login-wrapper .login .el-card__body {
+    box-shadow: 0 2px 5px #00000073
   }
 }
 
@@ -3609,7 +3808,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .theme-sana .header-bar .header-bar-logo {
-      width:35px
+    width: 35px
   }
 }
 
@@ -3625,16 +3824,18 @@ h3 .icon-lightning img {
   box-shadow: 0 5px 10px #00000026
 }
 
-.theme-sana .menuController .el-checkbox__label:after,.theme-sana .menuController .el-checkbox__label:before {
+.theme-sana .menuController .el-checkbox__label:after,
+.theme-sana .menuController .el-checkbox__label:before {
   background-color: #fff
 }
 
-.theme-sana .menuController.checkboxClose .el-checkbox__label:after,.theme-sana .menuController.checkboxClose .el-checkbox__label:before {
+.theme-sana .menuController.checkboxClose .el-checkbox__label:after,
+.theme-sana .menuController.checkboxClose .el-checkbox__label:before {
   background-color: var(--el-color-primary-light-5)
 }
 
 .theme-sana .asideMenu>.el-menu {
-  background: linear-gradient(to bottom,var(--el-color-tertiary) 40%,rgba(0,0,0,.25) 100%)
+  background: linear-gradient(to bottom, var(--el-color-tertiary) 40%, rgba(0, 0, 0, .25) 100%)
 }
 
 .theme-sana .asideMenu>.el-menu .el-sub-menu__title {
@@ -3656,7 +3857,8 @@ h3 .icon-lightning img {
   color: #fff
 }
 
-.theme-sana .asideMenu .el-menu-item:hover a,.theme-sana .asideMenu .el-menu-item.is-active a {
+.theme-sana .asideMenu .el-menu-item:hover a,
+.theme-sana .asideMenu .el-menu-item.is-active a {
   color: var(--el-color-primary-light-3)
 }
 
@@ -3684,7 +3886,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .box {
-      padding:20px
+    padding: 20px
   }
 }
 
@@ -3749,7 +3951,7 @@ h3 .icon-lightning img {
 }
 
 .box-data .el-table .el-button {
-  width: min(100px,100%);
+  width: min(100px, 100%);
   min-height: 30px;
   padding: 4px 8px;
   container-type: inline-size
@@ -3757,10 +3959,10 @@ h3 .icon-lightning img {
 
 @container (width < 65px) {
   .box-data .el-table .el-button span {
-      overflow: hidden;
-      width: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap
   }
 }
 
@@ -3825,7 +4027,8 @@ h3 .icon-lightning img {
   margin-left: -1px
 }
 
-.box-data .el-collapse .el-descriptions th,.box-data .el-collapse .el-descriptions td {
+.box-data .el-collapse .el-descriptions th,
+.box-data .el-collapse .el-descriptions td {
   padding: 4px 8px;
   border: 1px solid var(--el-bg-color-page)
 }
@@ -3835,11 +4038,13 @@ h3 .icon-lightning img {
   color: var(--el-color-gray)
 }
 
-.box-data .el-collapse .el-descriptions__label,.box-data .el-collapse .el-descriptions__content {
+.box-data .el-collapse .el-descriptions__label,
+.box-data .el-collapse .el-descriptions__content {
   height: 36px
 }
 
-.box-data .el-collapse .el-descriptions__label.is-left,.box-data .el-collapse .el-descriptions__content.is-left {
+.box-data .el-collapse .el-descriptions__label.is-left,
+.box-data .el-collapse .el-descriptions__content.is-left {
   width: auto
 }
 
@@ -3888,26 +4093,27 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .box-filter .w-100p {
-      justify-content:center
+    justify-content: center
   }
 
   .box-filter .w-100p:has(.box-filter_duration) {
-      justify-content: center
+    justify-content: center
   }
 
   .box-filter .w-100p .box-filter_duration {
-      flex: 1 0 100%
+    flex: 1 0 100%
   }
 
   .box-filter .w-100p .box-filter_duration .el-radio-group {
-      justify-content: center;
-      margin-bottom: 10px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--el-color-info-light-7)
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--el-color-info-light-7)
   }
 }
 
-.box-filter .el-form>.el-input,.box-filter .el-form>.el-select {
+.box-filter .el-form>.el-input,
+.box-filter .el-form>.el-select {
   margin-right: 10px
 }
 
@@ -3926,28 +4132,29 @@ h3 .icon-lightning img {
 }
 
 .box-filter .el-form--inline .el-form-item {
-  display: inline-flex!important;
-  flex: 0 1 min(var(--el-custom-datetimerange-width) / 2 - var(--el-custom-form-item-gap) / 2,100%);
+  display: inline-flex !important;
+  flex: 0 1 min(var(--el-custom-datetimerange-width) / 2 - var(--el-custom-form-item-gap) / 2, 100%);
   flex-wrap: wrap;
   margin: 0
 }
 
-.box-filter .el-form--inline .el-form-item__label,.box-filter .el-form--inline .el-form-item__content {
+.box-filter .el-form--inline .el-form-item__label,
+.box-filter .el-form--inline .el-form-item__content {
   flex: 1 0 100%
 }
 
 .box-filter .el-form--inline .el-form-item__label {
-  margin-bottom: 4px!important;
+  margin-bottom: 4px !important;
   font-weight: 700
 }
 
 @media only screen and (max-width: 768px) {
   .box-filter .el-form--inline {
-      --el-custom-datetimerange-width: 100%
+    --el-custom-datetimerange-width: 100%
   }
 
   .box-filter .el-form--inline .el-form-item {
-      flex: 1 0 50%
+    flex: 1 0 50%
   }
 }
 
@@ -3955,7 +4162,8 @@ h3 .icon-lightning img {
   margin: 0
 }
 
-.box-filter .el-form-item .el-input,.box-filter .el-form-item .el-select {
+.box-filter .el-form-item .el-input,
+.box-filter .el-form-item .el-select {
   width: 100%
 }
 
@@ -3975,7 +4183,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .box-filter .el-form-item {
-      width:100%!important
+    width: 100% !important
   }
 }
 
@@ -3989,29 +4197,31 @@ h3 .icon-lightning img {
   text-align: center
 }
 
-.box-filter .filter-picker .el-input__prefix-inner>:first-child,.box-filter .filter-picker .el-input__prefix-inner>:first-child.el-input__icon {
+.box-filter .filter-picker .el-input__prefix-inner>:first-child,
+.box-filter .filter-picker .el-input__prefix-inner>:first-child.el-input__icon {
   margin-left: 8px
 }
 
 .box-filter .filter-picker .el-date-editor .el-input__inner {
-  border: 0!important
+  border: 0 !important
 }
 
 @media only screen and (max-width: 428px) {
   .box-filter .filter-picker {
-      width:calc(100% - 20px)!important
+    width: calc(100% - 20px) !important
   }
 
   .box-filter .filter-picker+span {
-      width: 20px
+    width: 20px
   }
 
-  .box-filter .filter-picker .el-input__wrapper,.box-filter .filter-picker .el-input {
-      width: 100%!important
+  .box-filter .filter-picker .el-input__wrapper,
+  .box-filter .filter-picker .el-input {
+    width: 100% !important
   }
 
   .box-filter .filter-picker:first-child {
-      margin-bottom: 10px
+    margin-bottom: 10px
   }
 }
 
@@ -4060,16 +4270,16 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .box-filter_duration {
-      width:100%
+    width: 100%
   }
 
   .box-filter_duration .el-radio {
-      height: 36px;
-      padding: 8px
+    height: 36px;
+    padding: 8px
   }
 
   .box-filter_duration .el-radio__label {
-      line-height: 16px
+    line-height: 16px
   }
 }
 
@@ -4107,7 +4317,9 @@ h3 .icon-lightning img {
   width: 180px
 }
 
-.box-operate-display,.box-operate-pagination,.box-operate-btns {
+.box-operate-display,
+.box-operate-pagination,
+.box-operate-btns {
   position: relative;
   z-index: 2;
   float: right
@@ -4157,45 +4369,45 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 1024px) {
   .box-operate.isFixed {
-      padding:10px 30px
+    padding: 10px 30px
   }
 
   .box-operate-group p {
-      font-size: 14px
+    font-size: 14px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .box-operate {
-      height:auto
+    height: auto
   }
 
   .box-operate-display {
-      float: left;
-      margin-bottom: 10px
+    float: left;
+    margin-bottom: 10px
   }
 
   .box-operate-display>span {
-      display: none
+    display: none
   }
 
   .box-operate-pagination {
-      margin-bottom: 10px
+    margin-bottom: 10px
   }
 }
 
 @media only screen and (max-width: 428px) {
   .box-operate {
-      margin-bottom:10px
+    margin-bottom: 10px
   }
 
   .box-operate-currency {
-      display: block;
-      width: 100%
+    display: block;
+    width: 100%
   }
 
   .box-operate-betcount {
-      margin-top: 20px
+    margin-top: 20px
   }
 }
 
@@ -4205,7 +4417,8 @@ h3 .icon-lightning img {
   height: 100%
 }
 
-.box-currency,.box-prize {
+.box-currency,
+.box-prize {
   position: relative;
   display: table;
   box-sizing: border-box;
@@ -4229,7 +4442,8 @@ h3 .icon-lightning img {
 }
 
 .box-currency .el-icon {
-  margin-inline:12px}
+  margin-inline: 12px
+}
 
 .box-currency .el-dropdown {
   height: 100%
@@ -4240,7 +4454,7 @@ h3 .icon-lightning img {
   height: 100%;
   min-height: auto;
   padding: 0 0 0 12px;
-  background: transparent!important
+  background: transparent !important
 }
 
 .box-currency .el-dropdown .el-button:after {
@@ -4259,17 +4473,20 @@ h3 .icon-lightning img {
   color: #fff
 }
 
-.box-currency-sum,.box-currency_menu {
+.box-currency-sum,
+.box-currency_menu {
   position: relative;
   display: inline-block;
   font-weight: 700
 }
 
-.box-currency-sum em,.box-currency_menu em {
+.box-currency-sum em,
+.box-currency_menu em {
   font-style: normal
 }
 
-.box-currency-sum span,.box-currency_menu span {
+.box-currency-sum span,
+.box-currency_menu span {
   margin-left: 8px
 }
 
@@ -4278,7 +4495,7 @@ h3 .icon-lightning img {
 }
 
 .box-currency-sum span {
-  font-size: 18px!important
+  font-size: 18px !important
 }
 
 .box-currency_menu em {
@@ -4351,17 +4568,17 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 1024px) {
   .box.box-member-tree .box-filter .el-input--suffix {
-      flex:1 0 100%
+    flex: 1 0 100%
   }
 
   .box.box-member-tree .box-filter .el-select {
-      flex: 1 0 calc(50% - 10px)
+    flex: 1 0 calc(50% - 10px)
   }
 }
 
 @media only screen and (max-width: 768px) {
   .box.box-member-tree .box-filter .box-filter_btns {
-      justify-content:center
+    justify-content: center
   }
 }
 
@@ -4369,7 +4586,8 @@ h3 .icon-lightning img {
   cursor: pointer
 }
 
-.box.box-member-tree .box-level a.no-event,.box.box-member-tree .box-level a:after {
+.box.box-member-tree .box-level a.no-event,
+.box.box-member-tree .box-level a:after {
   pointer-events: none
 }
 
@@ -4405,8 +4623,8 @@ h3 .icon-lightning img {
 
 @media screen and (max-width: 480px) {
   .box.box-member-iframe h1 p {
-      display:block;
-      margin: 12px 0
+    display: block;
+    margin: 12px 0
   }
 }
 
@@ -4425,10 +4643,11 @@ h3 .icon-lightning img {
 }
 
 .box.box-member-iframe .slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1,.5,.8,1)
+  transition: all .3s cubic-bezier(1, .5, .8, 1)
 }
 
-.box.box-member-iframe .slide-fade-enter-from,.box.box-member-iframe .slide-fade-leave-to {
+.box.box-member-iframe .slide-fade-enter-from,
+.box.box-member-iframe .slide-fade-leave-to {
   opacity: 0;
   -webkit-transform: translateX(50px);
   transform: translate(50px)
@@ -4451,25 +4670,38 @@ h3 .icon-lightning img {
   text-align: right
 }
 
-.box.box-outstanding-summary .el-select,.box.box-outstanding-summary .el-input--suffix,.box.box-outstanding-summary .el-cascader,.box.box-promotion-report .el-select,.box.box-promotion-report .el-input--suffix,.box.box-promotion-report .el-cascader {
-  flex: 0 0 min(180px,50% - 5px);
+.box.box-outstanding-summary .el-select,
+.box.box-outstanding-summary .el-input--suffix,
+.box.box-outstanding-summary .el-cascader,
+.box.box-promotion-report .el-select,
+.box.box-promotion-report .el-input--suffix,
+.box.box-promotion-report .el-cascader {
+  flex: 0 0 min(180px, 50% - 5px);
   margin-right: 0
 }
 
 @media only screen and (max-width: 768px) {
-  .box.box-outstanding-summary .el-select,.box.box-outstanding-summary .el-input--suffix,.box.box-outstanding-summary .el-cascader,.box.box-promotion-report .el-select,.box.box-promotion-report .el-input--suffix,.box.box-promotion-report .el-cascader {
-      flex-grow:1
+
+  .box.box-outstanding-summary .el-select,
+  .box.box-outstanding-summary .el-input--suffix,
+  .box.box-outstanding-summary .el-cascader,
+  .box.box-promotion-report .el-select,
+  .box.box-promotion-report .el-input--suffix,
+  .box.box-promotion-report .el-cascader {
+    flex-grow: 1
   }
 }
 
-.box.box-outstanding-summary .box-filter .el-form,.box.box-promotion-report .box-filter .el-form {
+.box.box-outstanding-summary .box-filter .el-form,
+.box.box-promotion-report .box-filter .el-form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px
 }
 
-.box.box-outstanding-summary .el-table td .cell a,.box.box-promotion-report .el-table td .cell a {
+.box.box-outstanding-summary .el-table td .cell a,
+.box.box-promotion-report .el-table td .cell a {
   text-decoration: underline
 }
 
@@ -4482,7 +4714,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .box-add {
-      justify-content:center
+    justify-content: center
   }
 }
 
@@ -4499,13 +4731,13 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes maskRun {
   to {
-      -webkit-mask-position: 100vw 0
+    -webkit-mask-position: 100vw 0
   }
 }
 
 @keyframes maskRun {
   to {
-      -webkit-mask-position: 100vw 0
+    -webkit-mask-position: 100vw 0
   }
 }
 
@@ -4513,7 +4745,8 @@ h3 .icon-lightning img {
   z-index: 0
 }
 
-.wrapper .parttern,.wrapper .parttern:after {
+.wrapper .parttern,
+.wrapper .parttern:after {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -4527,11 +4760,11 @@ h3 .icon-lightning img {
   display: block;
   -webkit-animation: maskRun 3.5s ease-out infinite;
   animation: maskRun 3.5s ease-out infinite;
-  -webkit-mask-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0%,rgb(0,0,0) 10%,rgb(0,0,0) 20%,rgba(0,0,0,0) 30%);
+  -webkit-mask-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%);
   -webkit-mask-position: -12vw 0;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
-  mask-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0%,rgb(0,0,0) 10%,rgb(0,0,0) 20%,rgba(0,0,0,0) 30%);
+  mask-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%);
   mask-position: -12vw 0;
   mask-repeat: no-repeat;
   mask-size: contain
@@ -4546,17 +4779,17 @@ h3 .icon-lightning img {
   align-items: center;
   width: calc(100% - 60px);
   height: calc(100% - 60px);
-  border: 1px solid rgba(var(--el-color-primary-rgb),.65);
+  border: 1px solid var(--el-color-primary-rgb);
   border-radius: 10px;
-  background-color: rgba(var(--el-color-tertiary-rgb),.3)
+  background-color: rgba(var(--el-color-tertiary-rgb), .3)
 }
 
 @media only screen and (max-width: 428px) {
   .wrapper .frame {
-      top:10px;
-      left: 10px;
-      width: calc(100% - 20px);
-      height: calc(100% - 20px)
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px)
   }
 }
 
@@ -4575,7 +4808,7 @@ h3 .icon-lightning img {
 
 .wrapper .el-button {
   background: var(--el-color-primary-dark-2);
-  background: linear-gradient(to right,var(--el-color-primary) 0%,var(--el-color-primary-light-5) 100%);
+  background: linear-gradient(to right, var(--el-color-primary) 0%, var(--el-color-primary-light-5) 100%);
   min-height: 50px
 }
 
@@ -4584,7 +4817,7 @@ h3 .icon-lightning img {
 }
 
 .wrapper .circular {
-  width: 30px!important
+  width: 30px !important
 }
 
 .agent-setting {
@@ -4592,7 +4825,7 @@ h3 .icon-lightning img {
   margin-bottom: 22px;
   padding: 20px;
   border-radius: 4px;
-  background: rgba(0,0,0,.035)
+  background: rgba(0, 0, 0, .035)
 }
 
 .agent-setting .el-form-item:last-child {
@@ -4613,12 +4846,12 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .agent-setting .el-select {
-      width:100%
+    width: 100%
   }
 
   .agent-setting .el-select:not(:nth-child(3)) {
-      margin-right: 0;
-      margin-bottom: 5px
+    margin-right: 0;
+    margin-bottom: 5px
   }
 }
 
@@ -4637,7 +4870,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .agent-setting .ps {
-      text-align:left
+    text-align: left
   }
 }
 
@@ -4645,22 +4878,26 @@ h3 .icon-lightning img {
   align-items: baseline
 }
 
-.pwd-expired .el-alert,.step-data .el-alert {
+.pwd-expired .el-alert,
+.step-data .el-alert {
   margin-bottom: 22px
 }
 
-.pwd-expired .el-form,.step-data .el-form {
+.pwd-expired .el-form,
+.step-data .el-form {
   position: relative;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px
 }
 
-.pwd-expired .el-form .el-form-item__content,.step-data .el-form .el-form-item__content {
+.pwd-expired .el-form .el-form-item__content,
+.step-data .el-form .el-form-item__content {
   justify-content: center
 }
 
-.pwd-expired .el-form .el-form-item__label,.step-data .el-form .el-form-item__label {
+.pwd-expired .el-form .el-form-item__label,
+.step-data .el-form .el-form-item__label {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -4670,24 +4907,29 @@ h3 .icon-lightning img {
   text-align: right
 }
 
-.pwd-expired .el-form .el-form-item~.el-checkbox,.step-data .el-form .el-form-item~.el-checkbox {
+.pwd-expired .el-form .el-form-item~.el-checkbox,
+.step-data .el-form .el-form-item~.el-checkbox {
   display: block;
   margin-bottom: 22px;
   padding-left: 168px
 }
 
 @media only screen and (max-width: 428px) {
-  .pwd-expired .el-form,.step-data .el-form {
-      padding:0
+
+  .pwd-expired .el-form,
+  .step-data .el-form {
+    padding: 0
   }
 
-  .pwd-expired .el-form .el-form-item__label,.step-data .el-form .el-form-item__label {
-      width: 90px;
-      font-size: 14px
+  .pwd-expired .el-form .el-form-item__label,
+  .step-data .el-form .el-form-item__label {
+    width: 90px;
+    font-size: 14px
   }
 
-  .pwd-expired .el-form .el-form-item~.el-checkbox,.step-data .el-form .el-form-item~.el-checkbox {
-      padding-left: 90px
+  .pwd-expired .el-form .el-form-item~.el-checkbox,
+  .step-data .el-form .el-form-item~.el-checkbox {
+    padding-left: 90px
   }
 }
 
@@ -4711,15 +4953,20 @@ h3 .icon-lightning img {
   border-radius: 50%
 }
 
-.user-stage-active,.el-button.btn--active {
+.user-stage-active,
+.el-button.btn--active {
   color: var(--el-color-green)
 }
 
-.user-stage-active i,.el-button.btn--active i {
+.user-stage-active i,
+.el-button.btn--active i {
   border: 1px solid var(--el-color-green)
 }
 
-.user-stage-active i:before,.el-button.btn--active i:before,.user-stage-active i:after,.el-button.btn--active i:after {
+.user-stage-active i:before,
+.el-button.btn--active i:before,
+.user-stage-active i:after,
+.el-button.btn--active i:after {
   content: "";
   position: absolute;
   display: block;
@@ -4727,7 +4974,8 @@ h3 .icon-lightning img {
   background-color: var(--el-color-green)
 }
 
-.user-stage-active i:before,.el-button.btn--active i:before {
+.user-stage-active i:before,
+.el-button.btn--active i:before {
   top: 7px;
   left: 5px;
   height: 5px;
@@ -4735,7 +4983,8 @@ h3 .icon-lightning img {
   transform: rotate(-45deg)
 }
 
-.user-stage-active i:after,.el-button.btn--active i:after {
+.user-stage-active i:after,
+.el-button.btn--active i:after {
   top: 5px;
   left: 9px;
   height: 7px;
@@ -4743,15 +4992,18 @@ h3 .icon-lightning img {
   transform: rotate(45deg)
 }
 
-.user-stage-suspended,.el-button.btn--suspended {
+.user-stage-suspended,
+.el-button.btn--suspended {
   color: var(--el-color-red)
 }
 
-.user-stage-suspended i,.el-button.btn--suspended i {
+.user-stage-suspended i,
+.el-button.btn--suspended i {
   border: 1px solid var(--el-color-red)
 }
 
-.user-stage-suspended i:after,.el-button.btn--suspended i:after {
+.user-stage-suspended i:after,
+.el-button.btn--suspended i:after {
   content: "";
   position: absolute;
   display: block;
@@ -4764,21 +5016,27 @@ h3 .icon-lightning img {
   transform: rotate(45deg)
 }
 
-.user-stage-locked,.el-button.btn--locked {
+.user-stage-locked,
+.el-button.btn--locked {
   color: var(--el-color-info)
 }
 
-.user-stage-locked i,.el-button.btn--locked i {
+.user-stage-locked i,
+.el-button.btn--locked i {
   border: 1px solid var(--el-color-info)
 }
 
-.user-stage-locked i:before,.el-button.btn--locked i:before,.user-stage-locked i:after,.el-button.btn--locked i:after {
+.user-stage-locked i:before,
+.el-button.btn--locked i:before,
+.user-stage-locked i:after,
+.el-button.btn--locked i:after {
   content: "";
   position: absolute;
   display: block
 }
 
-.user-stage-locked i:before,.el-button.btn--locked i:before {
+.user-stage-locked i:before,
+.el-button.btn--locked i:before {
   top: 3px;
   left: 4px;
   width: 6px;
@@ -4787,7 +5045,8 @@ h3 .icon-lightning img {
   border-radius: 4px 4px 0 0
 }
 
-.user-stage-locked i:after,.el-button.btn--locked i:after {
+.user-stage-locked i:after,
+.el-button.btn--locked i:after {
   top: 7px;
   left: 3px;
   width: 10px;
@@ -4838,25 +5097,44 @@ h3 .icon-lightning img {
   margin: 20px auto
 }
 
-.account-status .account-status-check .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button__inner {
+.account-status .account-status-check .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button__inner {
   width: 120px;
   padding: 25px 10px;
   font-size: 18px
 }
 
 @media only screen and (max-width: 428px) {
-  .account-status .account-status-check .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button__inner {
-      width:100px;
-      padding: 20px 10px;
-      font-size: 14px
+
+  .account-status .account-status-check .el-checkbox-button__inner,
+  .account-status .account-status-check .el-radio-button__inner {
+    width: 100px;
+    padding: 20px 10px;
+    font-size: 14px
   }
 }
 
-.account-status .account-status-check .el-checkbox-button .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button .el-radio-button__inner,.account-status .account-status-check .el-checkbox-button:active .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button:active .el-radio-button__inner,.account-status .account-status-check .el-checkbox-button.is-checked .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-checked .el-radio-button__inner,.account-status .account-status-check .el-checkbox-button.is-focus .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-focus .el-radio-button__inner,.account-status .account-status-check .el-radio-button .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button .el-radio-button__inner,.account-status .account-status-check .el-radio-button:active .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button:active .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-checked .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-checked .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-focus .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-focus .el-radio-button__inner {
+.account-status .account-status-check .el-checkbox-button .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button .el-radio-button__inner,
+.account-status .account-status-check .el-checkbox-button:active .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button:active .el-radio-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-checked .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-checked .el-radio-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-focus .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-focus .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button:active .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button:active .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-focus .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-focus .el-radio-button__inner {
   border-color: var(--el-color-primary-light-3)
 }
 
-.account-status .account-status-check .el-checkbox-button i,.account-status .account-status-check .el-radio-button i {
+.account-status .account-status-check .el-checkbox-button i,
+.account-status .account-status-check .el-radio-button i {
   position: relative;
   display: block;
   width: 18px;
@@ -4866,26 +5144,35 @@ h3 .icon-lightning img {
   scale: .85
 }
 
-.account-status .account-status-check .el-checkbox-button i:before,.account-status .account-status-check .el-checkbox-button i:after,.account-status .account-status-check .el-radio-button i:before,.account-status .account-status-check .el-radio-button i:after {
+.account-status .account-status-check .el-checkbox-button i:before,
+.account-status .account-status-check .el-checkbox-button i:after,
+.account-status .account-status-check .el-radio-button i:before,
+.account-status .account-status-check .el-radio-button i:after {
   content: "";
   position: absolute;
   display: block
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__active span,.account-status .account-status-check .el-radio-button.account-status-check__active span {
+.account-status .account-status-check .el-checkbox-button.account-status-check__active span,
+.account-status .account-status-check .el-radio-button.account-status-check__active span {
   color: var(--el-color-green)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__active i,.account-status .account-status-check .el-radio-button.account-status-check__active i {
+.account-status .account-status-check .el-checkbox-button.account-status-check__active i,
+.account-status .account-status-check .el-radio-button.account-status-check__active i {
   border: 1px solid var(--el-color-green)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__active i:before,.account-status .account-status-check .el-checkbox-button.account-status-check__active i:after,.account-status .account-status-check .el-radio-button.account-status-check__active i:before,.account-status .account-status-check .el-radio-button.account-status-check__active i:after {
+.account-status .account-status-check .el-checkbox-button.account-status-check__active i:before,
+.account-status .account-status-check .el-checkbox-button.account-status-check__active i:after,
+.account-status .account-status-check .el-radio-button.account-status-check__active i:before,
+.account-status .account-status-check .el-radio-button.account-status-check__active i:after {
   width: 1px;
   background-color: var(--el-color-green)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__active i:before,.account-status .account-status-check .el-radio-button.account-status-check__active i:before {
+.account-status .account-status-check .el-checkbox-button.account-status-check__active i:before,
+.account-status .account-status-check .el-radio-button.account-status-check__active i:before {
   top: 7px;
   left: 5px;
   height: 5px;
@@ -4893,7 +5180,8 @@ h3 .icon-lightning img {
   transform: rotate(-45deg)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__active i:after,.account-status .account-status-check .el-radio-button.account-status-check__active i:after {
+.account-status .account-status-check .el-checkbox-button.account-status-check__active i:after,
+.account-status .account-status-check .el-radio-button.account-status-check__active i:after {
   top: 5px;
   left: 9px;
   height: 7px;
@@ -4901,15 +5189,18 @@ h3 .icon-lightning img {
   transform: rotate(45deg)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__suspended span,.account-status .account-status-check .el-radio-button.account-status-check__suspended span {
+.account-status .account-status-check .el-checkbox-button.account-status-check__suspended span,
+.account-status .account-status-check .el-radio-button.account-status-check__suspended span {
   color: var(--el-color-red)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__suspended i,.account-status .account-status-check .el-radio-button.account-status-check__suspended i {
+.account-status .account-status-check .el-checkbox-button.account-status-check__suspended i,
+.account-status .account-status-check .el-radio-button.account-status-check__suspended i {
   border: 1px solid var(--el-color-red)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__suspended i:after,.account-status .account-status-check .el-radio-button.account-status-check__suspended i:after {
+.account-status .account-status-check .el-checkbox-button.account-status-check__suspended i:after,
+.account-status .account-status-check .el-radio-button.account-status-check__suspended i:after {
   top: 0;
   left: 8px;
   width: 1px;
@@ -4919,15 +5210,18 @@ h3 .icon-lightning img {
   transform: rotate(45deg)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__locked span,.account-status .account-status-check .el-radio-button.account-status-check__locked span {
+.account-status .account-status-check .el-checkbox-button.account-status-check__locked span,
+.account-status .account-status-check .el-radio-button.account-status-check__locked span {
   color: var(--el-color-info)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__locked i,.account-status .account-status-check .el-radio-button.account-status-check__locked i {
+.account-status .account-status-check .el-checkbox-button.account-status-check__locked i,
+.account-status .account-status-check .el-radio-button.account-status-check__locked i {
   border: 1px solid var(--el-color-info)
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__locked i:before,.account-status .account-status-check .el-radio-button.account-status-check__locked i:before {
+.account-status .account-status-check .el-checkbox-button.account-status-check__locked i:before,
+.account-status .account-status-check .el-radio-button.account-status-check__locked i:before {
   top: 3px;
   left: 4px;
   width: 6px;
@@ -4936,7 +5230,8 @@ h3 .icon-lightning img {
   border-radius: 4px 4px 0 0
 }
 
-.account-status .account-status-check .el-checkbox-button.account-status-check__locked i:after,.account-status .account-status-check .el-radio-button.account-status-check__locked i:after {
+.account-status .account-status-check .el-checkbox-button.account-status-check__locked i:after,
+.account-status .account-status-check .el-radio-button.account-status-check__locked i:after {
   top: 7px;
   left: 3px;
   width: 10px;
@@ -4945,42 +5240,85 @@ h3 .icon-lightning img {
   background: var(--el-color-info)
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked span,.account-status .account-status-check .el-checkbox-button.is-active span,.account-status .account-status-check .el-radio-button.is-checked span,.account-status .account-status-check .el-radio-button.is-active span {
+.account-status .account-status-check .el-checkbox-button.is-checked span,
+.account-status .account-status-check .el-checkbox-button.is-active span,
+.account-status .account-status-check .el-radio-button.is-checked span,
+.account-status .account-status-check .el-radio-button.is-active span {
   color: #fff
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked i,.account-status .account-status-check .el-checkbox-button.is-active i,.account-status .account-status-check .el-radio-button.is-checked i,.account-status .account-status-check .el-radio-button.is-active i {
+.account-status .account-status-check .el-checkbox-button.is-checked i,
+.account-status .account-status-check .el-checkbox-button.is-active i,
+.account-status .account-status-check .el-radio-button.is-checked i,
+.account-status .account-status-check .el-radio-button.is-active i {
   border: 1px solid #FFFFFF
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active .el-radio-button__inner,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-active.account-status-check__active .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-active.account-status-check__active .el-radio-button__inner {
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active .el-radio-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__active .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__active .el-radio-button__inner {
   border-color: var(--el-color-green);
   background: var(--el-color-green)
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active i:before,.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active i:after,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active i:before,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active i:after,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active i:before,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active i:after,.account-status .account-status-check .el-radio-button.is-active.account-status-check__active i:before,.account-status .account-status-check .el-radio-button.is-active.account-status-check__active i:after {
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active i:before,
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__active i:after,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active i:before,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__active i:after,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active i:before,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__active i:after,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__active i:before,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__active i:after {
   background-color: #fff
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__suspended .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__suspended .el-radio-button__inner,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__suspended .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__suspended .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__suspended .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__suspended .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-active.account-status-check__suspended .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-active.account-status-check__suspended .el-radio-button__inner {
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__suspended .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__suspended .el-radio-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__suspended .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__suspended .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__suspended .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__suspended .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__suspended .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__suspended .el-radio-button__inner {
   border-color: var(--el-color-red);
   background: var(--el-color-red)
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__suspended i:after,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__suspended i:after,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__suspended i:after,.account-status .account-status-check .el-radio-button.is-active.account-status-check__suspended i:after {
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__suspended i:after,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__suspended i:after,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__suspended i:after,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__suspended i:after {
   background-color: #fff
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked .el-radio-button__inner,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked .el-checkbox-button__inner,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked .el-radio-button__inner,.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked .el-checkbox-button__inner,.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked .el-radio-button__inner {
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked .el-radio-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked .el-checkbox-button__inner,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked .el-radio-button__inner,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked .el-checkbox-button__inner,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked .el-radio-button__inner {
   border-color: var(--el-color-info);
   background: var(--el-color-info)
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked i:before,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked i:before,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked i:before,.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked i:before {
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked i:before,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked i:before,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked i:before,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked i:before {
   border: 1px solid #FFFFFF
 }
 
-.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked i:after,.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked i:after,.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked i:after,.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked i:after {
+.account-status .account-status-check .el-checkbox-button.is-checked.account-status-check__locked i:after,
+.account-status .account-status-check .el-checkbox-button.is-active.account-status-check__locked i:after,
+.account-status .account-status-check .el-radio-button.is-checked.account-status-check__locked i:after,
+.account-status .account-status-check .el-radio-button.is-active.account-status-check__locked i:after {
   background-color: #fff
 }
 
@@ -5024,7 +5362,7 @@ h3 .icon-lightning img {
 
 .header-row-bottom {
   border-top: 1px solid #E2E3E7;
-  background: #E9EDF3!important
+  background: #E9EDF3 !important
 }
 
 .permission-table .el-table__header thead th {
@@ -5045,7 +5383,7 @@ h3 .icon-lightning img {
 }
 
 .export-msg .el-button span {
-  display: block!important;
+  display: block !important;
   font-weight: 700;
   font-size: 16px
 }
@@ -5066,8 +5404,8 @@ h3 .icon-lightning img {
 }
 
 .cascader--narrow {
-  z-index: 2000!important;
-  margin-left: -2px!important
+  z-index: 2000 !important;
+  margin-left: -2px !important
 }
 
 .cascader--narrow .el-cascader-panel .el-cascader-menu {
@@ -5080,11 +5418,11 @@ h3 .icon-lightning img {
 }
 
 .cascader--narrow .el-cascader-panel .el-cascader-menu .el-scrollbar__wrap {
-  padding: 0!important
+  padding: 0 !important
 }
 
 .cascader--narrow .el-cascader-panel .el-cascader-menu .el-cascader-node {
-  padding: 0 12px!important
+  padding: 0 12px !important
 }
 
 .cascader--narrow .el-cascader-panel .el-cascader-menu .el-cascader-node>.el-checkbox {
@@ -5118,13 +5456,13 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .phoneSelect {
-      width:100%;
-      margin-right: 0;
-      margin-bottom: 5px
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px
   }
 
   .phoneSelect+.el-input {
-      width: 100%
+    width: 100%
   }
 }
 
@@ -5235,7 +5573,7 @@ h3 .icon-lightning img {
 
 .grandTotalTable #grandTotalTable {
   margin-top: -1px;
-  border-color: var(--el-text-color-regular)!important;
+  border-color: var(--el-text-color-regular) !important;
   background: var(--el-text-color-regular)
 }
 
@@ -5244,7 +5582,7 @@ h3 .icon-lightning img {
 }
 
 .grandTotalTable #grandTotalTable.el-table--scrollable-x .el-table__body-wrapper {
-  overflow-x: hidden!important
+  overflow-x: hidden !important
 }
 
 .grandTotalTable #grandTotalTable .el-table__empty-block {
@@ -5433,7 +5771,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .td-list-dialog .td-list-li {
-      flex:0 1 100%
+    flex: 0 1 100%
   }
 }
 
@@ -5491,17 +5829,17 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .step-data-setting .step-data .el-form {
-      display:block
+    display: block
   }
 
   .step-data-setting .step-data .el-form .el-form-item {
-      margin-right: 0;
-      margin-bottom: 22px
+    margin-right: 0;
+    margin-bottom: 22px
   }
 
   .step-data-setting .step-data .el-form .el-button {
-      display: block;
-      margin: 0 auto
+    display: block;
+    margin: 0 auto
   }
 }
 
@@ -5533,7 +5871,8 @@ h3 .icon-lightning img {
   max-width: 720px
 }
 
-.step-data .el-checkbox,.step-data .el-radio {
+.step-data .el-checkbox,
+.step-data .el-radio {
   margin-bottom: 10px
 }
 
@@ -5542,7 +5881,7 @@ h3 .icon-lightning img {
 }
 
 .step-data .step-data-checkbox-all {
-  margin-bottom: 0!important
+  margin-bottom: 0 !important
 }
 
 .step-data .step-data-checkbox-all .el-checkbox__label {
@@ -5556,7 +5895,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .step-data .step-data-setting {
-      padding:0 10px
+    padding: 0 10px
   }
 }
 
@@ -5578,7 +5917,9 @@ h3 .icon-lightning img {
   font-size: 14px
 }
 
-.step-data .step-data-setting .el-collapse .el-collapse-item__header,.step-data .step-data-setting .el-collapse .el-collapse-item__header:hover,.step-data .step-data-setting .el-collapse .el-collapse-item__header:active {
+.step-data .step-data-setting .el-collapse .el-collapse-item__header,
+.step-data .step-data-setting .el-collapse .el-collapse-item__header:hover,
+.step-data .step-data-setting .el-collapse .el-collapse-item__header:active {
   color: var(--el-color-primary)
 }
 
@@ -5612,21 +5953,21 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .step-data .step-data-btns {
-      position:fixed;
-      z-index: 5;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      margin: 0;
-      padding: 20px 0 10px;
-      background-color: #fffffff2;
-      box-shadow: 0 -3px 6px #0000000d;
-      transition: all .3s ease-in-out
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 10px;
+    background-color: #fffffff2;
+    box-shadow: 0 -3px 6px #0000000d;
+    transition: all .3s ease-in-out
   }
 
   .step-data .step-data-btns.isExtend {
-      left: 0;
-      width: 100%
+    left: 0;
+    width: 100%
   }
 }
 
@@ -5636,8 +5977,8 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 1024px) {
   .step-data .box-block:nth-last-child(2) {
-      margin-bottom:50px;
-      border-bottom: 0
+    margin-bottom: 50px;
+    border-bottom: 0
   }
 }
 
@@ -5656,7 +5997,7 @@ h3 .icon-lightning img {
 .menuController.checkboxClose .el-checkbox__label {
   box-sizing: border-box;
   border-radius: 4px;
-  background: rgba(var(--el-color-tertiary-rgb),.45)
+  background: rgba(var(--el-color-tertiary-rgb), .45)
 }
 
 .menuController .el-checkbox__input {
@@ -5673,7 +6014,8 @@ h3 .icon-lightning img {
   transition: all .3s ease
 }
 
-.menuController .el-checkbox__label:after,.menuController .el-checkbox__label:before {
+.menuController .el-checkbox__label:after,
+.menuController .el-checkbox__label:before {
   content: "";
   position: absolute;
   display: block;
@@ -5732,7 +6074,7 @@ h3 .icon-lightning img {
   z-index: 1;
   height: 38px;
   padding: 0;
-  padding-left: 0!important;
+  padding-left: 0 !important;
   color: var(--el-color-primary-light-3);
   line-height: 38px
 }
@@ -5749,11 +6091,13 @@ h3 .icon-lightning img {
   color: var(--el-color-primary-light-3)
 }
 
-.asideMenu .el-menu-item:hover,.asideMenu .el-menu-item.is-active {
-  background: rgba(0,0,0,.35)
+.asideMenu .el-menu-item:hover,
+.asideMenu .el-menu-item.is-active {
+  background: rgba(0, 0, 0, .35)
 }
 
-.asideMenu .el-menu-item:hover a,.asideMenu .el-menu-item.is-active a {
+.asideMenu .el-menu-item:hover a,
+.asideMenu .el-menu-item.is-active a {
   color: var(--el-color-primary-light-9)
 }
 
@@ -5762,7 +6106,7 @@ h3 .icon-lightning img {
 }
 
 .asideMenu .el-menu-item .router-link-active {
-  background: rgba(0,0,0,.35)
+  background: rgba(0, 0, 0, .35)
 }
 
 .asideMenu .el-menu-item .router-link-active:after {
@@ -5791,7 +6135,7 @@ h3 .icon-lightning img {
   border: 1px solid var(--el-color-tertiary);
   border-bottom: 0;
   background: var(--el-color-tertiary);
-  background: linear-gradient(to bottom,var(--el-color-tertiary) 40%,#000000 100%);
+  background: linear-gradient(to bottom, var(--el-color-tertiary) 40%, #000000 100%);
   text-align: left
 }
 
@@ -5807,7 +6151,7 @@ h3 .icon-lightning img {
 }
 
 .asideMenu>.el-menu .el-sub-menu.is-opened {
-  background: rgba(0,0,0,.35)
+  background: rgba(0, 0, 0, .35)
 }
 
 .asideMenu>.el-menu .el-sub-menu.is-opened>.el-sub-menu__title {
@@ -5821,16 +6165,18 @@ h3 .icon-lightning img {
 .asideMenu>.el-menu .el-sub-menu__title {
   height: 40px;
   padding: 0;
-  padding-left: 16px!important;
+  padding-left: 16px !important;
   line-height: 40px
 }
 
-.asideMenu>.el-menu .el-sub-menu__title,.asideMenu>.el-menu .el-sub-menu__title span {
+.asideMenu>.el-menu .el-sub-menu__title,
+.asideMenu>.el-menu .el-sub-menu__title span {
   color: var(--el-color-primary-light-3)
 }
 
-.asideMenu>.el-menu .el-sub-menu__title:hover,.asideMenu>.el-menu .el-sub-menu__title.is-active {
-  background: rgba(0,0,0,.35);
+.asideMenu>.el-menu .el-sub-menu__title:hover,
+.asideMenu>.el-menu .el-sub-menu__title.is-active {
+  background: rgba(0, 0, 0, .35);
   color: var(--el-color-primary-light-9)
 }
 
@@ -5852,16 +6198,16 @@ h3 .icon-lightning img {
 }
 
 .asideMenu>.el-menu .el-sub-menu .el-menu .el-menu-item {
-  padding-left: 8px!important
+  padding-left: 8px !important
 }
 
 .asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-sub-menu__title {
-  padding-left: 20px!important
+  padding-left: 20px !important
 }
 
 .asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-menu-item {
   position: relative;
-  padding-left: 40px!important
+  padding-left: 40px !important
 }
 
 .asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-menu-item a {
@@ -5875,26 +6221,28 @@ h3 .icon-lightning img {
 }
 
 .asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-menu-item:hover {
-  background: rgba(0,0,0,.35)
+  background: rgba(0, 0, 0, .35)
 }
 
-.asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-menu-item,.asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-menu-item.is-active {
+.asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-menu-item,
+.asideMenu>.el-menu .el-sub-menu .el-menu>.el-sub-menu .el-menu-item.is-active {
   padding: 0
 }
 
 .row-subtotal td {
-  padding: 4px 8px!important;
+  padding: 4px 8px !important;
   background-color: var(--el-bg-color)
 }
 
-.row-subtotal .cell,.row-subtotal .cell span {
+.row-subtotal .cell,
+.row-subtotal .cell span {
   font-weight: 700;
   font-size: 12px
 }
 
 .row-subtotal .cell a {
-  color: var(--el-color-gray)!important;
-  text-decoration: none!important;
+  color: var(--el-color-gray) !important;
+  text-decoration: none !important;
   pointer-events: none
 }
 
@@ -5903,15 +6251,16 @@ h3 .icon-lightning img {
 }
 
 .row-grandtotal td {
-  border: 0!important;
-  background-color: var(--el-text-color-regular)!important
+  border: 0 !important;
+  background-color: var(--el-text-color-regular) !important
 }
 
 .row-grandtotal .cell {
   color: #fff
 }
 
-.row-grandtotal .cell,.row-grandtotal .cell span {
+.row-grandtotal .cell,
+.row-grandtotal .cell span {
   font-weight: 700;
   font-size: 14px
 }
@@ -5922,7 +6271,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .display-columns .el-input__inner {
-      width:calc(100vw - 210px)
+    width: calc(100vw - 210px)
   }
 }
 
@@ -5933,7 +6282,7 @@ h3 .icon-lightning img {
 }
 
 .box-currency_menu .el-dropdown-menu__item:hover {
-  background: var(--el-bg-color-page)!important
+  background: var(--el-bg-color-page) !important
 }
 
 .box-currency_menu .el-dropdown-menu__item i {
@@ -6050,41 +6399,41 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes particle-1 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(73vw,7vh,113px);
-      transform: translate3d(73vw,7vh,113px)
+    opacity: 0;
+    -webkit-transform: translate3d(73vw, 7vh, 113px);
+    transform: translate3d(73vw, 7vh, 113px)
   }
 
   35% {
-      opacity: .1;
-      -webkit-transform: translate3d(65vw,28vh,102px);
-      transform: translate3d(65vw,28vh,102px)
+    opacity: .1;
+    -webkit-transform: translate3d(65vw, 28vh, 102px);
+    transform: translate3d(65vw, 28vh, 102px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(6vw,29vh,1px);
-      transform: translate3d(6vw,29vh,1px)
+    opacity: 0;
+    -webkit-transform: translate3d(6vw, 29vh, 1px);
+    transform: translate3d(6vw, 29vh, 1px)
   }
 }
 
 @keyframes particle-1 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(73vw,7vh,113px);
-      transform: translate3d(73vw,7vh,113px)
+    opacity: 0;
+    -webkit-transform: translate3d(73vw, 7vh, 113px);
+    transform: translate3d(73vw, 7vh, 113px)
   }
 
   35% {
-      opacity: .1;
-      -webkit-transform: translate3d(65vw,28vh,102px);
-      transform: translate3d(65vw,28vh,102px)
+    opacity: .1;
+    -webkit-transform: translate3d(65vw, 28vh, 102px);
+    transform: translate3d(65vw, 28vh, 102px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(6vw,29vh,1px);
-      transform: translate3d(6vw,29vh,1px)
+    opacity: 0;
+    -webkit-transform: translate3d(6vw, 29vh, 1px);
+    transform: translate3d(6vw, 29vh, 1px)
   }
 }
 
@@ -6102,41 +6451,41 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes particle-2 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(11vw,21vh,28px);
-      transform: translate3d(11vw,21vh,28px)
+    opacity: 0;
+    -webkit-transform: translate3d(11vw, 21vh, 28px);
+    transform: translate3d(11vw, 21vh, 28px)
   }
 
   35% {
-      opacity: .3;
-      -webkit-transform: translate3d(50vw,19vh,28px);
-      transform: translate3d(50vw,19vh,28px)
+    opacity: .3;
+    -webkit-transform: translate3d(50vw, 19vh, 28px);
+    transform: translate3d(50vw, 19vh, 28px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(50vw,15vh,24px);
-      transform: translate3d(50vw,15vh,24px)
+    opacity: 0;
+    -webkit-transform: translate3d(50vw, 15vh, 24px);
+    transform: translate3d(50vw, 15vh, 24px)
   }
 }
 
 @keyframes particle-2 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(11vw,21vh,28px);
-      transform: translate3d(11vw,21vh,28px)
+    opacity: 0;
+    -webkit-transform: translate3d(11vw, 21vh, 28px);
+    transform: translate3d(11vw, 21vh, 28px)
   }
 
   35% {
-      opacity: .3;
-      -webkit-transform: translate3d(50vw,19vh,28px);
-      transform: translate3d(50vw,19vh,28px)
+    opacity: .3;
+    -webkit-transform: translate3d(50vw, 19vh, 28px);
+    transform: translate3d(50vw, 19vh, 28px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(50vw,15vh,24px);
-      transform: translate3d(50vw,15vh,24px)
+    opacity: 0;
+    -webkit-transform: translate3d(50vw, 15vh, 24px);
+    transform: translate3d(50vw, 15vh, 24px)
   }
 }
 
@@ -6154,41 +6503,41 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes particle-3 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(11vw,4vh,112px);
-      transform: translate3d(11vw,4vh,112px)
+    opacity: 0;
+    -webkit-transform: translate3d(11vw, 4vh, 112px);
+    transform: translate3d(11vw, 4vh, 112px)
   }
 
   35% {
-      opacity: .2;
-      -webkit-transform: translate3d(18vw,12vh,14px);
-      transform: translate3d(18vw,12vh,14px)
+    opacity: .2;
+    -webkit-transform: translate3d(18vw, 12vh, 14px);
+    transform: translate3d(18vw, 12vh, 14px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(79vw,14vh,77px);
-      transform: translate3d(79vw,14vh,77px)
+    opacity: 0;
+    -webkit-transform: translate3d(79vw, 14vh, 77px);
+    transform: translate3d(79vw, 14vh, 77px)
   }
 }
 
 @keyframes particle-3 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(11vw,4vh,112px);
-      transform: translate3d(11vw,4vh,112px)
+    opacity: 0;
+    -webkit-transform: translate3d(11vw, 4vh, 112px);
+    transform: translate3d(11vw, 4vh, 112px)
   }
 
   35% {
-      opacity: .2;
-      -webkit-transform: translate3d(18vw,12vh,14px);
-      transform: translate3d(18vw,12vh,14px)
+    opacity: .2;
+    -webkit-transform: translate3d(18vw, 12vh, 14px);
+    transform: translate3d(18vw, 12vh, 14px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(79vw,14vh,77px);
-      transform: translate3d(79vw,14vh,77px)
+    opacity: 0;
+    -webkit-transform: translate3d(79vw, 14vh, 77px);
+    transform: translate3d(79vw, 14vh, 77px)
   }
 }
 
@@ -6206,41 +6555,41 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes particle-4 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(10vw,34vh,48px);
-      transform: translate3d(10vw,34vh,48px)
+    opacity: 0;
+    -webkit-transform: translate3d(10vw, 34vh, 48px);
+    transform: translate3d(10vw, 34vh, 48px)
   }
 
   35% {
-      opacity: .3;
-      -webkit-transform: translate3d(15vw,32vh,27px);
-      transform: translate3d(15vw,32vh,27px)
+    opacity: .3;
+    -webkit-transform: translate3d(15vw, 32vh, 27px);
+    transform: translate3d(15vw, 32vh, 27px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(44vw,1vh,6px);
-      transform: translate3d(44vw,1vh,6px)
+    opacity: 0;
+    -webkit-transform: translate3d(44vw, 1vh, 6px);
+    transform: translate3d(44vw, 1vh, 6px)
   }
 }
 
 @keyframes particle-4 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(10vw,34vh,48px);
-      transform: translate3d(10vw,34vh,48px)
+    opacity: 0;
+    -webkit-transform: translate3d(10vw, 34vh, 48px);
+    transform: translate3d(10vw, 34vh, 48px)
   }
 
   35% {
-      opacity: .3;
-      -webkit-transform: translate3d(15vw,32vh,27px);
-      transform: translate3d(15vw,32vh,27px)
+    opacity: .3;
+    -webkit-transform: translate3d(15vw, 32vh, 27px);
+    transform: translate3d(15vw, 32vh, 27px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(44vw,1vh,6px);
-      transform: translate3d(44vw,1vh,6px)
+    opacity: 0;
+    -webkit-transform: translate3d(44vw, 1vh, 6px);
+    transform: translate3d(44vw, 1vh, 6px)
   }
 }
 
@@ -6258,41 +6607,41 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes particle-5 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(34vw,29vh,59px);
-      transform: translate3d(34vw,29vh,59px)
+    opacity: 0;
+    -webkit-transform: translate3d(34vw, 29vh, 59px);
+    transform: translate3d(34vw, 29vh, 59px)
   }
 
   35% {
-      opacity: .3;
-      -webkit-transform: translate3d(37vw,23vh,83px);
-      transform: translate3d(37vw,23vh,83px)
+    opacity: .3;
+    -webkit-transform: translate3d(37vw, 23vh, 83px);
+    transform: translate3d(37vw, 23vh, 83px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(118vw,21vh,29px);
-      transform: translate3d(118vw,21vh,29px)
+    opacity: 0;
+    -webkit-transform: translate3d(118vw, 21vh, 29px);
+    transform: translate3d(118vw, 21vh, 29px)
   }
 }
 
 @keyframes particle-5 {
   0% {
-      opacity: 0;
-      -webkit-transform: translate3d(34vw,29vh,59px);
-      transform: translate3d(34vw,29vh,59px)
+    opacity: 0;
+    -webkit-transform: translate3d(34vw, 29vh, 59px);
+    transform: translate3d(34vw, 29vh, 59px)
   }
 
   35% {
-      opacity: .3;
-      -webkit-transform: translate3d(37vw,23vh,83px);
-      transform: translate3d(37vw,23vh,83px)
+    opacity: .3;
+    -webkit-transform: translate3d(37vw, 23vh, 83px);
+    transform: translate3d(37vw, 23vh, 83px)
   }
 
   to {
-      opacity: 0;
-      -webkit-transform: translate3d(118vw,21vh,29px);
-      transform: translate3d(118vw,21vh,29px)
+    opacity: 0;
+    -webkit-transform: translate3d(118vw, 21vh, 29px);
+    transform: translate3d(118vw, 21vh, 29px)
   }
 }
 
@@ -6319,22 +6668,23 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 480px) {
   .login-wrapper .login {
-      width:80%;
-      padding: 10px 10px 0
+    width: 80%;
+    padding: 10px 10px 0
   }
 
   .login-wrapper .login .login-logo {
-      margin-bottom: 30px
+    margin-bottom: 30px
   }
 
   .login-wrapper .login .login-logo img {
-      width: 100%
+    width: 100%
   }
 }
 
 .login-wrapper .el-alert {
   margin: -10px 0 10px;
-  padding-inline:0;background-color: transparent!important
+  padding-inline: 0;
+  background-color: transparent !important
 }
 
 .login-wrapper .el-alert--error.is-light {
@@ -6371,16 +6721,16 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 480px) {
   .otp-wrapper .otp {
-      width:80%;
-      padding: 10px 10px 0
+    width: 80%;
+    padding: 10px 10px 0
   }
 
   .otp-wrapper .otp .otp-logo {
-      margin-bottom: 30px
+    margin-bottom: 30px
   }
 
   .otp-wrapper .otp .otp-logo img {
-      width: 100%
+    width: 100%
   }
 }
 
@@ -6420,11 +6770,11 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .pwd-expired-wrapper .pwd-expired {
-      width:100%
+    width: 100%
   }
 
   .pwd-expired-wrapper .pwd-expired h2 span {
-      display: block
+    display: block
   }
 }
 
@@ -6434,7 +6784,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .pwd-expired-wrapper .el-form {
-      padding:20px
+    padding: 20px
   }
 }
 
@@ -6532,11 +6882,11 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .el-main {
-      padding-left:20px
+    padding-left: 20px
   }
 
   .el-main.isExtend {
-      padding-bottom: 70px
+    padding-bottom: 70px
   }
 }
 
@@ -6554,22 +6904,22 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .el-tabs--border-card>.el-tabs__content {
-      padding:15px
+    padding: 15px
   }
 }
 
 .el-table {
   border: 1px solid var(--el-color-text-light-9);
   border-bottom: 0;
-  color: var(--el-text-color-regular)!important
+  color: var(--el-text-color-regular) !important
 }
 
 .el-table--fit {
-  border-right: 1px solid #EBEEF5!important
+  border-right: 1px solid #EBEEF5 !important
 }
 
 .el-table td {
-  padding: 8px!important;
+  padding: 8px !important;
   font-size: 13px
 }
 
@@ -6585,10 +6935,7 @@ h3 .icon-lightning img {
   background-color: #f3f3f340
 }
 
-.el-table .cell {
-  padding: 0!important;
-  word-break: break-word!important
-}
+
 
 .el-table .bg-strike {
   --el-table-tr-bg-color: rgba(242, 218, 218)
@@ -6600,11 +6947,11 @@ h3 .icon-lightning img {
   bottom: 0;
   left: 0;
   height: 50%;
-  border-bottom: 1px solid rgb(148,67,76)
+  border-bottom: 1px solid rgb(148, 67, 76)
 }
 
 .el-table thead th {
-  padding: 12px 8px!important;
+  padding: 4px !important;
   background-color: var(--el-color-text-light-9);
   color: var(--el-text-color-regular);
   font-size: 12px
@@ -6615,10 +6962,10 @@ h3 .icon-lightning img {
 }
 
 .el-table thead th.is-leaf {
-  border-bottom: 1px solid var(--el-color-info-light-7)
+  border-bottom: 2px solid var(--el-color-info-light-7)
 }
 
-.el-table__row.el-table__row--striped {
+.el-table__row .el-table__row--striped {
   background-color: var(--el-bg-color)
 }
 
@@ -6627,7 +6974,7 @@ h3 .icon-lightning img {
 }
 
 .el-table__row td .cell {
-  word-break: break-word!important
+  word-break: break-word !important
 }
 
 .el-table__row td .cell>a {
@@ -6653,16 +7000,19 @@ h3 .icon-lightning img {
   left: -1px
 }
 
-.el-table__footer tbody td,.el-table__footer-wrapper tbody td {
+.el-table__footer tbody td,
+.el-table__footer-wrapper tbody td {
   font-size: 12px
 }
 
-.el-table__footer tbody td .cell,.el-table__footer-wrapper tbody td .cell {
+.el-table__footer tbody td .cell,
+.el-table__footer-wrapper tbody td .cell {
   color: var(--el-color-gray);
   font-weight: 700
 }
 
-.el-descriptions__label,.el-descriptions .is-bordered-label {
+.el-descriptions__label,
+.el-descriptions .is-bordered-label {
   color: var(--el-text-color-regular);
   font-weight: 700
 }
@@ -6698,7 +7048,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .el-descriptions--membercurrency .el-checkbox {
-      margin:5px 5px 5px 0
+    margin: 5px 5px 5px 0
   }
 }
 
@@ -6707,7 +7057,7 @@ h3 .icon-lightning img {
 }
 
 .el-form-item__error {
-  padding-top: 0!important
+  padding-top: 0 !important
 }
 
 .el-form-item.is-error:hover .el-input__inner {
@@ -6720,7 +7070,7 @@ h3 .icon-lightning img {
 
 .el-input__inner {
   box-sizing: border-box;
-  height: 40px!important;
+  height: 40px !important;
   padding: 0 8px;
   border-radius: 4px;
   color: var(--el-text-color-regular)
@@ -6740,7 +7090,7 @@ h3 .icon-lightning img {
 }
 
 .el-input-number .el-input__wrapper {
-  padding: 0!important
+  padding: 0 !important
 }
 
 .el-input__suffix {
@@ -6757,7 +7107,7 @@ h3 .icon-lightning img {
 }
 
 .el-select-dropdown .el-scrollbar__wrap {
-  padding: 0!important
+  padding: 0 !important
 }
 
 .el-select-dropdown span {
@@ -6765,7 +7115,7 @@ h3 .icon-lightning img {
 }
 
 .el-select-dropdown__item {
-  padding: 0 12px!important
+  padding: 0 12px !important
 }
 
 .el-select-dropdown__item:hover {
@@ -6804,7 +7154,7 @@ h3 .icon-lightning img {
 .el-cascader-menu {
   position: relative;
   height: 100%;
-  border-right: 0!important
+  border-right: 0 !important
 }
 
 .el-cascader-menu__list.is-empty {
@@ -6812,7 +7162,7 @@ h3 .icon-lightning img {
 }
 
 .el-cascader-menu__wrap.el-scrollbar__wrap {
-  height: auto!important;
+  height: auto !important;
   max-height: 204px
 }
 
@@ -6822,11 +7172,11 @@ h3 .icon-lightning img {
 }
 
 .el-cascader__tags .el-tag {
-  max-width: 100px!important
+  max-width: 100px !important
 }
 
 .el-cascader__tags .el-tag:not(:first-child) {
-  margin-left: 4px!important
+  margin-left: 4px !important
 }
 
 .el-cascader__tags .el-tag span {
@@ -6838,7 +7188,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .el-cascader__tags .el-tag {
-      max-width:100%!important
+    max-width: 100% !important
   }
 }
 
@@ -6853,7 +7203,7 @@ h3 .icon-lightning img {
 .el-cascader-node__label {
   position: absolute;
   left: 40px;
-  padding: 0!important;
+  padding: 0 !important;
   font-size: 12px;
   pointer-events: none
 }
@@ -6868,17 +7218,17 @@ h3 .icon-lightning img {
 }
 
 .el-dialog__header {
-  margin-right: 0!important;
+  margin-right: 0 !important;
   background: var(--el-bg-color-page);
   text-align: left
 }
 
 .el-dialog__headerbtn {
-  top: 0!important
+  top: 0 !important
 }
 
 .el-dialog__body {
-  padding: 20px 16px!important
+  padding: 20px 16px !important
 }
 
 .el-dialog__body .warning-dialog-content {
@@ -6923,7 +7273,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 1024px) {
   .el-dialog {
-      width:90%!important
+    width: 90% !important
   }
 }
 
@@ -6933,12 +7283,12 @@ h3 .icon-lightning img {
 
 .el-popover__title {
   font-weight: 700;
-  font-size: 14px!important
+  font-size: 14px !important
 }
 
 .el-message {
-  border-color: var(--el-color-info-light-7)!important;
-  background-color: #fff!important;
+  border-color: var(--el-color-info-light-7) !important;
+  background-color: #fff !important;
   box-shadow: 0 2px 4px #0000000d
 }
 
@@ -6987,7 +7337,7 @@ h3 .icon-lightning img {
 }
 
 .el-message-box__btns .el-button--primary {
-  background: var(--el-button-bg-color)!important
+  background: var(--el-button-bg-color) !important
 }
 
 .el-message-box__btns .el-button--primary:hover {
@@ -7013,7 +7363,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .el-message-box {
-      width:90%
+    width: 90%
   }
 }
 
@@ -7029,21 +7379,27 @@ h3 .icon-lightning img {
   margin: 20px 0
 }
 
-.el-step__head.is-finish,.el-step__head.is-success,.el-step__title.is-finish,.el-step__title.is-success {
-  color: var(--el-color-primary)!important
+.el-step__head.is-finish,
+.el-step__head.is-success,
+.el-step__title.is-finish,
+.el-step__title.is-success {
+  color: var(--el-color-primary) !important
 }
 
-.el-step__head.is-finish .el-step__icon.is-text,.el-step__head.is-success .el-step__icon.is-text,.el-step__title.is-finish .el-step__icon.is-text,.el-step__title.is-success .el-step__icon.is-text {
-  border-color: var(--el-color-primary)!important
+.el-step__head.is-finish .el-step__icon.is-text,
+.el-step__head.is-success .el-step__icon.is-text,
+.el-step__title.is-finish .el-step__icon.is-text,
+.el-step__title.is-success .el-step__icon.is-text {
+  border-color: var(--el-color-primary) !important
 }
 
 .el-step__title {
-  line-height: 1.5!important
+  line-height: 1.5 !important
 }
 
 @media only screen and (max-width: 428px) {
   .el-step__title {
-      font-size:12px!important
+    font-size: 12px !important
   }
 }
 
@@ -7063,22 +7419,26 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .el-alert__title {
-      font-size:12px
+    font-size: 12px
   }
 }
 
 @media only screen and (max-width: 428px) {
-  .el-checkbox__label,.el-radio__label {
-      font-size:14px
+
+  .el-checkbox__label,
+  .el-radio__label {
+    font-size: 14px
   }
 }
 
-.el-checkbox__input.is-disabled.is-checked span,.el-radio__input.is-disabled.is-checked span {
-  background-color: var(--el-button-bg-color)!important
+.el-checkbox__input.is-disabled.is-checked span,
+.el-radio__input.is-disabled.is-checked span {
+  background-color: var(--el-button-bg-color) !important
 }
 
-.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner:after,.el-radio__input.is-disabled.is-checked .el-checkbox__inner:after {
-  border-color: #fff!important
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner:after,
+.el-radio__input.is-disabled.is-checked .el-checkbox__inner:after {
+  border-color: #fff !important
 }
 
 .el-checkbox__input.is-disabled .el-checkbox__inner {
@@ -7092,7 +7452,7 @@ h3 .icon-lightning img {
 
 .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner {
   border-color: var(--el-color-primary);
-  background-color: var(--el-color-primary-light-5)!important
+  background-color: var(--el-color-primary-light-5) !important
 }
 
 .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner:after {
@@ -7104,21 +7464,21 @@ h3 .icon-lightning img {
 }
 
 .el-picker-panel__footer {
-  padding: 8px 4px!important
+  padding: 8px 4px !important
 }
 
 .el-picker-panel__footer .el-button {
   width: 60px;
-  border: 1px solid var(--el-button-border-color)!important
+  border: 1px solid var(--el-button-border-color) !important
 }
 
 .el-picker-panel__footer .el-button:last-child {
-  background-color: var(--el-button-bg-color)!important
+  background-color: var(--el-button-bg-color) !important
 }
 
 .el-picker-panel__footer .el-button:hover {
-  border: 1px solid var(--el-button-border-color)!important;
-  background-color: var(--el-button-hover-bg-color)!important
+  border: 1px solid var(--el-button-border-color) !important;
+  background-color: var(--el-button-hover-bg-color) !important
 }
 
 .el-picker-panel__footer .el-button:hover:after {
@@ -7130,11 +7490,13 @@ h3 .icon-lightning img {
   color: #fff
 }
 
-.el-date-picker__header .el-icon-d-arrow-left,.el-date-picker__header .el-icon-d-arrow-right {
+.el-date-picker__header .el-icon-d-arrow-left,
+.el-date-picker__header .el-icon-d-arrow-right {
   display: none
 }
 
-.el-date-picker__header .el-icon-arrow-left,.el-date-picker__header .el-icon-arrow-right {
+.el-date-picker__header .el-icon-arrow-left,
+.el-date-picker__header .el-icon-arrow-right {
   margin-top: 4px;
   font-weight: 700;
   font-size: 18px
@@ -7146,7 +7508,7 @@ h3 .icon-lightning img {
   overflow: hidden;
   width: 100%;
   min-height: 32px;
-  border: 0!important;
+  border: 0 !important;
   font-size: 14px;
   transition: all .25s ease
 }
@@ -7187,7 +7549,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 375px) {
   .el-button.btn--m {
-      width:240px
+    width: 240px
   }
 }
 
@@ -7198,7 +7560,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 375px) {
   .el-button.btn--sm {
-      width:100px
+    width: 100px
   }
 }
 
@@ -7209,7 +7571,7 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 375px) {
   .el-button.btn--s {
-      width:88px
+    width: 88px
   }
 }
 
@@ -7241,8 +7603,9 @@ h3 .icon-lightning img {
   color: var(--el-text-color-regular)
 }
 
-.el-button.btn--gold,.el-button.btn--gold :focus {
-  background: var(--el-button-bg-color)!important
+.el-button.btn--gold,
+.el-button.btn--gold :focus {
+  background: var(--el-button-bg-color) !important
 }
 
 .el-button.btn--gold:after {
@@ -7250,14 +7613,16 @@ h3 .icon-lightning img {
 }
 
 .el-button.btn--gold:hover {
-  background: var(--el-button-hover-bg-color)!important
+  background: var(--el-button-hover-bg-color) !important
 }
 
-.el-button.btn--black,.el-button.btn--black :focus {
-  background: var(--el-text-color-regular)!important
+.el-button.btn--black,
+.el-button.btn--black :focus {
+  background: var(--el-text-color-regular) !important
 }
 
-.el-button.btn--black i,.el-button.btn--black span {
+.el-button.btn--black i,
+.el-button.btn--black span {
   color: #fff
 }
 
@@ -7266,36 +7631,48 @@ h3 .icon-lightning img {
 }
 
 .el-button.btn--black:hover {
-  background: #000000!important
+  background: #000000 !important
 }
 
 .el-button.btn--black.disabled {
-  background: #999!important
+  background: #999 !important
 }
 
-.el-button.btn--border,.el-button.btn--icon,.el-button.btn--iconPure {
+.el-button.btn--border,
+.el-button.btn--icon,
+.el-button.btn--iconPure {
   box-sizing: border-box;
-  border: 1px solid var(--el-color-primary)!important;
-  background: transparent!important
+  border: 1px solid var(--el-color-primary) !important;
+  background: transparent !important
 }
 
-.el-button.btn--border:hover,.el-button.btn--icon:hover,.el-button.btn--iconPure:hover {
-  background: var(--el-color-primary-light-9)!important
+.el-button.btn--border:hover,
+.el-button.btn--icon:hover,
+.el-button.btn--iconPure:hover {
+  background: var(--el-color-primary-light-9) !important
 }
 
-.el-button.btn--border span,.el-button.btn--icon span,.el-button.btn--iconPure span {
+.el-button.btn--border span,
+.el-button.btn--icon span,
+.el-button.btn--iconPure span {
   color: var(--el-color-primary)
 }
 
-.el-button.btn--border:after,.el-button.btn--icon:after,.el-button.btn--iconPure:after {
+.el-button.btn--border:after,
+.el-button.btn--icon:after,
+.el-button.btn--iconPure:after {
   display: none
 }
 
-.el-button.btn--icon,.el-button.btn--iconPure {
+.el-button.btn--icon,
+.el-button.btn--iconPure {
   padding: 8px
 }
 
-.el-button.btn--icon i,.el-button.btn--icon span,.el-button.btn--iconPure i,.el-button.btn--iconPure span {
+.el-button.btn--icon i,
+.el-button.btn--icon span,
+.el-button.btn--iconPure i,
+.el-button.btn--iconPure span {
   position: relative;
   display: inline-block;
   z-index: 1;
@@ -7305,12 +7682,13 @@ h3 .icon-lightning img {
   transition: all .3s ease
 }
 
-.el-button.btn--icon i,.el-button.btn--iconPure i {
+.el-button.btn--icon i,
+.el-button.btn--iconPure i {
   font-size: 16px
 }
 
 .el-button.btn--icon:hover {
-  background-color: var(--el-color-primary)!important
+  background-color: var(--el-color-primary) !important
 }
 
 .el-button.btn--icon:hover span {
@@ -7327,24 +7705,35 @@ h3 .icon-lightning img {
   top: 1px
 }
 
-.el-button.btn--active,.el-button.btn--suspended,.el-button.btn--locked {
+.el-button.btn--active,
+.el-button.btn--suspended,
+.el-button.btn--locked {
   min-height: 32px;
   padding: 8px 4px
 }
 
-.el-button.btn--active i,.el-button.btn--active span,.el-button.btn--suspended i,.el-button.btn--suspended span,.el-button.btn--locked i,.el-button.btn--locked span {
+.el-button.btn--active i,
+.el-button.btn--active span,
+.el-button.btn--suspended i,
+.el-button.btn--suspended span,
+.el-button.btn--locked i,
+.el-button.btn--locked span {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   transition: all .3s ease
 }
 
-.el-button.btn--active span,.el-button.btn--suspended span,.el-button.btn--locked span {
+.el-button.btn--active span,
+.el-button.btn--suspended span,
+.el-button.btn--locked span {
   color: #fff;
   font-size: 13px
 }
 
-.el-button.btn--active i,.el-button.btn--suspended i,.el-button.btn--locked i {
+.el-button.btn--active i,
+.el-button.btn--suspended i,
+.el-button.btn--locked i {
   vertical-align: text-bottom;
   flex-shrink: 0;
   width: 18px;
@@ -7354,15 +7743,27 @@ h3 .icon-lightning img {
   border-radius: 50%
 }
 
-.el-button.btn--active i:after,.el-button.btn--active i:before,.el-button.btn--suspended i:after,.el-button.btn--suspended i:before,.el-button.btn--locked i:after,.el-button.btn--locked i:before {
+.el-button.btn--active i:after,
+.el-button.btn--active i:before,
+.el-button.btn--suspended i:after,
+.el-button.btn--suspended i:before,
+.el-button.btn--locked i:after,
+.el-button.btn--locked i:before {
   background-color: #fff
 }
 
-.el-button.btn--active:after,.el-button.btn--suspended:after,.el-button.btn--locked:after {
+.el-button.btn--active:after,
+.el-button.btn--suspended:after,
+.el-button.btn--locked:after {
   display: none
 }
 
-.el-button.btn--active.is-disabled,.el-button.btn--active.is-disabled:hover,.el-button.btn--suspended.is-disabled,.el-button.btn--suspended.is-disabled:hover,.el-button.btn--locked.is-disabled,.el-button.btn--locked.is-disabled:hover {
+.el-button.btn--active.is-disabled,
+.el-button.btn--active.is-disabled:hover,
+.el-button.btn--suspended.is-disabled,
+.el-button.btn--suspended.is-disabled:hover,
+.el-button.btn--locked.is-disabled,
+.el-button.btn--locked.is-disabled:hover {
   background-color: var(--el-color-info-light-7)
 }
 
@@ -7396,14 +7797,15 @@ h3 .icon-lightning img {
 }
 
 .el-checkbox-button:first-child .el-checkbox-button__inner {
-  border: 1px solid var(--el-color-primary)!important
+  border: 1px solid var(--el-color-primary) !important
 }
 
 .el-table td .cell a:not(:has(.user-badge)) {
   text-decoration: underline
 }
 
-.el-table--border td:first-child .cell,.el-table--border th:first-child .cell {
+.el-table--border td:first-child .cell,
+.el-table--border th:first-child .cell {
   padding-left: 0
 }
 
@@ -7419,11 +7821,15 @@ h3 .icon-lightning img {
   background-color: var(--el-bg-color)
 }
 
-.el-table--complex .el-table__row.el-table__row--level-1 .cell,.el-table--complex .el-table__row.el-table__row--level-1 .cell span {
+.el-table--complex .el-table__row.el-table__row--level-1 .cell,
+.el-table--complex .el-table__row.el-table__row--level-1 .cell span {
   color: var(--el-color-gray)
 }
 
-.el-table--complex .el-table__row.el-table__row--level-1 .el-table__indent,.el-table--complex .el-table__row.el-table__row--level-1 .el-table__placeholder,.el-table--complex .el-table__row.el-table__row--level-1 .el-button,.el-table--complex .el-table__expand-icon.el-table__expand-icon--expanded {
+.el-table--complex .el-table__row.el-table__row--level-1 .el-table__indent,
+.el-table--complex .el-table__row.el-table__row--level-1 .el-table__placeholder,
+.el-table--complex .el-table__row.el-table__row--level-1 .el-button,
+.el-table--complex .el-table__expand-icon.el-table__expand-icon--expanded {
   display: none
 }
 
@@ -7457,8 +7863,8 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 428px) {
   .back-top {
-      right:10px;
-      bottom: 80px
+    right: 10px;
+    bottom: 80px
   }
 }
 
@@ -7481,7 +7887,7 @@ h3 .icon-lightning img {
 }
 
 .loading.bgTransparent {
-  background: rgba(255,255,255,.5);
+  background: rgba(255, 255, 255, .5);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px)
 }
@@ -7517,8 +7923,8 @@ h3 .icon-lightning img {
   background: var(--el-color-primary-dark-2);
   -webkit-transform-origin: center;
   transform-origin: center;
-  -webkit-animation-timing-function: cubic-bezier(0,1,1,0);
-  animation-timing-function: cubic-bezier(0,1,1,0)
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0)
 }
 
 .loading .loading-ball .balls div:nth-child(1) {
@@ -7547,73 +7953,73 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes balls1 {
   0% {
-      -webkit-transform: scale(0);
-      transform: scale(0)
+    -webkit-transform: scale(0);
+    transform: scale(0)
   }
 
   to {
-      -webkit-transform: scale(1);
-      transform: scale(1)
+    -webkit-transform: scale(1);
+    transform: scale(1)
   }
 }
 
 @keyframes balls1 {
   0% {
-      -webkit-transform: scale(0);
-      transform: scale(0)
+    -webkit-transform: scale(0);
+    transform: scale(0)
   }
 
   to {
-      -webkit-transform: scale(1);
-      transform: scale(1)
+    -webkit-transform: scale(1);
+    transform: scale(1)
   }
 }
 
 @-webkit-keyframes balls2 {
   0% {
-      -webkit-transform: translate(0,0);
-      transform: translate(0)
+    -webkit-transform: translate(0, 0);
+    transform: translate(0)
   }
 
   to {
-      -webkit-transform: translate(24px,0);
-      transform: translate(24px)
+    -webkit-transform: translate(24px, 0);
+    transform: translate(24px)
   }
 }
 
 @keyframes balls2 {
   0% {
-      -webkit-transform: translate(0,0);
-      transform: translate(0)
+    -webkit-transform: translate(0, 0);
+    transform: translate(0)
   }
 
   to {
-      -webkit-transform: translate(24px,0);
-      transform: translate(24px)
+    -webkit-transform: translate(24px, 0);
+    transform: translate(24px)
   }
 }
 
 @-webkit-keyframes balls3 {
   0% {
-      -webkit-transform: scale(1);
-      transform: scale(1)
+    -webkit-transform: scale(1);
+    transform: scale(1)
   }
 
   to {
-      -webkit-transform: scale(0);
-      transform: scale(0)
+    -webkit-transform: scale(0);
+    transform: scale(0)
   }
 }
 
 @keyframes balls3 {
   0% {
-      -webkit-transform: scale(1);
-      transform: scale(1)
+    -webkit-transform: scale(1);
+    transform: scale(1)
   }
 
   to {
-      -webkit-transform: scale(0);
-      transform: scale(0)
+    -webkit-transform: scale(0);
+    transform: scale(0)
   }
 }
 
@@ -7675,21 +8081,21 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes effectText {
   0% {
-      color: var(--el-text-color-regular)
+    color: var(--el-text-color-regular)
   }
 
   to {
-      color: var(--el-color-primary-light-3)
+    color: var(--el-color-primary-light-3)
   }
 }
 
 @keyframes effectText {
   0% {
-      color: var(--el-text-color-regular)
+    color: var(--el-text-color-regular)
   }
 
   to {
-      color: var(--el-color-primary-light-3)
+    color: var(--el-color-primary-light-3)
   }
 }
 
@@ -7803,21 +8209,21 @@ h3 .icon-lightning img {
 
 @-webkit-keyframes lds-spinner {
   0% {
-      opacity: 1
+    opacity: 1
   }
 
   to {
-      opacity: 0
+    opacity: 0
   }
 }
 
 @keyframes lds-spinner {
   0% {
-      opacity: 1
+    opacity: 1
   }
 
   to {
-      opacity: 0
+    opacity: 0
   }
 }
 
@@ -7837,11 +8243,12 @@ h3 .icon-lightning img {
 }
 
 .header-bar .el-dropdown-menu__item:hover {
-  background: var(--el-bg-color)!important;
-  color: var(--el-color-primary)!important
+  background: var(--el-bg-color) !important;
+  color: var(--el-color-primary) !important
 }
 
-.header-bar .header-bar-info,.header-bar .header-bar-lang {
+.header-bar .header-bar-info,
+.header-bar .header-bar-lang {
   display: inline-flex;
   flex-shrink: 0;
   justify-content: center;
@@ -7850,49 +8257,50 @@ h3 .icon-lightning img {
 
 @media only screen and (max-width: 768px) {
   .header-bar .header-bar-right {
-      gap:10px
+    gap: 10px
   }
 
   .header-bar .header-bar-logo {
-      overflow: hidden;
-      width: 70px
+    overflow: hidden;
+    width: 70px
   }
 
   .header-bar .header-bar-logout {
-      width: 60px
+    width: 60px
   }
 }
 
 @media only screen and (max-width: 428px) {
   .header-bar {
-      padding:0 10px
+    padding: 0 10px
   }
 
   .header-bar .header-bar-logo {
-      width: 34px
+    width: 34px
   }
 
   .header-bar .header-bar-logo img {
-      height: 25px
+    height: 25px
   }
 
   .header-bar .header-bar-user-name {
-      display: inline-block;
-      vertical-align: middle;
-      overflow: hidden;
-      max-width: 80px;
-      text-overflow: ellipsis;
-      white-space: nowrap
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    max-width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap
   }
 }
 
 @media only screen and (max-width: 375px) {
   .header-bar .header-bar-user-name {
-      max-width:50px
+    max-width: 50px
   }
 }
 
-.header-bar-logo,.header-bar-right {
+.header-bar-logo,
+.header-bar-right {
   display: flex;
   align-items: center
 }
@@ -7935,8 +8343,9 @@ h3 .icon-lightning img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding-inline:4px;border: 0;
+  padding-inline: 4px;
+  border: 0;
   color: var(--el-text-color-regular);
   background: var(--el-color-primary-dark-2);
-  background: linear-gradient(to right,var(--el-color-primary) 0%,var(--el-color-primary-light-5) 100%)
+  background: linear-gradient(to right, var(--el-color-primary) 0%, var(--el-color-primary-light-5) 100%)
 }

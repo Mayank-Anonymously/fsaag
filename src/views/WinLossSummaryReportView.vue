@@ -2,10 +2,7 @@
   <section class="el-container is-vertical">
     <Header />
     <section class="el-container">
-      <SideBar
-        :is-sidebar-open="isSidebarOpen"
-        @toggle-sidebar="toggleSidebar"
-      />
+      <SideBar :is-sidebar-open="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
       <WinLossReport />
     </section>
   </section>
