@@ -32,17 +32,19 @@
                 <el-form-item label="Currency" required>
                     <el-cascader v-model="form.currency" :options="currency" placeholder="Select currency" />
                 </el-form-item>
-                <div>
-                    <el-radio-group v-model="radio1" size="large">
-                        <el-radio-button class="el-radio" label="New York" value="New York" />
-                        <el-radio-button label="Washington" value="Washington" />
-                        <el-radio-button label="Los Angeles" value="Los Angeles" />
-                        <el-radio-button label="Chicago" value="Chicago" />
-                    </el-radio-group>
-                    <el-form-item class="button-group">
-                        <el-button type="primary" @click="onSubmit">Create</el-button>
-                        <el-button>Cancel</el-button>
-                    </el-form-item>
+
+
+
+                <div class="form-option-flex">
+                    <el-checkbox-group v-model="checkboxGroup4" size="small"
+                        style="margin-top: 10px; flex-wrap: wrap; gap: 10px; display: flex">
+                        <el-checkbox-button v-for="(item, index) in filterButton" :key="index" :value="item"
+                            class="el-radio">
+                            {{ item }}
+                        </el-checkbox-button>
+                    </el-checkbox-group>
+                    <el-button type="primary" class="el-button btn--s btn--gold" @click="onSubmit">Submit</el-button>
+                    <el-button type="primary" class="el-button btn--s btn--gold" @click="onSubmit">EXPORT</el-button>
                 </div>
             </el-form>
         </div>
@@ -52,26 +54,28 @@
 
 <script>
 import { reactive } from 'vue'
-
-// do not use same name with ref
+// do not use same name with ref    
 const form = reactive({
     dateRange: [],
     timeZone: null,
     platform: null,
     type: null,
     location: '',
-    currency: ''
+    currency: '',
+    selectedFilter: "Today"
+
 })
 
 const onSubmit = () => {
     console.log('submit!')
 }
+
 export default {
     name: "Customfilter",
     props: {
         filterButton: {
             type: Array,
-            required: true,
+            default: () => [],
         },
         form: {
             type: Object,
@@ -79,20 +83,21 @@ export default {
         },
         timeZones: {
             type: Array,
-            default: false, // Default is not to show actions
+            default: () => [], // Default is not to show actions
         },
         platformOptions: {
             type: Array,
-            default: false, // Default is not to show actions
+            default: () => [], // Default is not to show actions
         },
         typeOptions: {
             type: Array,
-            default: false, // Default is not to show actions
+            default: () => [], // Default is not to show actions
         },
         currency: {
             type: Array,
-            default: false, // Default is not to show actions
+            default: () => [], // Default is not to show actions
         },
+
     },
 
 };

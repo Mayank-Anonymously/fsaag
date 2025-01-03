@@ -4087,9 +4087,6 @@ h3 .icon-lightning img {
   width: auto
 }
 
-.box-filter .w-100p .box-filter_duration .el-radio-group {
-  width: 100%
-}
 
 @media only screen and (max-width: 768px) {
   .box-filter .w-100p {
@@ -4231,42 +4228,8 @@ h3 .icon-lightning img {
   text-align: center
 }
 
-.box-filter_duration .el-radio-group {
-  gap: 10px
-}
 
-.box-filter_duration .el-radio {
-  box-sizing: border-box;
-  height: 40px;
-  margin-right: 0;
-  padding: 10px 20px;
-  border: 1px solid var(--el-color-primary);
-  border-radius: 4px;
-  transition: all .3s ease
-}
 
-.box-filter_duration .el-radio:hover {
-  background: var(--el-color-primary-light-9)
-}
-
-.box-filter_duration .el-radio.is-checked {
-  background-color: var(--el-color-primary)
-}
-
-.box-filter_duration .el-radio.is-checked .el-radio__label {
-  color: #fff
-}
-
-.box-filter_duration .el-radio__input {
-  display: none
-}
-
-.box-filter_duration .el-radio__label {
-  padding-left: 0;
-  color: var(--el-color-primary);
-  font-size: 14px;
-  line-height: 20px
-}
 
 @media only screen and (max-width: 768px) {
   .box-filter_duration {
@@ -8348,4 +8311,100 @@ h3 .icon-lightning img {
   color: var(--el-text-color-regular);
   background: var(--el-color-primary-dark-2);
   background: linear-gradient(to right, var(--el-color-primary) 0%, var(--el-color-primary-light-5) 100%)
+}
+
+.form-option-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.el-checkbox-button__original {
+  display: none;
+}
+
+.el-radio {
+  box-sizing: border-box;
+  height: 40px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--el-color-primary);
+  border-radius: 4px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.el-radio:hover {
+  background: var(--el-color-primary-light-9);
+  opacity: 10px;
+  border-radius: 4px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.el-radio__label {
+  font-size: 12px;
+  color: var(--el-color-primary);
+}
+
+.el-checkbox-button .el-checkbox-button__inner {
+  border: none !important;
+  font-size: 12px;
+  color: var(--el-color-primary);
+}
+
+.el-checkbox-button:first-child .el-checkbox-button__inner {
+  border: none !important;
+  font-size: 12px;
+  color: var(--el-color-primary);
+}
+
+
+.wrapper .el-button span {
+  font-size: 12px;
+}
+
+.box-filter .w-100p .box-filter_btns {
+  position: relative;
+  inset: auto;
+  width: auto;
+}
+
+.box-filter .w-100p .box-filter_duration {
+  flex: 1 1 50%;
+  order: -1;
+  width: auto;
+}
+
+.form-option-flex {
+  display: flex;
+  flex-direction: column;
+  /* Default layout for small devices */
+  gap: 10px;
+  align-items: stretch;
+}
+
+@media screen and (min-width: 768px) {
+  .form-option-flex {
+    flex-direction: row;
+    /* Row layout for larger devices */
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Space between buttons */
+  justify-content: flex-start;
+  /* Align buttons for small screens */
+}
+
+.el-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Spacing between checkboxes */
 }

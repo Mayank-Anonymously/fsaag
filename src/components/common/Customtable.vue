@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-table :data="paginatedData" border>
+    <el-table :data="paginatedData" border height="250">
       <el-table-column v-if="showActions" label="Player Summary">
         <template #default="scope">
           <el-button type="primary" size="small" @click="handleButtonClick(scope.row)">

@@ -37,12 +37,12 @@ export default {
         return {
             isActionEnabled: true,
             filterButton: [
-                "Last Month",
-                "This Month",
-                "Last Week",
-                "This Week",
-                "Yesterday",
-                "Today",
+                { value: "Last Month", label: "Last Month" },
+                { value: "This Month", label: "This Month" },
+                { value: "Last Week", label: "Last Week" },
+                { value: "This Week", label: "This Week" },
+                { value: "Yesterday", label: "Yesterday" },
+                { value: "Today", label: "Today" },
             ],
             form: {
                 dateRange: [],
@@ -50,6 +50,8 @@ export default {
                 platform: null,
                 type: null,
                 location: '',
+                filter: '',
+                currency: ''
             },
             timeZones: [
                 { value: 'GMT', label: 'GMT' },
