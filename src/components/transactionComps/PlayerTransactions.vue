@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <main class="el-main">
+        <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
             <h1>Player Transactions<span></span></h1>
             <div class="box">
 
@@ -26,6 +26,7 @@ export default {
         TableComp,
         Customfilter
     },
+
     data() {
         return {
             isActionEnabled: true,

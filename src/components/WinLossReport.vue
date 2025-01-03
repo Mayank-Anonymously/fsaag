@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <main class="el-main">
+    <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
       <h1>Win / Loss Summary <span></span></h1>
       <div class="box">
         <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones" :platformOption="platformOptions"
@@ -19,6 +19,12 @@ import winloss from "../utils/winLossSummary/winloss.json";
 import Customfilter from "./common/Customfilter.vue";
 export default {
   name: "WinLossReport",
+  props: {
+    isSidebarOpen: {
+      type: Boolean,
+      required: true,
+    },
+  },
   components: {
     TableComp,
     Customfilter
