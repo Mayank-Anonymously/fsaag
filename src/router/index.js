@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import DashboardView from "../views/DashboardView.vue";
-import HomeView from "../views/HomeView.vue";
-import MemberTreeView from "../views/MemberTreeView.vue";
-import WinLossSummaryReportView from "../views/winLossSummaryReportView.vue";
+import DashboardView from "@/views/DashboardView.vue";
+import HomeView from "@/views/HomeView.vue";
+import MemberTreeView from "@/views/MemberTreeView.vue";
+import WinLossSummaryReportView from "@/views/WinLossSummaryReportView.vue";
 import AdjustmentDetails from "@/views/AdjustmentDetails.vue";
 import PlayerSummaryView from "@/views/Transactions/PlayerSummaryView.vue";
 import PlayerTransactions from "@/views/Transactions/PlayerTransactions.vue";
