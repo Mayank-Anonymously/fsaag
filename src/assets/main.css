@@ -8391,6 +8391,10 @@ h3 .icon-lightning img {
     justify-content: space-between;
     align-items: center;
   }
+
+  .el-date-range-picker__content {
+    width: 67% !important
+  }
 }
 
 .button-group {
@@ -8424,12 +8428,16 @@ h3 .icon-lightning img {
 
   .el-date-range-picker__content.is-left {
     border-right: 1px solid var(--el-datepicker-inner-border-color) !important;
-    width: 150% !important;
+    width: 67% !important;
   }
 
-  .el-date-range-picker__content.is-right {
+  .el-picker-panel__content .el-date-range-picker__content .is-right {
     border-right: 1px solid var(--el-datepicker-inner-border-color) !important;
-    width: 150% !important;
+    width: 67% !important;
+  }
+
+  .el-date-range-picker__content {
+    width: 67% !important
   }
 
   .el-date-range-picker {
@@ -8456,12 +8464,16 @@ h3 .icon-lightning img {
 
   .el-date-range-picker__content.is-left {
     border-right: 1px solid var(--el-datepicker-inner-border-color) !important;
-    width: 150% !important;
+    width: 67% !important;
   }
 
-  .el-date-range-picker__content.is-left {
+  .el-date-range-picker__content {
+    width: 67% !important
+  }
+
+  .el-picker-panel__content .el-date-range-picker__content .is-right {
     border-right: 1px solid var(--el-datepicker-inner-border-color) !important;
-    width: 150% !important;
+    width: 67% !important;
   }
 
   .el-date-range-picker {
@@ -8488,12 +8500,16 @@ h3 .icon-lightning img {
 
   .el-date-range-picker__content.is-left {
     border-right: 1px solid var(--el-datepicker-inner-border-color) !important;
-    width: 150% !important;
+    width: 67% !important;
   }
 
-  .el-date-range-picker__content.is-left {
+  .el-date-range-picker__content {
+    width: 67% !important
+  }
+
+  .el-picker-panel__content .el-date-range-picker__content .is-right {
     border-right: 1px solid var(--el-datepicker-inner-border-color) !important;
-    width: 150% !important;
+    width: 67% !important;
   }
 
   .el-date-range-picker {
