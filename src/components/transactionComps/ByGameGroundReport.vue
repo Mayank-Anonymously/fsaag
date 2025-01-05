@@ -3,7 +3,6 @@
         <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
             <h1>By Game Ground Report<span></span></h1>
             <div class="box">
-
                 <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones"
                     :platformOption="platformOptions" :gameType="gameType" :currency="currency"
                     :isPlatformTxID="isPlatformTxID" :isAgentId="isAgentId" :isPrefixEnabled="isPrefixEnabled"
@@ -12,8 +11,6 @@
             </div>
             <div class="box">
                 <TableComp :headers="headersKeys" :reportData="reportData" :showActions="isActionEnabled" />
-
-
             </div>
         </main>
     </div>

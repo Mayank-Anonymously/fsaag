@@ -81,9 +81,20 @@
                             {{ item }}
                         </el-checkbox-button>
                     </el-checkbox-group>
-
-                    <el-button type="primary" class="el-button btn--s btn--gold" @click="onSubmit">Submit</el-button>
-                    <el-button type="primary" class="el-button btn--s btn--gold" @click="exportData">EXPORT</el-button>
+                    <div class="container">
+                        <div class="row form-option-flex-button">
+                            <div class="col-2 button">
+                                <el-button type="primary" class="el-button btn--s btn--gold w-100" @click="onSubmit">
+                                    Submit
+                                </el-button>
+                            </div>
+                            <div class="col-2 button">
+                                <el-button type="primary" class="el-button btn--s btn--gold w-100" @click="exportData">
+                                    EXPORT
+                                </el-button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </el-form>
         </div>
@@ -211,12 +222,55 @@ export default {
     margin-top: 20px;
 }
 
-.button-group .el-button {
-    flex: 1;
-    margin-right: 10px;
-}
+
 
 .button-group .el-button:last-child {
     margin-right: 0;
+}
+
+.form-option-flex-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.form-option-flex-button .button {
+    margin: 10px
+}
+
+@media (max-width: 768px) {
+    .form-option-flex-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+    }
+
+    .form-option-flex-button .button {
+        margin: 10px
+    }
+}
+
+@media (max-width: 768px) {
+    .form-option-flex-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+    }
+
+    .form-option-flex-button .button {
+        margin: 10px
+    }
+}
+
+@media (max-width: 480px) {
+    .form-option-flex-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+    }
+
+    .form-option-flex-button .button {
+        margin: 10px
+    }
 }
 </style>
