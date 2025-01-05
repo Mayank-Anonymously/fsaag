@@ -22,7 +22,6 @@
 
 <script>
 import TableComp from "../common/Customtable.vue";
-import winloss from "../../utils/winLossSummary/winloss.json";
 import Customfilter from "../common/Customfilter.vue";
 export default {
     name: "PlayerSummary",
