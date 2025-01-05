@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <main :class="[isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+        <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
             <!-- <main class="el-main"> -->
             <h1>Player Transactions<span></span></h1>
             <div class="box">
@@ -8,7 +8,8 @@
                 <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones"
                     :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency"
                     :isPlatformTxID="isPlatformTxID" :isPlayerId="isPlayerId" :isAgentId="isAgentId"
-                    :isPrefixEnabled="isPrefixEnabled" :isCurrency="isCurrency" />
+                    :isPrefixEnabled="isPrefixEnabled" :isCurrency="isCurrency" :isType="isType"
+                    :isGameName="isGameName" />
             </div>
             <div class="box">
                 <TableComp :headers="headersKeys" :reportData="reportData" :showActions="isActionEnabled" />
@@ -29,7 +30,12 @@ export default {
         TableComp,
         Customfilter
     },
-
+    props: {
+        isSidebarOpen: {
+            type: Boolean,
+            required: true,
+        },
+    },
     data() {
         return {
             isActionEnabled: true,
@@ -37,7 +43,9 @@ export default {
             isPrefixEnabled: false,
             isPlayerId: true,
             isPlatformTxID: true,
+            isType: true,
             isCurrency: false,
+            isGameName: true,
             filterButton: [
                 "Last Week",
                 "This Week",
@@ -105,38 +113,28 @@ export default {
                 { value: "PHP", label: "PHP" }
             ],
             headersKeys: [
-                { title: "User  ID", prop: "userID" },
+                { title: "No.", prop: "No." },
+                { title: "Currency", prop: "currency" },
+                { title: "Player ID", prop: "playerID" },
+                { title: "Platform txID", prop: "platformTxID" },
+                { title: "RoundId", prop: "roundId" },
+                { title: "Time", prop: "time" },
                 { title: "Platform", prop: "platform" },
                 { title: "Type", prop: "type" },
-                { title: "Location", prop: "location" },
-                { title: "Bet Count", prop: "betCount" },
+                { title: "Game Name", prop: "gameName" },
+                { title: "Game Info", prop: "gameInfo" },
+                { title: "Bet Type", prop: "betType" },
+                { title: "Odds", prop: "odds" },
+                { title: "Status", prop: "status" },
                 { title: "Valid Turnover", prop: "validTurnover" },
                 { title: "Bet Amount", prop: "betAmount" },
-                { title: "Total Bet", prop: "totlBet" },
-                { title: "Remark", prop: "remark" },
-                {
-                    title: "Player",
-                    subHeaders: [
-                        { title: "Win Loss", prop: "Player.playerWinLoss" },
-                        { title: "Adjustment", prop: "Player.adjustment" },
-                        { title: "Total PL", prop: "Player.totalPL" },
-                        { title: "Margin", prop: "Player.margin" },
-                    ],
-                },
-                {
-                    title: "Agent",
-                    subHeaders: [
-                        { title: "Win Loss", prop: "Agent.ptWinLoss" },
-                        { title: "Adjustment", prop: "Agent.Adjustment" },
-                        { title: "Total PL", prop: "Agent.totalPL" },
-                    ],
-                },
-                {
-                    title: "Company",
-                    subHeaders: [{ title: "Company Total PL", prop: "Company.totalPL" }],
-                },
+                { title: "Win Amount", prop: "winAmount" },
+                { title: "PlayerWL", prop: "PlayerWL" },
+                { title: "Device", prop: "device" },
+                { title: "BetIP", prop: "betIP" },
+
             ],
-            reportData: winloss,
+            reportData: [],
         };
     },
     methods: {

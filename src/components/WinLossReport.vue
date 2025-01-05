@@ -1,10 +1,11 @@
 <template>
   <div class="wrapper">
-    <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+    <main class=el-main>
       <h1>Win / Loss Summary <span></span></h1>
       <div class="box">
         <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones" :platformOption="platformOptions"
-          :typeOptions="typeOptions" :currency="currency" @filterSubmit="applyFilters" />
+          :typeOptions="typeOptions" :isType="isType" :currency="currency" @filterSubmit="applyFilters"
+          :isLocation="isLocation" :isCurrency="isCurrency" />
       </div>
       <div v-for="(curr, index) in filteredReportData" :key="index" class="box">
         <template v-if="curr.data && curr.data.length > 0">
@@ -27,6 +28,7 @@
 import TableComp from "../components/common/Customtable.vue";
 import winloss from "../utils/winLossSummary/winloss.json";
 import Customfilter from "./common/Customfilter.vue";
+
 export default {
   name: "WinLossReport",
   props: {
@@ -41,9 +43,12 @@ export default {
   },
   data() {
     return {
+      isCurrency: true,
+      isLocation: true,
       isActionEnabled: true,
       filteredReportData: [], // Filtered data
       filteredReportDataSet: [],
+      isType: true,
       filterButton: [
         "Last Month",
         "This Month",

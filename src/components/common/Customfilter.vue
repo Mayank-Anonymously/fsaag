@@ -2,6 +2,7 @@
     <div>
         <div class="box-filter">
             <el-form :model="form" label-position="top" :inline="true" class="el-form--inline">
+
                 <!-- Date and Time -->
                 <el-form-item label="Date and Time" required>
                     <el-date-picker v-model="form.dateRange" type="datetimerange" range-separator="-"
@@ -15,6 +16,9 @@
 
                 <el-form-item v-if="isPrefixEnabled" label="Prefix Id">
                     <el-input v-model="form.prefix" placeholder="Select" />
+                </el-form-item>
+                <el-form-item v-if="isGameName" label="Game Name">
+                    <el-input v-model="form.gameName" placeholder="Select" />
                 </el-form-item>
 
                 <el-form-item v-if="isRoundId" label="Round ID">
@@ -57,20 +61,16 @@
                 </el-form-item>
 
                 <!-- Conditional rendering based on isUser Id -->
-                <el-form-item v-if="isCurrency" label="User ID">
-                    <el-input v-model="form.userId" placeholder="Enter User ID" />
+                <el-form-item v-if="isCurrency" label="Currency">
+                    <el-cascader v-model="form.currency" :options="currency" placeholder="Select Currency" />
+
                 </el-form-item>
-
-
 
 
                 <!-- Conditional Location Input -->
                 <el-form-item v-if="isLocation" label="Location">
-                    <el-input v-model="form.location" placeholder="Select" />
+                    <el-input v-model="form.location" placeholder="Select" disabled readonly />
                 </el-form-item>
-
-
-
 
 
                 <div class="form-option-flex">
@@ -159,6 +159,10 @@ export default {
         },
         gameType: {
             type: Array,
+            required: true
+        },
+        isGameName: {
+            type: Boolean,
             required: true
         }
 

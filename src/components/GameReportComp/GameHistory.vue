@@ -1,12 +1,12 @@
 <template>
     <div class="wrapper">
-        <main :class="[isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+        <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
             <h1>Game Report<span></span></h1>
             <div class="box">
 
                 <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones"
                     :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency"
-                    @filterSubmit="applyFilters" :isUserId="isUserId" />
+                    @filterSubmit="applyFilters" :isUserId="isUserId" :isType="isType" :isCurrency="isCurrency" />
             </div>
 
             <div v-for="(curr, index) in filteredReportData" :key="index" class="box">
@@ -46,6 +46,8 @@ export default {
             isActionEnabled: false,
             isUserId: false,
             isLocation: false,
+            isType: true,
+            isCurrency: true,
             filterButton: [
                 "Last Week",
                 "This Week",

@@ -3,7 +3,7 @@
         <Header />
         <section class="el-container">
             <SideBar :is-sidebar-open="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
-            <GameDaily />
+            <GameDaily :is-sidebar-open="isSidebarOpen" />
         </section>
     </section>
 </template>

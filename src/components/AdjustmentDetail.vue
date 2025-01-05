@@ -1,11 +1,11 @@
 <template>
     <div class="wrapper">
-        <main :class="[isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+        <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
             <h1>Adjustment Detail <span></span></h1>
             <div class="box">
                 <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones"
                     :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency"
-                    @filterSubmit="applyFilters" :isUserId="isUserId" />
+                    @filterSubmit="applyFilters" :isCurrency="isCurrency" :isUserId="isUserId" :isType="isType" />
             </div>
 
             <div v-for="(curr, index) in filteredReportData" :key="index" class="box">
@@ -20,7 +20,6 @@
                     </div>
                 </template>
             </div>
-
         </main>
     </div>
 </template>
@@ -44,6 +43,8 @@ export default {
     },
     data() {
         return {
+            isCurrency: true,
+            isType: true,
             isUserId: true,
             isActionEnabled: false,
             filteredReportData: [], // Filtered data

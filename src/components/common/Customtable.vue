@@ -5,7 +5,7 @@
       <el-table-column v-if="showActions" label="Player Summary">
         <template #default="scope">
           <el-button type="primary" size="small" @click="handleButtonClick(scope.row)">
-            Action
+            View
           </el-button>
         </template>
       </el-table-column>
