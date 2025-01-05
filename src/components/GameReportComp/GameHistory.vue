@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <main class="el-main">
+        <main :class="[isSidebarOpen ? 'el-main isExtend' : 'el-main']">
             <h1>Game Report<span></span></h1>
             <div class="box">
 

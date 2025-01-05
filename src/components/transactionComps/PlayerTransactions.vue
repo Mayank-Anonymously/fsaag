@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
-        <!-- <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']"> -->
-        <main class="el-main">
+        <main :class="[isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+            <!-- <main class="el-main"> -->
             <h1>Player Transactions<span></span></h1>
             <div class="box">
 
