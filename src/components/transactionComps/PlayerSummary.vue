@@ -1,11 +1,13 @@
 <template>
     <div class="wrapper">
-        <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+        <!-- <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']"> -->
+        <main class="el-main">
             <h1>Player Summary<span></span></h1>
             <div class="box">
 
                 <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones"
-                    :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency" />
+                    :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency"
+                    :isPrefixEnabled="isPrefixEnabled" :isPlayerId="isPlayerId" :isAgentId="isAgentId" />
             </div>
             <div class="box">
                 <TableComp :headers="headersKeys" :reportData="reportData" :showActions="isActionEnabled" />
@@ -18,8 +20,8 @@
 
 <script>
 import TableComp from "../common/Customtable.vue";
-import winloss from "../../utils/winLossSummary/winloss.json";
 import Customfilter from "../common/Customfilter.vue";
+
 export default {
     name: "PlayerSummary",
     components: {
@@ -34,10 +36,12 @@ export default {
     },
     data() {
         return {
-            isActionEnabled: true,
+            isUserId: false,
+            isActionEnabled: false,
+            isPrefixEnabled: true,
+            isPlayerId: true,
+            isAgentId: true,
             filterButton: [
-                "Last Month",
-                "This Month",
                 "Last Week",
                 "This Week",
                 "Yesterday",
@@ -104,38 +108,35 @@ export default {
                 { value: "PHP", label: "PHP" }
             ],
             headersKeys: [
-                { title: "User  ID", prop: "userID" },
-                { title: "Platform", prop: "platform" },
-                { title: "Type", prop: "type" },
-                { title: "Location", prop: "location" },
-                { title: "Bet Count", prop: "betCount" },
-                { title: "Valid Turnover", prop: "validTurnover" },
-                { title: "Bet Amount", prop: "betAmount" },
-                { title: "Total Bet", prop: "totlBet" },
-                { title: "Remark", prop: "remark" },
                 {
-                    title: "Player",
-                    subHeaders: [
-                        { title: "Win Loss", prop: "Player.playerWinLoss" },
-                        { title: "Adjustment", prop: "Player.adjustment" },
-                        { title: "Total PL", prop: "Player.totalPL" },
-                        { title: "Margin", prop: "Player.margin" },
-                    ],
+                    title: "PlayerId", prop: "playerId"
                 },
                 {
-                    title: "Agent",
-                    subHeaders: [
-                        { title: "Win Loss", prop: "Agent.ptWinLoss" },
-                        { title: "Adjustment", prop: "Agent.Adjustment" },
-                        { title: "Total PL", prop: "Agent.totalPL" },
-                    ],
+                    title: "Platform", prop: "platform"
                 },
                 {
-                    title: "Company",
-                    subHeaders: [{ title: "Company Total PL", prop: "Company.totalPL" }],
+                    title: "Bet Amount", prop: "betAmount"
                 },
+                {
+                    title: "Valid Turnover", prop: "validTurnover"
+                },
+                {
+                    title: "Win Amount", prop: "winAmount"
+                },
+                {
+                    title: "Player Win/Loss", prop: "playerPL"
+                },
+                {
+                    title: "Adjustment",
+                    prop: "adjustment",
+                },
+                {
+                    title: "Total P/L",
+                    prop: "totalPL",
+                },
+
             ],
-            reportData: winloss,
+            reportData: [],
         };
     },
     methods: {

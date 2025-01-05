@@ -3,7 +3,7 @@
         <Header />
         <section class="el-container">
             <SideBar :is-sidebar-open="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
-            <PlayerSummary />
+            <ByGameGroundReport />
         </section>
     </section>
 </template>
@@ -12,7 +12,7 @@
 import Header from "@/components/Header.vue";
 import MyProfile from "@/components/MyProfile.vue";
 import SideBar from "@/components/SideBar.vue";
-import PlayerSummary from "@/components/transactionComps/PlayerSummary.vue";
+import ByGameGroundReport from "@/components/transactionComps/ByGameGroundReport.vue";
 
 export default {
     methods: {
@@ -34,7 +34,7 @@ export default {
         Header,
         SideBar,
         MyProfile,
-        PlayerSummary
+        ByGameGroundReport
     },
 };
 </script>

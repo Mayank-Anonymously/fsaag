@@ -13,13 +13,41 @@
                     <el-cascader v-model="form.timeZones" :options="timeZones" placeholder="Select Time Zone" />
                 </el-form-item>
 
+                <el-form-item v-if="isPrefixEnabled" label="Prefix Id">
+                    <el-input v-model="form.prefix" placeholder="Select" />
+                </el-form-item>
+
+                <el-form-item v-if="isRoundId" label="Round ID">
+                    <el-input v-model="form.roundId" placeholder="Select" />
+                </el-form-item>
+
+                <el-form-item v-if="refPlatformTxId" label="refPlatformTxId">
+                    <el-input v-model="form.refPlatformTxId" placeholder="Select" />
+                </el-form-item>
+
+                <el-form-item v-if="gameType" label="Game Type">
+                    <el-cascader v-model="form.gameType" :options="gameType" placeholder="Select Gametype" />
+                </el-form-item>
+
+                <el-form-item v-if="isPlatformTxID" label="Platform TxID">
+                    <el-input v-model="form.platformTxId" placeholder="Select" />
+                </el-form-item>
+
+                <el-form-item v-if="isPlayerId" label="Player Id">
+                    <el-input v-model="form.player" placeholder="Select" />
+                </el-form-item>
+
+                <el-form-item v-if="isAgentId" label="Agent Id">
+                    <el-input v-model="form.agentId" placeholder="Select" />
+                </el-form-item>
+
                 <!-- Platform -->
                 <el-form-item label="Platform" required>
                     <el-cascader v-model="form.platform" :options="platformOption" placeholder="Select Platform" />
                 </el-form-item>
 
                 <!-- Type -->
-                <el-form-item label="Type" required>
+                <el-form-item v-if="isType" label="Type" required>
                     <el-cascader v-model="form.type" :options="typeOptions" placeholder="Select Type" />
                 </el-form-item>
 
@@ -28,20 +56,22 @@
                     <el-input v-model="form.userId" placeholder="Enter User ID" />
                 </el-form-item>
 
-                <el-form-item v-if="isUserId" label="User ID">
+                <!-- Conditional rendering based on isUser Id -->
+                <el-form-item v-if="isCurrency" label="User ID">
                     <el-input v-model="form.userId" placeholder="Enter User ID" />
                 </el-form-item>
 
+
+
+
                 <!-- Conditional Location Input -->
                 <el-form-item v-if="isLocation" label="Location">
-                    <el-input v-model="form.location" placeholder="Select" disabled readonly />
+                    <el-input v-model="form.location" placeholder="Select" />
                 </el-form-item>
 
 
-                <!-- Currency -->
-                <el-form-item label="Currency" required>
-                    <el-cascader v-model="form.currency" :options="currency" placeholder="Select Currency" />
-                </el-form-item>
+
+
 
                 <div class="form-option-flex">
                     <el-checkbox-group v-model="form.selectedFilters" size="small"
@@ -92,6 +122,43 @@ export default {
         },
         isLocation: {
             type: Boolean,
+            required: true
+        },
+
+        isPrefixEnabled: {
+            type: Boolean,
+            required: true
+        },
+        isAgentId: {
+            type: Boolean,
+            required: true
+        },
+        isType: {
+            type: Boolean,
+            required: true
+        },
+        isPlayerId: {
+            type: Boolean,
+            required: true
+        },
+        isCurrency: {
+            type: Boolean,
+            required: true
+        },
+        isPlatformTxID: {
+            type: Boolean,
+            required: true
+        },
+        isRoundId: {
+            type: Boolean,
+            required: true
+        },
+        refPlatformTxId: {
+            type: Boolean,
+            required: true
+        },
+        gameType: {
+            type: Array,
             required: true
         }
 

@@ -1,11 +1,14 @@
 <template>
     <div class="wrapper">
-        <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+        <!-- <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']"> -->
+        <main class="el-main">
             <h1>Player Transactions<span></span></h1>
             <div class="box">
 
                 <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones"
-                    :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency" />
+                    :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency"
+                    :isPlatformTxID="isPlatformTxID" :isPlayerId="isPlayerId" :isAgentId="isAgentId"
+                    :isPrefixEnabled="isPrefixEnabled" :isCurrency="isCurrency" />
             </div>
             <div class="box">
                 <TableComp :headers="headersKeys" :reportData="reportData" :showActions="isActionEnabled" />
@@ -30,9 +33,12 @@ export default {
     data() {
         return {
             isActionEnabled: true,
+            isAgentId: false,
+            isPrefixEnabled: false,
+            isPlayerId: true,
+            isPlatformTxID: true,
+            isCurrency: false,
             filterButton: [
-                "Last Month",
-                "This Month",
                 "Last Week",
                 "This Week",
                 "Yesterday",
