@@ -1,0 +1,186 @@
+[
+  {
+    "currency": "KES",
+    "data": [
+      {
+        "gameType": "FH",
+        "platform": "JDB",
+        "betCount": 1,
+        "validTurnover": 5.0,
+        "betAmount": 5.0,
+        "winAmount": 0,
+        "totalBet": 5.0,
+        "player": {
+          "amount": -5.0,
+          "percentage": -100.0
+        }
+      },
+      {
+        "gameType": "SLOT",
+        "platform": "PP",
+        "betCount": 3,
+        "validTurnover": 60.0,
+        "betAmount": 60.0,
+        "winAmount": 16.0,
+        "totalBet": 60.0,
+        "player": {
+          "amount": -44.0,
+          "percentage": -73.33
+        }
+      }
+    ]
+  },
+  {
+    "currency": "MXN",
+    "data": [
+      {
+        "gameType": "EGAME",
+        "platform": "JDB",
+        "betCount": 215,
+        "validTurnover": 708.0,
+        "betAmount": 708.0,
+        "winAmount": 959.6,
+        "totalBet": 708.0,
+        "player": {
+          "amount": 251.6,
+          "percentage": 35.54
+        }
+      },
+      {
+        "gameType": "FH",
+        "platform": "JDB",
+        "betCount": 135,
+        "validTurnover": 456.5,
+        "betAmount": 456.5,
+        "winAmount": 143.7,
+        "totalBet": 456.5,
+        "player": {
+          "amount": -312.8,
+          "percentage": -68.52
+        }
+      },
+      {
+        "gameType": "SLOT",
+        "platform": "JDB",
+        "betCount": 3387,
+        "validTurnover": 3332.2,
+        "betAmount": 3332.2,
+        "winAmount": 2882.37,
+        "totalBet": 3332.2,
+        "player": {
+          "amount": -449.83,
+          "percentage": -13.5
+        }
+      },
+      {
+        "gameType": "SLOT",
+        "platform": "JILI",
+        "betCount": 129,
+        "validTurnover": 38.7,
+        "betAmount": 38.7,
+        "winAmount": 18.6,
+        "totalBet": 38.7,
+        "player": {
+          "amount": -20.1,
+          "percentage": -51.94
+        }
+      },
+      {
+        "gameType": "SLOT",
+        "platform": "PP",
+        "betCount": 6456,
+        "validTurnover": 7611.85,
+        "betAmount": 7611.85,
+        "winAmount": 7088.28,
+        "totalBet": 7611.85,
+        "player": {
+          "amount": -523.57,
+          "percentage": -6.88
+        }
+      }
+    ]
+  },
+  {
+    "currency": "INR",
+    "data": [
+      {
+        "gameType": "EGAME",
+        "platform": "JDB",
+        "betCount": 197,
+        "validTurnover": 6558.36,
+        "betAmount": 6558.6,
+        "winAmount": 6856.02,
+        "totalBet": 6558.6,
+        "player": {
+          "amount": 297.42,
+          "percentage": 4.53
+        }
+      },
+      {
+        "gameType": "EGAME",  
+        "platform": "SPRIBE",
+        "betCount": 520178,
+        "validTurnover": 69207825.78,
+        "betAmount": 69207825.78,
+        "winAmount": 68061699.86,
+        "totalBet": 69207825.78,
+        "player": {
+          "amount": -1146125.92,
+          "percentage": -1.66
+        }
+      },
+      {
+        "gameType": "FH",
+        "platform": "JDB",
+        "betCount": 17671,
+        "validTurnover": 186385.6,
+        "betAmount": 186385.6,
+        "winAmount": 186162.3,
+        "totalBet": 186385.6,
+        "player": {
+          "amount": -223.3,
+          "percentage": -0.12
+        }
+      },
+      {
+        "gameType": "SLOT",
+        "platform": "JDB",
+        "betCount": 23843,
+        "validTurnover": 159339.2,
+        "betAmount": 159339.2,
+        "winAmount": 161564.29,
+        "totalBet": 159339.2,
+        "player": {
+          "amount": 2225.09,
+          "percentage": 1.4
+        }
+      },
+      {
+        "gameType": "SLOT",
+        "platform": "JILI",
+        "betCount": 51,
+        "validTurnover": 207.3,
+        "betAmount": 207.3,
+        "winAmount": 162.25,
+        "totalBet": 207.3,
+        "player": {
+          "amount": -45.05,
+          "percentage": -21.73
+        }
+      },
+      {
+        "gameType": "TABLE",
+        "platform": "JILI",
+        "betCount": 15,
+        "validTurnover": 300.0,
+        "betAmount": 300.0,
+        "winAmount": 380.0,
+        "totalBet": 300.0,
+        "player": {
+          "amount": 80.0,
+          "percentage": 26.67
+        }
+      }
+    ]
+  }
+]

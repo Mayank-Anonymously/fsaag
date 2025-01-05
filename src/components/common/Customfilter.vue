@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="box-filter">
-            <el-form ref="form" :model="form" label-position="top" :inline="true" class="el-form--inline">
+            <el-form :model="form" label-position="top" :inline="true" class="el-form--inline">
                 <!-- Date and Time -->
                 <el-form-item label="Date and Time" required>
                     <el-date-picker v-model="form.dateRange" type="datetimerange" range-separator="-"
@@ -15,7 +15,7 @@
 
                 <!-- Platform -->
                 <el-form-item label="Platform" required>
-                    <el-cascader v-model="form.platform" :options="platformOptions" placeholder="Select Platform" />
+                    <el-cascader v-model="form.platform" :options="platformOption" placeholder="Select Platform" />
                 </el-form-item>
 
                 <!-- Type -->
@@ -23,83 +23,113 @@
                     <el-cascader v-model="form.type" :options="typeOptions" placeholder="Select Type" />
                 </el-form-item>
 
-                <!-- Location -->
-                <el-form-item label="Location">
+                <!-- Conditional rendering based on isUser Id -->
+                <el-form-item v-if="isUserId" label="User ID">
+                    <el-input v-model="form.userId" placeholder="Enter User ID" />
+                </el-form-item>
+
+                <el-form-item v-if="isUserId" label="User ID">
+                    <el-input v-model="form.userId" placeholder="Enter User ID" />
+                </el-form-item>
+
+                <!-- Conditional Location Input -->
+                <el-form-item v-if="isLocation" label="Location">
                     <el-input v-model="form.location" placeholder="Select" disabled readonly />
                 </el-form-item>
 
-                <!-- Platform -->
+
+                <!-- Currency -->
                 <el-form-item label="Currency" required>
-                    <el-cascader v-model="form.currency" :options="currency" placeholder="Select currency" />
+                    <el-cascader v-model="form.currency" :options="currency" placeholder="Select Currency" />
                 </el-form-item>
 
-
-
                 <div class="form-option-flex">
-                    <el-checkbox-group v-model="checkboxGroup4" size="small"
+                    <el-checkbox-group v-model="form.selectedFilters" size="small"
                         style="margin-top: 10px; flex-wrap: wrap; gap: 10px; display: flex">
                         <el-checkbox-button v-for="(item, index) in filterButton" :key="index" :value="item"
                             class="el-radio">
                             {{ item }}
                         </el-checkbox-button>
                     </el-checkbox-group>
+
                     <el-button type="primary" class="el-button btn--s btn--gold" @click="onSubmit">Submit</el-button>
-                    <el-button type="primary" class="el-button btn--s btn--gold" @click="onSubmit">EXPORT</el-button>
+                    <el-button type="primary" class="el-button btn--s btn--gold" @click="exportData">EXPORT</el-button>
                 </div>
             </el-form>
         </div>
-
     </div>
 </template>
 
 <script>
-import { reactive } from 'vue'
-// do not use same name with ref    
-const form = reactive({
-    dateRange: [],
-    timeZone: null,
-    platform: null,
-    type: null,
-    location: '',
-    currency: '',
-    selectedFilter: "Today"
-
-})
-
-const onSubmit = () => {
-    console.log('submit!')
-}
+import { reactive } from "vue";
 
 export default {
-    name: "Customfilter",
+    name: "CustomFilter",
     props: {
         filterButton: {
             type: Array,
             default: () => [],
         },
-        form: {
-            type: Object,
-            required: true,
-        },
         timeZones: {
             type: Array,
-            default: () => [], // Default is not to show actions
+            default: () => [],
         },
-        platformOptions: {
+        platformOption: {
             type: Array,
-            default: () => [], // Default is not to show actions
+            required: true,
         },
         typeOptions: {
             type: Array,
-            default: () => [], // Default is not to show actions
+            default: () => [],
         },
         currency: {
             type: Array,
-            default: () => [], // Default is not to show actions
+            default: () => [],
         },
+        isUserId: {
+            type: Boolean,
+            required: true,
+        },
+        isLocation: {
+            type: Boolean,
+            required: true
+        }
 
     },
 
+    setup(props, { emit }) {
+        const form = reactive({
+            dateRange: [],
+            timeZones: null,
+            platform: null,
+            type: null,
+            location: "",
+            currency: null,
+            selectedFilters: [],
+        });
+        const onSubmit = () => {
+            const filterCriteria = {
+                dateRange: form.dateRange,
+                timeZones: form.timeZones,
+                platform: form.platform,
+                type: form.type,
+                currency: form.currency,
+                selectedFilters: form.selectedFilters,
+            };
+            emit("filterSubmit", filterCriteria);
+            console.log("Filter Criteria Emitted:", filterCriteria); // Debugging line
+        };
+
+        const exportData = () => {
+            console.log("Exporting data...");
+        };
+
+        return {
+            form,
+            onSubmit,
+            exportData,
+        };
+    }
 };
 </script>
 
@@ -113,11 +143,9 @@ export default {
 .button-group .el-button {
     flex: 1;
     margin-right: 10px;
-    /* Space between buttons */
 }
 
 .button-group .el-button:last-child {
     margin-right: 0;
-    /* Remove margin from the last button */
 }
 </style>

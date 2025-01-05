@@ -1,32 +1,41 @@
 <template>
     <div class="wrapper">
-        <main :class="[!isSidebarOpen ? 'el-main isExtend' : 'el-main']">
+        <main class="el-main">
             <h1>Game Daily<span></span></h1>
             <div class="box">
 
                 <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones"
-                    :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency" />
+                    :platformOption="platformOptions" :typeOptions="typeOptions" :currency="currency"
+                    @filterSubmit="applyFilters" :isUserId="isUserId" />
             </div>
-            <div class="box">
-                <TableComp :headers="headersKeys" :reportData="reportData" :showActions="isActionEnabled" />
 
-
+            <div v-for="(curr, index) in filteredReportData" :key="index" class="box">
+                <template v-if="curr.data && curr.data.length > 0">
+                    <!-- Render the table if there is data -->
+                    <TableComp :headers="headersKeys" :reportData="curr.data" :showActions="isActionEnabled" />
+                </template>
+                <template v-else>
+                    <!-- Render a message or placeholder if there is no data -->
+                    <div class="no-data-message box">
+                        No Data Available
+                    </div>
+                </template>
             </div>
+
         </main>
     </div>
 </template>
 
 <script>
 import TableComp from "../common/Customtable.vue";
-import winloss from "../../utils/winLossSummary/winloss.json";
+import gamesummary from "../../utils/GameReport/gamesummary.json";
 import Customfilter from "../common/Customfilter.vue";
 export default {
     name: "PlayerSummary",
     components: {
         TableComp,
         Customfilter
-    },
-    props: {
+    }, props: {
         isSidebarOpen: {
             type: Boolean,
             required: true,
@@ -34,10 +43,10 @@ export default {
     },
     data() {
         return {
-            isActionEnabled: true,
+            isActionEnabled: false,
+            isUserId: false,
+            isLocation: false,
             filterButton: [
-                "Last Month",
-                "This Month",
                 "Last Week",
                 "This Week",
                 "Yesterday",
@@ -73,29 +82,7 @@ export default {
                     label: 'SPRIBE',
                 },
             ],
-            typeOptions: [
-                {
-                    value: 'AWC_PROMOTION',
-                    label: 'AWC_PROMOTION',
-                },
-                {
-                    value: 'FREE_GAME',
-                    label: 'FREE_GAME',
-                },
-                {
-                    value: 'GP_PROMOTION',
-                    label: 'GP_PROMOTION',
-                },
-                {
-                    value: 'JACKPOT_WIN',
-                    label: 'JACKPOT_WIN',
-                },
-                {
-                    value: 'COMMISSION',
-                    label: 'EGAME',
-                },
 
-            ],
             currency: [
                 { value: "IDR", label: "IDR" },
                 { value: "INR", label: "INR" },
@@ -104,44 +91,50 @@ export default {
                 { value: "PHP", label: "PHP" }
             ],
             headersKeys: [
-                { title: "User  ID", prop: "userID" },
+                { title: "Game Type", prop: "gameType" },
                 { title: "Platform", prop: "platform" },
-                { title: "Type", prop: "type" },
-                { title: "Location", prop: "location" },
                 { title: "Bet Count", prop: "betCount" },
                 { title: "Valid Turnover", prop: "validTurnover" },
                 { title: "Bet Amount", prop: "betAmount" },
+                { title: "Win Amount", prop: "winAmount" },
                 { title: "Total Bet", prop: "totlBet" },
-                { title: "Remark", prop: "remark" },
                 {
                     title: "Player",
                     subHeaders: [
-                        { title: "Win Loss", prop: "Player.playerWinLoss" },
-                        { title: "Adjustment", prop: "Player.adjustment" },
-                        { title: "Total PL", prop: "Player.totalPL" },
-                        { title: "Margin", prop: "Player.margin" },
+                        { title: "Win Loss", prop: "Player.amount" },
+                        { title: "Adjustment", prop: "Player.percentage" },
                     ],
                 },
-                {
-                    title: "Agent",
-                    subHeaders: [
-                        { title: "Win Loss", prop: "Agent.ptWinLoss" },
-                        { title: "Adjustment", prop: "Agent.Adjustment" },
-                        { title: "Total PL", prop: "Agent.totalPL" },
-                    ],
-                },
-                {
-                    title: "Company",
-                    subHeaders: [{ title: "Company Total PL", prop: "Company.totalPL" }],
-                },
+
             ],
-            reportData: winloss,
+            reportData: gamesummary,
         };
     },
     methods: {
-        handleButtonClick(row) {
-            console.log("Button clicked for:", row);
-            alert(`Button clicked for User ID: ${row.userID}`);
+        applyFilters(filterCriteria) {
+            this.emittedFilterCriteria = filterCriteria; // Store the emitted criteria
+            console.log("applyFilters called with:", !filterCriteria.currency ? "yes" : "no"); // Debugging line
+
+            if (filterCriteria.currency) {
+                this.filteredReportData = this.reportData.filter((data) => data.currency == filterCriteria.currency); // Reset to all data if no currency is selected
+
+                console.log("this.filteredReportData:", this.filteredReportData)
+                return;
+            }
+
+            const relevantData = this.reportData.filter(item => item.currency === filterCriteria.currency);
+            this.filteredReportData = relevantData.filter(item => {
+                const matchesTimeZone = filterCriteria.timeZone ? item.timeZone === filterCriteria.timeZone : true;
+                const matchesPlatform = filterCriteria.platform ? item.platform === filterCriteria.platform : true;
+                const matchesType = filterCriteria.type ? item.type === filterCriteria.type : true;
+                const matchesDateRange = this.checkDateRange(item.date, filterCriteria.dateRange);
+                return matchesTimeZone && matchesPlatform && matchesType && matchesDateRange;
+            });
+        },
+        checkDateRange(itemDate, dateRange) {
+            if (!dateRange || dateRange.length !== 2) return true;
+            const [startDate, endDate] = dateRange; nom
+            return new Date(itemDate) >= new Date(startDate) && new Date(itemDate) <= new Date(endDate);
         },
     },
 };

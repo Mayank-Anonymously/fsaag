@@ -1,0 +1,295 @@
+[
+  {
+    "currency": "KES",
+    "data": [
+      {
+        "userId": "wnrawc32944003",
+        "userName": "wnrawc32944003",
+        "platform": "JDB",
+        "gameType": "FH",
+        "adjustmentTypes": "COMMISSION",
+        "items": "JDB COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc32944003 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc33070595",
+        "userName": "wnrawc33070595",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc33070595 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      }
+    ]
+  },
+  {
+    "currency": "IDR",
+    "data": [
+      {
+        "userId": "wnrawc31548287",
+        "userName": "wnrawc31548287",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31548287 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31571639",
+        "userName": "wnrawc31571639",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31571639 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31636466",
+        "userName": "wnrawc31636466",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31636466 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31640765",
+        "userName": "wnrawc31640765",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31640765 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31676882",
+        "userName": "wnrawc31676882",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31676882 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31720467",
+        "userName": "wnrawc31720467",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31720467 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31723620",
+        "userName": "wnrawc31723620",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "value1": 0,
+        "value2": 0,
+        "value3": 0,
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31723620 ]",
+          "value1": 0,
+          "value2": 0,
+          "value3": 0
+        }
+      },
+      {
+        "userId": "wnrawc31744548",
+        "userName": "wnrawc31744548",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31744548 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31749859",
+        "userName": "wnrawc31749859",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31749859 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31752811",
+        "userName": "wnrawc31752811",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31752811 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31753607",
+        "userName": "wnrawc31753607",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31753607 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31761107",
+        "userName": "wnrawc31761107",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31761107 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      },
+      {
+        "userId": "wnrawc31767617",
+        "userName": "wnrawc 31767617",
+        "platform": "PP",
+        "gameType": "SLOT",
+        "adjustmentTypes": "COMMISSION",
+        "items": "PP COMMISSION",
+        "Adjustment": {
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        },
+        "subtotal": {
+          "label": "Sub Total[ wnrawc31767617 ]",
+          "player": 0,
+          "agent": 0,
+          "company": 0
+        }
+      }
+    ]
+  }
+]

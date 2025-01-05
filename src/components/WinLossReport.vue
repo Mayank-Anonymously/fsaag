@@ -4,11 +4,21 @@
       <h1>Win / Loss Summary <span></span></h1>
       <div class="box">
         <Customfilter :filterButton="filterButton" :form="form" :timeZones="timeZones" :platformOption="platformOptions"
-          :typeOptions="typeOptions" :currency="currency" />
+          :typeOptions="typeOptions" :currency="currency" @filterSubmit="applyFilters" />
       </div>
-      <div class="box">
-        <TableComp :headers="headersKeys" :reportData="reportData" :showActions="isActionEnabled" />
+      <div v-for="(curr, index) in filteredReportData" :key="index" class="box">
+        <template v-if="curr.data && curr.data.length > 0">
+          <!-- Render the table if there is data -->
+          <TableComp :headers="headersKeys" :reportData="curr.data" :showActions="isActionEnabled" />
+        </template>
+        <template v-else>
+          <!-- Render a message or placeholder if there is no data -->
+          <div class="no-data-message box">
+            No Data Available
+          </div>
+        </template>
       </div>
+
     </main>
   </div>
 </template>
@@ -32,6 +42,8 @@ export default {
   data() {
     return {
       isActionEnabled: true,
+      filteredReportData: [], // Filtered data
+      filteredReportDataSet: [],
       filterButton: [
         "Last Month",
         "This Month",
@@ -116,7 +128,7 @@ export default {
         { value: "PHP", label: "PHP" }
       ],
       headersKeys: [
-        { title: "User  ID", prop: "userID" },
+        { title: "User ID", prop: "userID" },
         { title: "Platform", prop: "platform" },
         { title: "Type", prop: "type" },
         { title: "Location", prop: "location" },
@@ -151,10 +163,41 @@ export default {
     };
   },
   methods: {
-    handleButtonClick(row) {
-      console.log("Button clicked for:", row);
-      alert(`Button clicked for User ID: ${row.userID}`);
+    applyFilters(filterCriteria) {
+      this.emittedFilterCriteria = filterCriteria; // Store the emitted criteria
+      console.log("applyFilters called with:", !filterCriteria.currency ? "yes" : "no"); // Debugging line
+
+      if (filterCriteria.currency) {
+        this.filteredReportData = this.reportData.filter((data) => data.currency == filterCriteria.currency); // Reset to all data if no currency is selected
+
+        return;
+      }
+
+      const relevantData = this.reportData.filter(item => item.currency === filterCriteria.currency);
+      this.filteredReportData = relevantData.filter(item => {
+        const matchesTimeZone = filterCriteria.timeZone ? item.timeZone === filterCriteria.timeZone : true;
+        const matchesPlatform = filterCriteria.platform ? item.platform === filterCriteria.platform : true;
+        const matchesType = filterCriteria.type ? item.type === filterCriteria.type : true;
+        const matchesDateRange = this.checkDateRange(item.date, filterCriteria.dateRange);
+        return matchesTimeZone && matchesPlatform && matchesType && matchesDateRange;
+      });
+    },
+    checkDateRange(itemDate, dateRange) {
+      if (!dateRange || dateRange.length !== 2) return true;
+      const [startDate, endDate] = dateRange; nom
+      return new Date(itemDate) >= new Date(startDate) && new Date(itemDate) <= new Date(endDate);
     },
   },
 };
 </script>
+
+<style>
+.no-data-message {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px dashed #ccc;
+}
+</style>

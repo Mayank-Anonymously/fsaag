@@ -1,18 +1,19 @@
 <template>
+
     <section class="el-container is-vertical">
         <Header />
         <section class="el-container">
             <SideBar :is-sidebar-open="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
-            <PlayerSummary />
+            <GameHistory />
         </section>
     </section>
 </template>
 
 <script>
+import GameHistory from "@/components/GameReportComp/GameHistory.vue";
 import Header from "@/components/Header.vue";
 import MyProfile from "@/components/MyProfile.vue";
 import SideBar from "@/components/SideBar.vue";
-import PlayerSummary from "@/components/transactionComps/PlayerSummary.vue";
 
 export default {
     methods: {
@@ -34,7 +35,7 @@ export default {
         Header,
         SideBar,
         MyProfile,
-        PlayerSummary
+        GameHistory
     },
 };
 </script>

@@ -3,16 +3,16 @@
         <Header />
         <section class="el-container">
             <SideBar :is-sidebar-open="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
-            <PlayerSummary />
+            <GameDaily />
         </section>
     </section>
 </template>
 
 <script>
+import GameDaily from "@/components/GameReportComp/GameDaily.vue";
 import Header from "@/components/Header.vue";
 import MyProfile from "@/components/MyProfile.vue";
 import SideBar from "@/components/SideBar.vue";
-import PlayerSummary from "@/components/transactionComps/PlayerSummary.vue";
 
 export default {
     methods: {
@@ -34,7 +34,7 @@ export default {
         Header,
         SideBar,
         MyProfile,
-        PlayerSummary
+        GameDaily
     },
 };
 </script>
