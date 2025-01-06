@@ -9,6 +9,7 @@ import PlayerTransactions from "@/views/Transactions/PlayerTransactions.vue";
 import ByGameGroundReport from "@/views/Transactions/ByGameGroundReport.vue";
 import GameDailyView from "@/views/GameReport/GameDailyView.vue";
 import GameHistoryView from "@/views/GameReport/GameHistoryView.vue";
+import AccountStatementView from "../views/AccountStatment/AccountStatementView.vue";
 
 const isAuthenticated = () => {
   return !!localStorage.getItem("authToken");
@@ -129,6 +130,18 @@ const router = createRouter({
       path: "/game/game-daily-summary",
       name: "GameDailySummary",
       component: GameDailyView,
+      beforeEnter: (to, from, next) => {
+        if (isAuthenticated()) {
+          next();
+        } else {
+          next("/");
+        }
+      },
+    },
+    {
+      path: "/account/account-statement",
+      name: "AccountStatement",
+      component: AccountStatementView,
       beforeEnter: (to, from, next) => {
         if (isAuthenticated()) {
           next();

@@ -46,7 +46,7 @@
                 </el-form-item>
 
                 <!-- Platform -->
-                <el-form-item label="Platform" required>
+                <el-form-item v-if="isPlatform" label="Platform" required>
                     <el-cascader v-model="form.platform" :options="platformOption" placeholder="Select Platform" />
                 </el-form-item>
 
@@ -175,6 +175,11 @@ export default {
         isGameName: {
             type: Boolean,
             required: true
+        },
+        isPlatform: {
+            type: Boolean,
+            required: true
+
         }
 
     },

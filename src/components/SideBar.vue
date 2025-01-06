@@ -178,8 +178,13 @@
             </ul>
           </li>
           <li class="el-menu-item" role="menuitem" tabindex="-1">
-            <a href="/accountStatement" class="">Account Statement</a>
+            <router-link :aria-current="[isActiveAccountStatement ? 'page' : '']" :class="{
+              'router-link-active router-link-exact-active':
+                isActiveAccountStatement,
+              '': !isActiveAccountStatement,
+            }" to="/account/account-statement">Account Statement</router-link>
           </li>
+
         </ul>
       </li>
     </ul>
@@ -278,6 +283,13 @@ export default {
       this.isOpenWinLoseReport =
         this.$route.path === "/game/game-daily-summary" ? true : false;
       return this.$route.path === "/game/game-daily-summary";
+    },
+    isActiveAccountStatement() {
+      this.isOpenReport =
+        this.$route.path === "/account/account-statement" ? true : false;
+      this.isOpenWinLoseReport =
+        this.$route.path === "/account/account-statement" ? true : false;
+      return this.$route.path === "/account/account-statement";
     },
   },
 };
