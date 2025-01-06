@@ -1,48 +1,5 @@
 [
   {
-    "currency": "KES",
-    "data": [
-      {
-        "userId": "wnrawc32944003",
-        "userName": "wnrawc32944003",
-        "platform": "JDB",
-        "gameType": "FH",
-        "adjustmentTypes": "COMMISSION",
-        "items": "JDB COMMISSION",
-        "Adjustment": {
-          "player": 0,
-          "agent": 0,
-          "company": 0
-        },
-        "subtotal": {
-          "label": "Sub Total[ wnrawc32944003 ]",
-          "player": 0,
-          "agent": 0,
-          "company": 0
-        }
-      },
-      {
-        "userId": "wnrawc33070595",
-        "userName": "wnrawc33070595",
-        "platform": "PP",
-        "gameType": "SLOT",
-        "adjustmentTypes": "COMMISSION",
-        "items": "PP COMMISSION",
-        "Adjustment": {
-          "player": 0,
-          "agent": 0,
-          "company": 0
-        },
-        "subtotal": {
-          "label": "Sub Total[ wnrawc33070595 ]",
-          "player": 0,
-          "agent": 0,
-          "company": 0
-        }
-      }
-    ]
-  },
-  {
     "currency": "IDR",
     "data": [
       {
