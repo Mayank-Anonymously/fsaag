@@ -49,7 +49,7 @@
 
   <div id="el-popper-container-7572">
     <div
-      class="el-popper is-pure is-light el-dropdown__popper"
+      class="el-popper is-pure is-light el-dropdown__popper language-dropdown"
       tabindex="-1"
       aria-hidden="true"
       data-popper-reference-hidden="false"
